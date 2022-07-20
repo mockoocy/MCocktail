@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from "./pages/Home/Home"
-import Themes from './data/Themes';
+import Themes from './data/themes';
 
 
 
