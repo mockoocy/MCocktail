@@ -19,13 +19,17 @@ h1 {
 }
 .more-text {
     width: 80%;
-    margin: 0 10%;
-    height: 40vh;
+    margin: 0 10% 2.5% 10%;
+    height: auto;
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
   }
 
   .text-block {
+    background-color: var(--bgVariationClr);
+    border-radius: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -48,22 +52,26 @@ h1 {
     font-size: 2rem;
     text-align: center;
     color:  var(--boringClr);
-    width: 24ch;
+    width: 20ch;
     }
-  @media (max-width: 784px){
+  @media (max-width: 820px){
     * {
     margin: 0 5%;
     text-align: center;
 
     }
-    h1 {
-      margin: 0 10% 20% 10%;
+    .motto-container{ 
+      h1 {
+      margin: 5%;
       font-size: 2.5rem;
+      }
+    }
+    .text-block {
+      width: 60%;
     }
     .more-text{
       flex-direction: column;
       align-items: center;
-      padding-top: 10vh;
     }
     .big-text {
       font-size: 2rem;

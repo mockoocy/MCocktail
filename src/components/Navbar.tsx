@@ -1,8 +1,9 @@
 import StyledNavbar from "./styles/StyledNavbar"
 import React from "react";
+import { Icon } from '@iconify/react';
+
 import {ReactComponent as Logo} from '../assets/LogoDark.svg';
 import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
-import {ReactComponent as ThemeSwitcher} from '../assets/ThemeSwitch.svg';
 
 
 function Navbar(){
@@ -15,7 +16,7 @@ function Navbar(){
       <div className="button-container">
         <button className="btn browse">Browse</button>
         <button className=" btn generate">Generate</button>
-        <ThemeSwitcher className="btn theme"/>
+        <Icon icon="arcticons:theme-store" className="btn theme" />
       </div>
     </StyledNavbar>
   )

@@ -5,7 +5,9 @@ import StyledTextBs from "./styles/StyledTextBs";
 function TextBs() {
   return (
     <StyledTextBs>
-      <h1>A little drink never killed nobody</h1>
+      <div className="motto-container">
+        <h1>A little drink never killed nobody</h1>
+      </div>
       <div className="more-text">
         <div className="text-block">
           <h3 className="big-text">Drink something cheaply</h3>

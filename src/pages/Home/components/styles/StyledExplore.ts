@@ -1,12 +1,25 @@
 import styled from "styled-components";
 
 const StyledExplore = styled.section`
-padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 80%;
   margin: 0 10%;
+
+
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &>* {
+      width: 200%;
+      height: 200%;
+      background: transparent;
+      
+    }
+  }
 
   .title {
     font-family: Lato, sans-serif;
@@ -27,13 +40,18 @@ padding: 2rem;
       font-weight: 500;
       font-family: Lato, sans-serif;
       border: 1px solid var(--fancyClr);
-      filter: 
-        drop-shadow(.125rem .125rem 0.25rem var(--fancyClr));
+
       border-radius: 100vmax;
       width: auto;
       height: 2.5rem;
       background-color: var(--boringClr);
       color: var(--bgClr);
+
+      &:hover {
+        transform: scale(1.1);
+        filter: 
+        drop-shadow(.125rem .125rem 0.25rem var(--fancyClr));
+      }
     }
   .clicked {
     background: var(--fancyClr);
@@ -42,28 +60,48 @@ padding: 2rem;
       drop-shadow(.125rem .125rem 0.25rem var(--boringClr));
     
   }
+  .carousel-container {
+    padding: 0 10vw;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   }
   .carousel {
-    min-width: 80%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-auto-columns: 25vw;
     gap: 1rem;
+    overflow-x: auto;
+    background-color: var(--bgVariationClr);
+    border-radius: 2rem;
+    padding: 0 1rem;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-color: var(--fancyClr) var(--captionClr);
 
     .img-container {
       position: relative;
+      padding: 5% 0;
+      scroll-snap-align: start;
+      scroll-padding-inline: 1rem;
     }
     
     img {
-      aspect-ratio: 0.5;
-      min-width: 9rem;
-      min-height: 6rem;
+      aspect-ratio: 1.5;
+      flex: 0 1 auto;
+      width: 100%;
+      height: 100%;
       border-radius: 2rem;
-      mix-blend-mode: screen;
-      filter: drop-shadow(.25rem .25rem .5rem var(--fancyClr));
+
     }
+    img:hover {
+        transform: scale(1.05);
+        }
     .caption {
-      background-color: #0f0f0fa0;
+      background-color: var(--captionClr); //TODO CAPTION CLR
       color: var(--fancyClr);
       height: auto;
       font-size: 1.5rem;
@@ -72,14 +110,14 @@ padding: 2rem;
       margin: 0 10%;
       text-align: center;
       position: absolute;
-      bottom: 0;
+      bottom: 15%;
     }
   }
   
 
 
 
-  @media (max-width: 784px){
+  @media (max-width: 820px){
     .options-container {
     display: grid;
     grid-template-columns: repeat(4, .20fr);
@@ -94,16 +132,11 @@ padding: 2rem;
       }
     }
     .carousel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
-    grid-auto-rows: minmax(20%, auto);
-      img {
-        aspect-ratio: 1.5;
-        min-width: 35vw;
-        height: auto;
-      }
-  } 
+      margin: 0;
+      grid-auto-columns: 33.33  vw;
+
+
+    }
     .title {
       font-size: 2.5rem;
     }

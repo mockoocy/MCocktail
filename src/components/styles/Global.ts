@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components"
-import { Theme } from "../../App";
+import { Theme } from "../../types"
 
 const GlobalStyles = createGlobalStyle<{theme: Theme}>`
 :root {
@@ -7,6 +7,9 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
   --boringClr: ${({theme})=>theme.colors.boringClr};
   --bgClr: ${({theme})=>theme.colors.bgClr};
   --selectionClr: ${({theme})=>theme.colors.selectionClr};
+  --bgVariationClr: ${({theme})=>theme.colors.bgVariationClr};
+  --captionClr: ${({theme})=>theme.colors.captionClr};
+
 
   *::selection {
   background-color: var(--selectionClr);

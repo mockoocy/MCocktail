@@ -50,13 +50,22 @@ const StyledNavbar = styled.nav`
   .btn {
     color: var(--fancyClr);
     font-size: 2rem;
-    font-family: "Roboto Slab", sans-serif
+    font-family: "Roboto Slab", sans-serif;
+    text-shadow: 
+      .125rem .125rem 0.125rem var(--boringClr),
+      -.125rem .125rem 0.125rem var(--boringClr),
+      .125rem -.125rem 0.125rem var(--boringClr),
+      -.125rem -.125rem 0.125rem var(--boringClr);
+
   }
   .theme {
     width: 2rem;
     height: 2rem;
+    stroke-width: 0.25rem;
+    filter: 
+      drop-shadow(.25rem .25rem var(--captionClr))
   }
-  @media (max-width: 784px) {
+  @media (max-width: 820px) {
 
     .btn {
       font-size: 1rem;
