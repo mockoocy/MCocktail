@@ -4,7 +4,6 @@ import { Icon } from '@iconify/react';
 
 import {ReactComponent as Logo} from '../assets/LogoDark.svg';
 import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
-import {ReactComponent as ThemeSwitcher} from '../assets/ThemeSwitch.svg';
 
 
 function Navbar(){
