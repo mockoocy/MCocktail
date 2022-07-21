@@ -48,6 +48,7 @@ const StyledExplore = styled.section`
       color: var(--bgClr);
 
       &:hover {
+        cursor: pointer;
         transform: scale(1.1);
         filter: 
         drop-shadow(.125rem .125rem 0.25rem var(--fancyClr));
@@ -98,6 +99,8 @@ const StyledExplore = styled.section`
 
     }
     img:hover {
+        cursor: pointer;
+
         transform: scale(1.05);
         }
     .caption {

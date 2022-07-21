@@ -10,7 +10,8 @@ const darkTheme: Theme = {
     captionClr: "#0f0f0fa0",
   },
   utils: {
-    loadingIcon: './assets/WhitePac.svg'
+    loadingIcon: './assets/WhitePac.svg',
+    navSaturation: '75%'
   }
 }
 
@@ -25,7 +26,8 @@ const greenTheme: Theme = {
 
   },
   utils: {
-    loadingIcon: './assets/BlackPac.svg'
+    loadingIcon: './assets/BlackPac.svg',
+    navSaturation: '100%'
   }
 }
 
@@ -40,7 +42,8 @@ const lightTheme: Theme = {
 
   },
   utils: {
-    loadingIcon: './assets/BlackPac.svg'
+    loadingIcon: './assets/BlackPac.svg',
+    navSaturation: '140%'
   }
 }
 

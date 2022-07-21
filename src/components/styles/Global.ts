@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
   --selectionClr: ${({theme})=>theme.colors.selectionClr};
   --bgVariationClr: ${({theme})=>theme.colors.bgVariationClr};
   --captionClr: ${({theme})=>theme.colors.captionClr};
+  --navSaturation: ${({theme})=>theme.utils.navSaturation};
 
 
   *::selection {

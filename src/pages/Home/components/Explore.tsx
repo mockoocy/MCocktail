@@ -1,14 +1,11 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import StyledExplore from "./styles/StyledExplore";
 import urls from "../../../data/urls.json";
 import {useApiGet} from "../../../hooks/useApiGet"
 import { TApiResponse } from "../../../types";
-import {ReactComponent as LoadingDark} from "../../../assets/BlackPac.svg";
 import randomSample from "../../../utils/randomSample"
+import {ReactComponent as LoadingDark} from "../../../assets/BlackPac.svg";
 
-/**
- * TODO: CHANGE EXPLORE IMAGES INTO HORIZONTAL MEDIA SCROLLER
- */
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
 

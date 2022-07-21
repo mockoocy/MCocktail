@@ -9,7 +9,8 @@ type Colors = {
 }
 
 type Utils = {
-  loadingIcon: string
+  loadingIcon: string;
+  navSaturation: string;
 }
 
 export type Theme = {

@@ -45,6 +45,21 @@ h1 {
     font-weight: 400;
     text-align: center;
   }
+  .svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .svg {
+    width: 50%;
+    height: 50%;
+    position: relative;
+  }
+  .robot {
+    width: 75%;
+    height: 75%;
+  }
+  }
+
   .small-text {
     font-family: Lato, sans-serif;
     font-style: italic;
