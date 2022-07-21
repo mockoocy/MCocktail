@@ -1,7 +1,8 @@
 import React, {useCallback, useEffect, useState} from "react";
 import StyledExplore from "./styles/StyledExplore";
 import urls from "../../../data/urls.json";
-import {useApiGet, TApiResponse} from "../../../hooks/useApiGet"
+import {useApiGet} from "../../../hooks/useApiGet"
+import { TApiResponse } from "../../../types";
 import {ReactComponent as LoadingDark} from "../../../assets/BlackPac.svg";
 import randomSample from "../../../utils/randomSample"
 
