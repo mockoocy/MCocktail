@@ -14,9 +14,9 @@ const StyledExplore = styled.section`
     justify-content: center;
     position: relative;
     &>* {
-      width: 200%;
-      height: 200%;
-      background: transparent;
+      width: 50%;
+      height: 50%;
+      background-color: transparent;
       
     }
   }

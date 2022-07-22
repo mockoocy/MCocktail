@@ -28,8 +28,8 @@ function Navbar({changeTheme}: Props){
         <Logo className="logo"/>
       </div>
       <div className="button-container" >
-        <button className="btn browse">Browse</button>
-        <button className="btn generate">Generate</button>
+        <Icon icon="akar-icons:book" className="btn icon-book"/>
+        <Icon icon="ic:baseline-computer" className="btn icon-computer"/>
         <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector}  />
         </div>
           {themeSelectorOpen 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from "react";
 import StyledExplore from "./styles/StyledExplore";
+import Loader from "../../../components/Loader";
 import urls from "../../../data/urls.json";
 import {useApiGet} from "../../../hooks/useApiGet"
 import { TApiResponse } from "../../../types";
@@ -123,7 +124,7 @@ function Explore() {
       {
         cocktailsLoading
           ? <div className="loading-container">
-            <LoadingDark />
+            <Loader text="Loading..."/>
           </div>
           : <div className="carousel-container">
             <div className="carousel">

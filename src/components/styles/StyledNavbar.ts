@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
   position: sticky;
+  z-index: 100; 
   width: 100%;
   height: 12.5vh;
   display: flex;
@@ -47,18 +48,21 @@ const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     position: relative;
   }
   .btn {
     color: var(--fancyClr);
-    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
     font-family: "Roboto Slab", sans-serif;
     text-shadow: 
       .125rem .125rem 0.125rem var(--boringClr),
       -.125rem .125rem 0.125rem var(--boringClr),
       .125rem -.125rem 0.125rem var(--boringClr),
       -.125rem -.125rem 0.125rem var(--boringClr);
+      filter: 
+    drop-shadow(.25rem .25rem var(--captionClr));
 
 
   }
@@ -89,20 +93,20 @@ const StyledNavbar = styled.nav`
   }
 
   .theme {
-  width: 2rem;
-  height: 2rem;
   stroke-width: 0.25rem;
-  filter: 
-    drop-shadow(.25rem .25rem var(--captionClr));
+
 }
 
 
 
 
   @media (max-width: 820px) {
-
+    position: fixed;
     .btn {
-      font-size: 1rem;
+      width: 2rem;
+    }
+    .browse {
+      content: 'dupa';
     }
     .dropdown-list {
       right: 10%;
