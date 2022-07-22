@@ -3,6 +3,7 @@ type Colors = {
   fancyClr: string;
   boringClr: string;
   bgVariationClr: string;
+  bgNestedClr: string;
   selectionClr ?: string;
   captionClr ?: string;
 

@@ -11,11 +11,11 @@ gap: 2rem;
 align-items: center;
 h1 {
   color: var(--fancyClr);
-  font-size: 5rem;
-  font-family: "Dancing Script", Lato, sans-serif;
+  font-size: 4rem;
+  font-family: "Rubik Moonrocks", Lato, sans-serif;
   filter:
     drop-shadow(.25rem .25rem 0 var(--boringClr))
-    drop-shadow(.5rem .5rem .25rem var(--boringClr));
+    drop-shadow(.25rem .25rem .25rem var(--boringClr));
 }
 .more-text {
     width: 80%;
@@ -78,7 +78,7 @@ h1 {
     .motto-container{ 
       h1 {
       margin: 5%;
-      font-size: 2.5rem;
+      font-size: 2rem;
       }
     }
     .text-block {

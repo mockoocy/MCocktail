@@ -28,6 +28,7 @@ function Navbar({changeTheme}: Props){
         <Logo className="logo"/>
       </div>
       <div className="button-container" >
+        <Icon icon="akar-icons:heart" className="btn icon-hear"/>
         <Icon icon="akar-icons:book" className="btn icon-book"/>
         <Icon icon="ic:baseline-computer" className="btn icon-computer"/>
         <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector}  />
@@ -38,6 +39,8 @@ function Navbar({changeTheme}: Props){
               <li className="theme-option" onClick={()=> changeTheme(Themes.darkTheme)}>Dark</li>
               <li className="theme-option" onClick={()=> changeTheme(Themes.lightTheme)}>Light</li>
               <li className="theme-option" onClick={()=> changeTheme(Themes.greenTheme)}>Green</li>
+              <li className="theme-option" onClick={()=> changeTheme(Themes.FuschiaTheme)}>Fuschia</li>
+
             </ul>
           
           }

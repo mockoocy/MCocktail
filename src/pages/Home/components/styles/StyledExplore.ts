@@ -3,9 +3,11 @@ import styled from "styled-components";
 const StyledExplore = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   width: 80%;
-  margin: 0 10%;
+  margin: 5% 10% 0  10%;
+  background-color: var(--bgVariationClr);
+  border-radius: 2rem;
 
 
   .loading-container {
@@ -23,7 +25,7 @@ const StyledExplore = styled.section`
 
   .title {
     font-family: Lato, sans-serif;
-    font-size: 4rem;
+    font-size: 3.25rem;
     color: var(--fancyClr);
     text-shadow: .125rem .125rem .125rem var(--boringClr),
     -.125rem -.125rem .5rem var(--boringClr);
@@ -56,6 +58,7 @@ const StyledExplore = styled.section`
     }
   .clicked {
     background: var(--fancyClr);
+    color: var(--boringClr);
     border-color: var(--boringClr);
     filter: 
       drop-shadow(.125rem .125rem 0.25rem var(--boringClr));
@@ -76,7 +79,7 @@ const StyledExplore = styled.section`
     grid-auto-columns: 25vw;
     gap: 1rem;
     overflow-x: auto;
-    background-color: var(--bgVariationClr);
+    background-color: var(--bgNestedClr);
     border-radius: 2rem;
     padding: 0 1rem;
     overscroll-behavior-inline: contain;
