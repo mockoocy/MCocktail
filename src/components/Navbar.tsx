@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Icon } from '@iconify/react';
 import {ReactComponent as Logo} from '../assets/LogoDark.svg';
 import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
-import Themes from "../data/Themes"
+import Themes from "../data/themes"
 import {Theme} from "../types"
 type Props = {
   changeTheme: (theme: Theme) => void

@@ -9,7 +9,6 @@ type Colors = {
 }
 
 type Utils = {
-  loadingIcon: string;
   navSaturation: string;
 }
 

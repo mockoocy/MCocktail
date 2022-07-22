@@ -1,5 +1,5 @@
 import React, {useState, useContext, SetStateAction} from "react";
-import Themes from "./data/Themes";
+import Themes from "./data/themes";
 import { Theme } from "./types";
 
 type Props = {
