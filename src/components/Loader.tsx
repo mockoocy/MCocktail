@@ -1,5 +1,6 @@
 import React from "react";
 import StyledLoader from "./styles/StyledLoader"
+
 type Props = {
   text: string;
 }

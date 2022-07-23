@@ -5,16 +5,12 @@ import urls from "../../../data/urls.json";
 import {useApiGet} from "../../../hooks/useApiGet"
 import { TApiResponse } from "../../../types";
 import randomSample from "../../../utils/randomSample"
+import {Option} from "../../../types";
 
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
 
-type Option = {
-  value: string;
-  clicked: boolean;
-  url: string;
-  id: number
-}
+
 
 const DEFAULT_OPTIONS: Option[] = [
   {
@@ -37,8 +33,6 @@ const DEFAULT_OPTIONS: Option[] = [
   }
 ]
 
-
-// TODO : ADD USEFETCH JS AND USEASYNC JS FROM WDS 
 
 function Explore() {
   const [urlSelected, setUrlSelected] = useState(urls.urlDefault);
@@ -106,7 +100,7 @@ function Explore() {
   
   const cocktailElements = cocktails.map((cocktail,id) =>{
     return (
-      <div className="img-container" key={id}>
+      <div className="img-container" key={id}  data-ApiId={cocktail.idDrink}>
         <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
         <span className="caption">{cocktail.strDrink}</span>
       </div>

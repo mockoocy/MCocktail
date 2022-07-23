@@ -1,3 +1,5 @@
+// THEMES RELATED TYPES
+
 type Colors = {
   bgClr: string;
   fancyClr: string;
@@ -17,6 +19,8 @@ export type Theme = {
   colors : Colors;
   utils: Utils;
 }
+
+// Used by  UseApiGet hook
 export type TApiResponse = {
   status: Number;
   statusText: String;
@@ -24,3 +28,11 @@ export type TApiResponse = {
   error: any;
   loading: Boolean;
 };
+
+// Represents filter option in explore (such as alcoholic, non-alcoholic, etc.)
+export type Option = {
+  value: string;
+  clicked: boolean;
+  url: string;
+  id: number
+}
