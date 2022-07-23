@@ -1,6 +1,4 @@
-import React, {useState, useContext, SetStateAction} from "react";
-import Themes from "./data/themes";
-import { Theme } from "./types";
+import React, {useContext} from "react";
 
 type Props = {
   children: JSX.Element;

@@ -24,8 +24,11 @@ export const useApiGet = (url: string): TApiResponse => {
   };
 
   useEffect(() => {
+    // react exhaustive deps fix; otherwise - empty deps and linter comment 
+    if (loading || data) return; 
+    console.log('ue')
     getAPIData();
-  }, []);
+  }, [getAPIData, data, loading]);
 
   return { status, statusText, data, error, loading };
 };

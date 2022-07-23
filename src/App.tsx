@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import GlobalStyles from './components/styles/Global';
-import { ThemeProvider } from 'styled-components';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import GlobalStyles from './components/styles/Global';
 import Home from "./pages/Home/Home"
+
+import { ThemeProvider } from 'styled-components';
 import Themes from "./data/themes"
 import { Theme } from './types';
+
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+
 
 function App()  {
   const [theme, setTheme] = useState(Themes.darkTheme);
@@ -15,14 +19,16 @@ function changeTheme(theme: Theme){
 }
 
   return (
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <Navbar changeTheme={changeTheme}/>
-          <Home />
-          <Footer/>
-        </>
+        <GlobalStyles />
+        <Navbar changeTheme={changeTheme}/>
+        <Routes>
+          <Route path ='/' element={<Home/>}/>
+        </Routes>
+        <Footer/>
       </ThemeProvider>
+    </BrowserRouter>
   ) 
 }
 export default App;
