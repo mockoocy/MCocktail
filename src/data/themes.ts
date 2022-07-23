@@ -15,7 +15,7 @@ const darkTheme: Theme = {
   }
 }
 
-const FuschiaTheme: Theme = {
+const fuschiaTheme: Theme = {
   colors: {
     bgClr: '#0E0B16',
     fancyClr: '#BF46EF',
@@ -27,6 +27,22 @@ const FuschiaTheme: Theme = {
   },
   utils: {
     navSaturation: '100%'
+  }
+}
+
+const monoTheme: Theme = {
+  colors: {
+    bgClr: '#0f0f0f',
+    fancyClr: '#f8fff8',
+    boringClr: '#999',
+    selectionClr: 'rgb(131, 241, 208)',
+    bgNestedClr: '#242424',
+    bgVariationClr: '#202020',
+    captionClr : "#0f0f0fa0"
+
+  },
+  utils: {
+    navSaturation: '0%'
   }
 }
 
@@ -62,11 +78,46 @@ const lightTheme: Theme = {
   }
 }
 
+const peachTheme: Theme = {
+  colors: {
+    bgClr: '#c2cad0',
+    fancyClr: '#e7717d',
+    boringClr: 'rgb(15, 15, 15)',
+    selectionClr: 'rgb(131, 241, 208)',
+    bgVariationClr: '#CBD2D7',
+    bgNestedClr: '#D4D9DE',
+    captionClr: "#f0f2f598",
+
+  },
+  utils: {
+    navSaturation: '140%'
+  }
+}
+
+const vividTheme: Theme = {
+  colors: {
+    bgClr: '#0A0C10',
+    fancyClr: '#ffe885',
+    boringClr: '#EF7B45',
+    selectionClr: '#ce81a8',
+    bgVariationClr: '#121236',
+    bgNestedClr: '#59F1FF0f ',
+    captionClr: "#e7a1d9A0",
+
+  },
+  utils: {
+    navSaturation: '250%'
+  }
+}
+
 const Themes = {
   darkTheme,
   lightTheme,
   greenTheme,
-  FuschiaTheme
+  fuschiaTheme,
+  monoTheme,
+  peachTheme,
+  vividTheme
 
 }
 

@@ -5,7 +5,6 @@ import urls from "../../../data/urls.json";
 import {useApiGet} from "../../../hooks/useApiGet"
 import { TApiResponse } from "../../../types";
 import randomSample from "../../../utils/randomSample"
-import {ReactComponent as LoadingDark} from "../../../assets/BlackPac.svg";
 
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
@@ -94,7 +93,7 @@ function Explore() {
       }
     }
     fetchCocktails();
-    },[options])
+    },[options, urlSelected])
 
 
   const optionElements = options.map(option =>{
@@ -116,7 +115,7 @@ function Explore() {
   })
   return (
     <StyledExplore >
-      <h1 className="title">Explore drinks</h1>
+      <h1 className="title">Some drinks for you</h1>
       <div className="options-container">
         {optionElements}
         {!ingredients.loading && <div className="option" onClick={() => shuffleOptions(ingredients.data.drinks, RANDOM_INGREDIENTS_AMOUNT)}>Shuffle and get Ingredients!🔀 </div>}

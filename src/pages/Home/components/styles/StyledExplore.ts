@@ -26,6 +26,7 @@ const StyledExplore = styled.section`
   .title {
     font-family: Lato, sans-serif;
     font-size: 3.25rem;
+    letter-spacing: 0.25rem;
     color: var(--fancyClr);
     text-shadow: .125rem .125rem .125rem var(--boringClr),
     -.125rem -.125rem .5rem var(--boringClr);
