@@ -40,6 +40,8 @@ function Explore() {
   const [cocktails, setCocktails] = useState<any[]>([]);
   const [options, setOptions] = useState<Option[]>(DEFAULT_OPTIONS);
 
+  // Can't put it in useEffect, so we call it there. [options, cocktails] is the only
+  // deps array that forces re-render, so there is no excess data being fetched, no worries
   const ingredients : TApiResponse = useApiGet(urls.urlListIngredients);
 
   function handleOptionClick(id: number){

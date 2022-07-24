@@ -11,6 +11,8 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
   --captionClr: ${({theme})=>theme.colors.captionClr};
   --navSaturation: ${({theme})=>theme.utils.navSaturation};
   --bgNestedClr: ${({theme})=>theme.colors.bgNestedClr};
+  --OptionClr: ${({theme})=>theme.colors.optionClr};
+
 
 
   *::selection {
@@ -31,7 +33,9 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
 
   body {
     line-height: 1.5;
-    background: var(--bgClr)
+    background: var(--bgClr);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   img, picture, video, canvas, svg {

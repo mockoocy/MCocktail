@@ -31,6 +31,7 @@ function changeTheme(theme: Theme){
           <Route path ='drink/:drinkId' element={<SingleDrink/>}/>
           <Route path ='*' element={<Error/>}/>
         </Routes>
+
         <Footer/>
       </ThemeProvider>
     </BrowserRouter>

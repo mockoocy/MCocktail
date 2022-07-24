@@ -94,6 +94,7 @@ h1 {
       font-size: 2rem;
     }
     .small-text {
+      width: 16ch;
       font-size: 1.25rem;
     }
   }

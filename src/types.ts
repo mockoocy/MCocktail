@@ -6,6 +6,7 @@ type Colors = {
   boringClr: string;
   bgVariationClr: string;
   bgNestedClr: string;
+  optionClr ?: string;
   selectionClr ?: string;
   captionClr ?: string;
 

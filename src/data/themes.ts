@@ -3,6 +3,7 @@ import { Theme } from "../types"
 const darkTheme: Theme = {
   colors: {
     bgClr: 'rgb(15, 15, 15)',
+    optionClr: 'rgb(15, 15, 15)',
     fancyClr: '#7FFFD4',
     boringClr: 'rgb(235, 255, 251)',
     selectionClr: 'rgb(95, 95, 95)',
@@ -18,6 +19,7 @@ const darkTheme: Theme = {
 const fuschiaTheme: Theme = {
   colors: {
     bgClr: '#0E0B16',
+    optionClr: '#0E0B16',
     fancyClr: '#BF46EF',
     boringClr: '#F8EFFC',
     selectionClr: '#313131',
@@ -33,6 +35,7 @@ const fuschiaTheme: Theme = {
 const monoTheme: Theme = {
   colors: {
     bgClr: '#0f0f0f',
+    optionClr: '#0f0f0f',
     fancyClr: '#f8fff8',
     boringClr: '#999',
     selectionClr: 'rgb(131, 241, 208)',
@@ -49,6 +52,7 @@ const monoTheme: Theme = {
 const greenTheme: Theme = {
   colors: {
     bgClr: '#f5faf5',
+    optionClr: '#f5faf5',
     fancyClr: '#DDFFC7',
     boringClr: 'rgb(15, 15, 15)',
     selectionClr: 'rgb(131, 241, 208)',
@@ -65,6 +69,7 @@ const greenTheme: Theme = {
 const lightTheme: Theme = {
   colors: {
     bgClr: '#f0f2f5',
+    optionClr: '#f0f2f5',
     fancyClr: '#005ce6',
     boringClr: 'rgb(15, 15, 15)',
     selectionClr: 'rgb(131, 241, 208)',
@@ -80,12 +85,13 @@ const lightTheme: Theme = {
 
 const peachTheme: Theme = {
   colors: {
-    bgClr: '#c2cad0',
-    fancyClr: '#e7717d',
+    bgClr: 'linear-gradient(45deg,#ff5858,#ffc8c8)',
+    optionClr: '#c2cad0'  ,
+    fancyClr: '#D12335',
     boringClr: 'rgb(15, 15, 15)',
     selectionClr: 'rgb(131, 241, 208)',
-    bgVariationClr: '#CBD2D7',
-    bgNestedClr: '#D4D9DE',
+    bgVariationClr: '#E87A72',
+    bgNestedClr: '#E88E72',
     captionClr: "#f0f2f598",
 
   },
@@ -96,12 +102,13 @@ const peachTheme: Theme = {
 
 const vividTheme: Theme = {
   colors: {
-    bgClr: '#0A0C10',
+    bgClr: 'linear-gradient(45deg,#ffd91b, #1b4395, #e663e3)',
+    optionClr: '#0A0C10',
     fancyClr: '#ffe885',
     boringClr: '#EF7B45',
     selectionClr: '#ce81a8',
-    bgVariationClr: '#121236',
-    bgNestedClr: '#59F1FF0f ',
+    bgVariationClr: '#080b10',
+    bgNestedClr: '#272729 ',
     captionClr: "#C270A8b0",
 
   },

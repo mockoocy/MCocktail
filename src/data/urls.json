@@ -3,5 +3,6 @@
   "urlAlcoholic": "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=",
   "urlIngredient": "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=",
   "urlName": "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=",
-  "urlListIngredients": "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+  "urlListIngredients": "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list",
+  "urlDetailsById" : "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007"
 }

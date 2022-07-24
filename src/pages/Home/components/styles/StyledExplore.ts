@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledExplore = styled.section`
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -48,7 +49,7 @@ const StyledExplore = styled.section`
       width: auto;
       height: 2.5rem;
       background-color: var(--boringClr);
-      color: var(--bgClr);
+      color: var(--OptionClr, --bgClr, --boringClr);
 
       &:hover {
         cursor: pointer;
@@ -82,7 +83,6 @@ const StyledExplore = styled.section`
     overflow-x: auto;
     background-color: var(--bgNestedClr);
     border-radius: 2rem;
-    padding: 0 1rem;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
     scrollbar-color: var(--fancyClr) var(--captionClr);
@@ -108,7 +108,7 @@ const StyledExplore = styled.section`
         transform: scale(1.05);
         }
     .caption {
-      background-color: var(--captionClr); //TODO CAPTION CLR
+      background-color: var(--captionClr); 
       color: var(--fancyClr);
       height: auto;
       font-size: 1.5rem;
@@ -125,14 +125,17 @@ const StyledExplore = styled.section`
 
 
   @media (max-width: 820px){
+    margin-top: 12.5vh;
     .options-container {
-    display: grid;
-    grid-template-columns: repeat(4, .20fr);
-    gap: 0.5rem;
-    grid-auto-rows: minmax(20%, auto);
+      display: grid;
+      grid-template-columns: repeat(3, .20fr);
+      justify-content: space-around;
+      grid-auto-rows: minmax(20%, auto);
+
       .option {
+        text-align: center;
         justify-content: center;
-        align-content   : center;
+        align-content: center;
         width: auto;
         height: 2rem;
         font-size: 0.75rem;
@@ -140,7 +143,7 @@ const StyledExplore = styled.section`
     }
     .carousel {
       margin: 0;
-      grid-auto-columns: 33.33  vw;
+      grid-auto-columns: 40vw;
 
 
     }
