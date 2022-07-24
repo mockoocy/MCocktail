@@ -65,6 +65,10 @@ const StyledNavbar = styled.nav`
       filter: 
     drop-shadow(.25rem .25rem var(--captionClr));
 
+    :hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
 
   }
 

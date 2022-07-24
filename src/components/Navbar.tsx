@@ -1,10 +1,12 @@
-import StyledNavbar from "./styles/StyledNavbar"
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import StyledNavbar from "./styles/StyledNavbar"
 import { Icon } from '@iconify/react';
 import {ReactComponent as Logo} from '../assets/LogoDark.svg';
 import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
 import Themes from "../data/themes"
 import {Theme} from "../types"
+
 type Props = {
   changeTheme: (theme: Theme) => void
 }
@@ -28,9 +30,16 @@ function Navbar({changeTheme}: Props){
         <Logo className="logo"/>
       </div>
       <div className="button-container" >
-        <Icon icon="akar-icons:heart" className="btn icon-hear"/>
-        <Icon icon="akar-icons:book" className="btn icon-book"/>
-        <Icon icon="ic:baseline-computer" className="btn icon-computer"/>
+        <NavLink to = '/'>
+          <Icon icon="akar-icons:heart" className="btn icon-hear"/>
+        </NavLink>
+
+        <NavLink to = '/'>
+          <Icon icon="akar-icons:book" className="btn icon-book"/>
+        </NavLink>
+        <NavLink to = '/'>
+          <Icon icon="ic:baseline-computer" className="btn icon-computer"/>
+        </NavLink>
         <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector}  />
         </div>
           {themeSelectorOpen 

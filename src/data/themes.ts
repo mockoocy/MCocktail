@@ -102,7 +102,7 @@ const vividTheme: Theme = {
     selectionClr: '#ce81a8',
     bgVariationClr: '#121236',
     bgNestedClr: '#59F1FF0f ',
-    captionClr: "#e7a1d9A0",
+    captionClr: "#C270A8b0",
 
   },
   utils: {

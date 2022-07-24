@@ -11,6 +11,7 @@ import { Theme } from './types';
 //Pages
 import Home from "./pages/Home/Home"
 import SingleDrink from "./pages/SingleDrink/SingleDrink"
+import Error from './pages/Error/Error';
 
 
 function App()  {
@@ -27,7 +28,8 @@ function changeTheme(theme: Theme){
         <Navbar changeTheme={changeTheme}/>
         <Routes>
           <Route path ='/' element={<Home/>}/>
-          <Route path ='single' element={<SingleDrink/>}/>
+          <Route path ='drink/:drinkId' element={<SingleDrink/>}/>
+          <Route path ='*' element={<Error/>}/>
         </Routes>
         <Footer/>
       </ThemeProvider>

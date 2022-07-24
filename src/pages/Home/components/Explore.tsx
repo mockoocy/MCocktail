@@ -1,11 +1,11 @@
 import React, { useEffect, useState} from "react";
-import StyledExplore from "./styles/StyledExplore";
 import Loader from "../../../components/Loader";
-import urls from "../../../data/urls.json";
-import {useApiGet} from "../../../hooks/useApiGet"
-import { TApiResponse } from "../../../types";
+import StyledExplore from "./styles/StyledExplore";
 import randomSample from "../../../utils/randomSample"
 import {Option} from "../../../types";
+import { TApiResponse } from "../../../types";
+import {useApiGet} from "../../../hooks/useApiGet"
+import urls from "../../../data/urls.json";
 
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
@@ -100,7 +100,7 @@ function Explore() {
   
   const cocktailElements = cocktails.map((cocktail,id) =>{
     return (
-      <div className="img-container" key={id}  data-ApiId={cocktail.idDrink}>
+      <div className="img-container" key={id}  data-drinkid={cocktail.idDrink}>
         <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
         <span className="caption">{cocktail.strDrink}</span>
       </div>
