@@ -36,7 +36,7 @@ const DEFAULT_OPTIONS: Option[] = [
 
 function Explore() {
   const [urlSelected, setUrlSelected] = useState(urls.urlDefault);
-  const [cocktailsLoading, setCocktailsLoading] = useState(false);
+  const [cocktailsLoading, setCocktailsLoading] = useState(true);
   const [cocktails, setCocktails] = useState<any[]>([]);
   const [options, setOptions] = useState<Option[]>(DEFAULT_OPTIONS);
 
