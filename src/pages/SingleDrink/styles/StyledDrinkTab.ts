@@ -4,7 +4,7 @@ const StyledDrinkTab = styled.section`
   background-color: var(--bgVariationClr);
   color: var(--boringClr);  
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   width: 80%;
   margin: 2.5% 10%;
   padding: 2.5%;
@@ -13,6 +13,7 @@ const StyledDrinkTab = styled.section`
 
 
   .img-container {
+      min-width: 35%;
       width: 60%;
 
     img {
@@ -23,7 +24,7 @@ const StyledDrinkTab = styled.section`
   }
 
   .info-container {
-    min-width: 60%;
+    min-width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +63,7 @@ const StyledDrinkTab = styled.section`
         -.125rem -.125rem .5rem var(--captionClr);
       }
       img {
-          height: 3rem;
+          height: 2rem;
         }
 
         * {
@@ -87,29 +88,45 @@ const StyledDrinkTab = styled.section`
     justify-content: space-around;
 
     .ingredients-glass {
-      padding: 0 2.5%;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      padding-right: 10%;
+      align-items: top;
       
     }
 
 
-    .ingredients-title, .glass-title {
+    .subtitle {
       color: var(--fancyClr);
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       text-shadow: .125rem .125rem .125rem var(--captionClr),
       -.125rem -.125rem .5rem var(--captionClr);
     }
-    .glass-type {
-      font-size: 1.5rem;
+    .ingredients-title {
+      font-size: 2.5rem;
+    }
+    .type {
+      font-size: 1.25rem;
     }
     .ingredients-list{
-      font-size: 1rem;
+      padding: 0;
+      font-size: 1.25rem;
       color: var(--boringClr);
+      
+      >li {
+        display: flex;
+        justify-content: space-between;
+
+      }
 
       *::marker {
-        content: '🍹 ';
+        content: '';
+      }
+    }
+    .instructions-container {
+      padding-top: 2.5%;
+      .instruction{
+        font-size: 1rem;
       }
     }
   }

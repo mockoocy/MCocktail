@@ -21,6 +21,16 @@ function DrinkTab({drink}: Props) {
     strIngredient1,
     ingredientsWithMeasures} = drink
 
+    const ingredients = Object.keys(ingredientsWithMeasures);
+    const ingredientElements = ingredients.map((ingredient, id) => (
+      <li className="ingredient"
+      key={id}>
+        <span className="ingredient-name">{ingredient}</span>
+        <span className="ingredient-measure">{ingredientsWithMeasures[ingredient]}</span>
+      </li>
+      )
+    )
+
   return (
     <StyledDrinkTab>
       <div className="img-container">
@@ -35,24 +45,21 @@ function DrinkTab({drink}: Props) {
               <h4 className="main-ingredient">{strIngredient1}</h4>
               <img src={`${urlImageByIngredient}${strIngredient1}.png`}  className="main-ingredient-image" />
             </div>
-            <div className="less-important-info">
-              <h5 className="alcohol">{strAlcoholic}</h5>
               <h5 className="iba">{strIBA}</h5>
-            </div>
           </div>
           <div className="preparation-info">
             <div className="ingredients-glass">
               <div className="ingredients-container">
-                <h3 className="ingredients-title">Ingredients:</h3>
+                <h3 className="ingredients-title subtitle">Ingredients:</h3>
                 <ul className="ingredients-list">
-                  <li className="ingredient">ingr1</li>
-                  <li className="ingredient">ingr221434231</li>
-                  <li className="ingredient">ingr3</li>
+                  {ingredientElements}
                 </ul>
               </div>
-                <div className="glass-container">
-                  <h3 className="glass-title">Glass type:</h3>
-                  <h4 className="glass-type">{strGlass}</h4>
+                <div className="glass-container alcoholic-container">
+                  <h3 className="glass-title subtitle">Glass type:</h3>
+                  <h4 className="glass-type type">{strGlass}</h4>
+                  <h3 className="alcoholic-title subtitle">Alcoholic:</h3>
+                  <h4 className="alcoholic-type type">{strAlcoholic}</h4>
                 </div>
             </div>
             <div className="instructions-container">

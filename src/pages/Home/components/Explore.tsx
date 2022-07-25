@@ -6,6 +6,7 @@ import {Option} from "../../../types";
 import { TApiResponse } from "../../../types";
 import {useApiGet} from "../../../hooks/useApiGet"
 import urls from "../../../data/urls.json";
+import { Link } from "react-router-dom";
 
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
@@ -102,10 +103,10 @@ function Explore() {
   
   const cocktailElements = cocktails.map((cocktail,id) =>{
     return (
-      <div className="img-container" key={id}  data-drinkid={cocktail.idDrink}>
+      <Link to={`/drink/${cocktail.idDrink}`} className="img-container" key={id}  data-drinkid={cocktail.idDrink}>
         <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
         <span className="caption">{cocktail.strDrink}</span>
-      </div>
+      </Link>
     )
 
   })
