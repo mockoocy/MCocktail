@@ -37,3 +37,23 @@ export type Option = {
   url: string;
   id: number
 }
+// Used in single drink page
+
+export interface IngredientsWithMeasures  {
+  [key: string]: string;
+}
+
+export type Drink = {
+  idDrink: string;
+  strDrink: string;
+  strCategory: string;
+  strIBA: string;
+  strAlcoholic: string;
+  strGlass: string;
+  strInstructions: string;
+  strDrinkThumb: string;
+  ingredientsWithMeasures: IngredientsWithMeasures;
+  // For a shortcut I have assigned some other attributes to the drink state. 
+  // I won't throw it away anyway, because of the suggestion I will get tahnks to this type 
+
+}

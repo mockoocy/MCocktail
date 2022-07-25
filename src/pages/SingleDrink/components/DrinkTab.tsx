@@ -1,8 +1,13 @@
 import React from 'react'
 import StyledDrinkTab from '../styles/StyledDrinkTab'
+import {Drink} from "../../../types"
 
+type Props = {
+  drink: Drink;
+}
 
-function DrinkTab() {
+function DrinkTab({drink}: Props) {
+  
   return (
     <StyledDrinkTab>
       <div className="drink-info-container">
