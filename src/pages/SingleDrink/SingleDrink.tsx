@@ -22,6 +22,7 @@ export default function SingleDrink(){
   strGlass: '',
   strInstructions: '',
   strDrinkThumb: '',
+  strIngredient1: '',
   ingredientsWithMeasures: {}
   });
 
@@ -29,12 +30,12 @@ export default function SingleDrink(){
   const {urlDetailsById} = urls;
 
   const fetchData : TApiResponse = useApiGet(`${urlDetailsById}${drinkId}`);
+  let drinkInfo: any = fetchData.data?.drinks[0];
 
   useEffect(()=>{
-  let drinkInfo: any = fetchData.data?.drinks[0];
   let ingredientsWithMeasures : IngredientsWithMeasures = {}
   if (fetchData.data?.drinks[0]){
-    const drinkData : any = fetchData.data.drinks[0];
+  const drinkData : any = fetchData.data.drinks[0];
 
     for (let i=1;i<MAX_INGREDIENT_NUMBER; i++){
       const ingredient = drinkData[`strIngredient${i}`];
@@ -47,6 +48,7 @@ export default function SingleDrink(){
   }
 
     if (drinkInfo){
+      console.log(drinkInfo)
       const {idDrink,
         strDrink,
         strCategory,
@@ -54,7 +56,8 @@ export default function SingleDrink(){
         strAlcoholic,
         strGlass,
         strInstructions,
-        strDrinkThumb} = drinkInfo 
+        strDrinkThumb,
+        strIngredient1} = drinkInfo 
       setDrink({idDrink,
         strDrink,
         strCategory,
@@ -63,10 +66,11 @@ export default function SingleDrink(){
         strGlass,
         strInstructions,
         strDrinkThumb,
+        strIngredient1,
         ingredientsWithMeasures});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  },[drinkInfo])
   return (
     <>
       {fetchData.loading
