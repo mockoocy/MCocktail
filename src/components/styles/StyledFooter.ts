@@ -11,7 +11,7 @@ position: relative;
 bottom: 0;
 
 @media (max-width:820px) {
-  font-size: 0.75rem; 
+  font-size: 0.75rem;
 }
 `
 

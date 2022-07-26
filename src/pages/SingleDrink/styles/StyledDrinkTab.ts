@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { textOutline } from "../../../utils/mixins";
+
+
 
 const StyledDrinkTab = styled.section`
   background-color: var(--bgVariationClr);
@@ -36,20 +39,18 @@ const StyledDrinkTab = styled.section`
       justify-content: center;
       align-items: center;
       width: 100%;
-    
       
       .drink-name {
         color: var(--fancyClr);
         font-size: 4rem;
-        text-shadow: .125rem .125rem .125rem var(--captionClr),
-        -.125rem -.125rem .5rem var(--captionClr);
+        ${textOutline(.125, .125, 'var(--captionClr)')}
+
       }
       .category {
         font-size: 2rem;
         color: var(--fancyClr);
         mix-blend-mode: luminosity;
-        text-shadow: .125rem .125rem .125rem var(--captionClr),
-        -.125rem -.125rem .5rem var(--captionClr);
+        ${textOutline(.125, .125, 'var(--captionClr)')}
       }
       .less-important-info {
         width: 100%;
@@ -65,8 +66,8 @@ const StyledDrinkTab = styled.section`
           color: var(--fancyClr);
           mix-blend-mode: luminosity;
           font-size: 2rem;
-          text-shadow: .125rem .125rem .125rem var(--captionClr),
-        -.125rem -.125rem .5rem var(--captionClr);
+          ${textOutline(.125, .125, 'var(--captionClr)')}
+
       }
 
       }
@@ -103,8 +104,8 @@ const StyledDrinkTab = styled.section`
     .subtitle {
       color: var(--fancyClr);
       font-size: 2.25rem;
-      text-shadow: .125rem .125rem .125rem var(--captionClr),
-      -.125rem -.125rem .5rem var(--captionClr);
+      ${textOutline(.125, .125, 'var(--captionClr)')}
+
     }
     .ingredients-title {
       font-size: 2.5rem;
