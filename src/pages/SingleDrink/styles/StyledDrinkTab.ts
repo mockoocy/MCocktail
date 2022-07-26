@@ -42,45 +42,48 @@ const StyledDrinkTab = styled.section`
         color: var(--fancyClr);
         font-size: 4rem;
         text-shadow: .125rem .125rem .125rem var(--captionClr),
-      -.125rem -.125rem .5rem var(--captionClr);
+        -.125rem -.125rem .5rem var(--captionClr);
       }
       .category {
         font-size: 2rem;
         color: var(--fancyClr);
         mix-blend-mode: luminosity;
         text-shadow: .125rem .125rem .125rem var(--captionClr),
-      -.125rem -.125rem .5rem var(--captionClr);
+        -.125rem -.125rem .5rem var(--captionClr);
+      }
+      .less-important-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2ch;
+        * {
+          font-size: 2rem;
+        }
+        
+        .main-ingredient, .iba{
+          color: var(--fancyClr);
+          mix-blend-mode: luminosity;
+          font-size: 2rem;
+          text-shadow: .125rem .125rem .125rem var(--captionClr),
+        -.125rem -.125rem .5rem var(--captionClr);
+      }
+
       }
       .main-ingredient-container{
         display: flex;
         justify-content: center;
         align-items: center;
-        .main-ingredient{
-          font-size: 1.5rem;
-          color: var(--fancyClr);
-          mix-blend-mode: luminosity;
-          text-shadow: .125rem .125rem .125rem var(--captionClr),
-        -.125rem -.125rem .5rem var(--captionClr);
-      }
+
+
       img {
           height: 2rem;
         }
 
-        * {
-          font-size: 1rem;
-        }
       }
 
     }
 
-    .less-important-info {
-      width: 40%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 2ch;
-    }
   }
   .preparation-info {
     display: flex;
@@ -94,6 +97,7 @@ const StyledDrinkTab = styled.section`
       align-items: top;
       
     }
+
 
 
     .subtitle {
@@ -124,9 +128,52 @@ const StyledDrinkTab = styled.section`
       }
     }
     .instructions-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding-top: 2.5%;
       .instruction{
+        font-size: 1.25rem;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width:820px){
+    flex-direction: column; 
+    margin-top: 12.5vh;
+
+    .img-container {
+      width: 100%;
+      height: 40%;
+    }
+    .info-container{
+      width: 100%;
+
+      .ingredients-glass {
+        flex-direction: column;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+      }
+      .type {
+        font-size: 0.75rem;
+      }
+
+      .ingredients-list{
         font-size: 1rem;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .glass-alcohol {
+        flex-direction: column;
       }
     }
   }

@@ -40,12 +40,14 @@ function DrinkTab({drink}: Props) {
         <div className="info-container">
           <div className="main-info">
             <h1 className="drink-name">{strDrink}</h1>
-            <h3 className="category">{strCategory}</h3>
-            <div className="main-ingredient-container">
-              <h4 className="main-ingredient">{strIngredient1}</h4>
-              <img src={`${urlImageByIngredient}${strIngredient1}.png`}  className="main-ingredient-image" />
+              <h3 className="category">{strCategory}</h3>
+            <div className="less-important-info">
+              <div className="main-ingredient-container">
+                <h4 className="main-ingredient">{strIngredient1}</h4>
+                <img src={`${urlImageByIngredient}${strIngredient1}.png`}  alt=""  className="main-ingredient-image" />
+              </div>
+                <h5 className="iba">{strIBA}</h5>
             </div>
-              <h5 className="iba">{strIBA}</h5>
           </div>
           <div className="preparation-info">
             <div className="ingredients-glass">
@@ -55,15 +57,20 @@ function DrinkTab({drink}: Props) {
                   {ingredientElements}
                 </ul>
               </div>
-                <div className="glass-container alcoholic-container">
+              <div className="glass-alcohol container">
+
+                <div className="container glass-container">
                   <h3 className="glass-title subtitle">Glass type:</h3>
                   <h4 className="glass-type type">{strGlass}</h4>
+                </div>
+                <div className="container alcoholic-container">
                   <h3 className="alcoholic-title subtitle">Alcoholic:</h3>
                   <h4 className="alcoholic-type type">{strAlcoholic}</h4>
                 </div>
+              </div>
             </div>
             <div className="instructions-container">
-              <h2 className="instructions">Instructions:</h2>
+              <h2 className="instructions subtitle">Instructions:</h2>
               <p className="instruction">{strInstructions}</p>
             </div>
           </div>

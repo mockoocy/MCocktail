@@ -8,7 +8,11 @@ align-items: center;
 background-color: var(--captionClr);
 width: 100%;
 position: relative;
-bottom: 0
+bottom: 0;
+
+@media (max-width:820px) {
+  font-size: 0.75rem; 
+}
 `
 
 export default StyledFooter
