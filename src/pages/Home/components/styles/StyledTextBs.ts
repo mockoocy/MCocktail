@@ -53,7 +53,7 @@ h1 {
     width: 50%;
     height: 50%;
     position: relative;
-    filter: saturate(calc(0.35 * var(--navSaturation) + 30%));
+    filter: saturate(calc(0.35 * var(--navSaturation) + 30%)) hue-rotate(var(--hueRotateDeg));
 
   }
   .robot {

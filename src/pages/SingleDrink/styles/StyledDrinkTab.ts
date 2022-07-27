@@ -23,6 +23,7 @@ const StyledDrinkTab = styled.section`
       width: 100%;
       height: 100%;
       border-radius: 4rem;
+      filter: drop-shadow( .25rem .25rem  .125rem var(--boringClr));
     }
   }
 
@@ -121,7 +122,7 @@ const StyledDrinkTab = styled.section`
       >li {
         display: flex;
         justify-content: space-between;
-
+        gap: 1rem;
       }
 
       *::marker {

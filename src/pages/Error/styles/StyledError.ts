@@ -7,6 +7,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 2.5%;
+
   h1 {
     color: var(--boringClr);
     mix-blend-mode: difference;
@@ -15,6 +16,7 @@ padding: 2.5%;
   .svg {
     width: 60vw;
     height: 60vh;
+    filter: hue-rotate(var(--hueRotateDeg));
 
   }
 `

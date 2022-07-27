@@ -9,9 +9,11 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
   --selectionClr: ${({theme})=>theme.colors.selectionClr};
   --bgVariationClr: ${({theme})=>theme.colors.bgVariationClr};
   --captionClr: ${({theme})=>theme.colors.captionClr};
-  --navSaturation: ${({theme})=>theme.utils.navSaturation};
   --bgNestedClr: ${({theme})=>theme.colors.bgNestedClr};
   --OptionClr: ${({theme})=>theme.colors.optionClr};
+  --navSaturation: ${({theme})=>theme.utils.navSaturation};
+  --hueRotateDeg: ${({theme})=>theme.utils.hueRotateDeg};
+
 
 
 

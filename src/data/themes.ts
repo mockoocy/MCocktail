@@ -28,7 +28,8 @@ const fuschiaTheme: Theme = {
     captionClr: "#0f0f0fa0",
   },
   utils: {
-    navSaturation: '100%'
+    navSaturation: '100%',
+    hueRotateDeg: '150deg'
   }
 }
 
@@ -62,7 +63,8 @@ const greenTheme: Theme = {
 
   },
   utils: {
-    navSaturation: '100%'
+    navSaturation: '100%',
+    hueRotateDeg: '300deg'
   }
 }
 
@@ -79,7 +81,9 @@ const lightTheme: Theme = {
 
   },
   utils: {
-    navSaturation: '140%'
+    navSaturation: '140%',
+    hueRotateDeg: '45deg'
+
   }
 }
 
@@ -96,7 +100,8 @@ const peachTheme: Theme = {
 
   },
   utils: {
-    navSaturation: '140%'
+    navSaturation: '140%',
+    hueRotateDeg: '200deg'
   }
 }
 
@@ -113,7 +118,8 @@ const vividTheme: Theme = {
 
   },
   utils: {
-    navSaturation: '250%'
+    navSaturation: '250%',
+    hueRotateDeg: '60deg'
   }
 }
 

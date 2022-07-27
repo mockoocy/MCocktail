@@ -6,14 +6,14 @@ type Colors = {
   boringClr: string;
   bgVariationClr: string;
   bgNestedClr: string;
-  optionClr ?: string;
-  selectionClr ?: string;
-  captionClr ?: string;
-
+  optionClr : string;
+  selectionClr : string;
+  captionClr : string;
 }
 
 type Utils = {
   navSaturation: string;
+  hueRotateDeg?: string;
 }
 
 export type Theme = {
