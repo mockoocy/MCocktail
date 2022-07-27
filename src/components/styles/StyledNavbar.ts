@@ -35,6 +35,10 @@ const StyledNavbar = styled.nav`
     
   }
 
+  .logo, .logo-text {
+    filter: hue-rotate(var(--hueRotateDeg));
+  }
+
   .logo {
     width: 2rem;
     height: 2rem;

@@ -30,7 +30,7 @@ function Navbar({changeTheme}: Props){
         <Logo className="logo"/>
       </div>
       <div className="button-container" >
-        <NavLink to = '/'>
+        <NavLink to = '/thanks'>
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>
         </NavLink>
 

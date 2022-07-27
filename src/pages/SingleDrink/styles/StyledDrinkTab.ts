@@ -44,7 +44,8 @@ const StyledDrinkTab = styled.section`
       .drink-name {
         color: var(--fancyClr);
         font-size: 4rem;
-        ${textOutline(.125, .125, 'var(--captionClr)')}
+        ${textOutline(.125, .125, 'var(--captionClr)')};
+        font-weight: 600;
 
       }
       .category {
@@ -105,7 +106,9 @@ const StyledDrinkTab = styled.section`
     .subtitle {
       color: var(--fancyClr);
       font-size: 2.25rem;
-      ${textOutline(.125, .125, 'var(--captionClr)')}
+      ${textOutline(.125, .125, 'var(--captionClr)')};
+      font-weight: 600;
+
 
     }
     .ingredients-title {
@@ -113,6 +116,7 @@ const StyledDrinkTab = styled.section`
     }
     .type {
       font-size: 1.25rem;
+      font-style: italic;
     }
     .ingredients-list{
       padding: 0;
@@ -123,6 +127,11 @@ const StyledDrinkTab = styled.section`
         display: flex;
         justify-content: space-between;
         gap: 1rem;
+
+        .ingredient-measure {
+          font-weight: 400;
+          font-style: italic;
+        }
       }
 
       *::marker {
