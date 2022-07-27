@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { textOutline } from "../../../utils/mixins";
-
+import { textOutline, dropShadowOutline } from "../../../utils/mixins";
 
 
 const StyledDrinkTab = styled.section`
@@ -18,12 +17,32 @@ const StyledDrinkTab = styled.section`
   .img-container {
       min-width: 35%;
       width: 60%;
+      position: relative;
+
 
     img {
       width: 100%;
       height: 100%;
       border-radius: 4rem;
-      filter: drop-shadow( .25rem .25rem  .125rem var(--boringClr));
+      ${dropShadowOutline(.0625, .0625, 'var(--boringClr)')};
+    }
+    #star {
+      height: 4rem;
+      width: 4rem;
+      ${dropShadowOutline(.0625, .0625, '#000')};
+      color: #fff; 
+      mix-blend-mode: multiply;
+      position: absolute;
+      margin: 0 10%;
+      top: 2.5%;
+      right: 0;
+      transition: all 150ms linear;
+
+      &:hover {
+        transform: scale(1.15);
+        color: var(--fancyClr)
+        
+      }
     }
   }
 
@@ -158,6 +177,11 @@ const StyledDrinkTab = styled.section`
     .img-container {
       width: 100%;
       height: 40%;
+
+      #star {
+        height: 2rem;
+      }
+
     }
     .info-container{
       width: 100%;

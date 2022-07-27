@@ -1,7 +1,8 @@
-import React from 'react'
-import StyledDrinkTab from '../styles/StyledDrinkTab'
-import {Drink} from "../../../types"
-import urls from "../../../data/urls.json"
+import React from 'react';
+import StyledDrinkTab from '../styles/StyledDrinkTab';
+import {Drink} from "../../../types";
+import urls from "../../../data/urls.json";
+import { Icon } from '@iconify/react';
 
 const {urlImageByIngredient} = urls;
 
@@ -35,6 +36,7 @@ function DrinkTab({drink}: Props) {
     <StyledDrinkTab>
       <div className="img-container">
           <img src={strDrinkThumb} alt={strDrink} className="drink-image" />
+          <Icon icon="carbon:star-filled" id="star"/> 
       </div>
         
         <div className="info-container">

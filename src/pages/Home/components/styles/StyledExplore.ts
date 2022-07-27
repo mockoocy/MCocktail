@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { textOutline } from "../../../../utils/mixins";
 
 const StyledExplore = styled.section`
   padding: 0 1rem;
@@ -29,8 +30,7 @@ const StyledExplore = styled.section`
     font-size: 3.25rem;
     letter-spacing: 0.25rem;
     color: var(--fancyClr);
-    text-shadow: .125rem .125rem .125rem var(--boringClr),
-    -.125rem -.125rem .5rem var(--boringClr);
+    ${textOutline(.125, .125, 'var(--boringClr)')}
   }
   .options-container {
     display: flex;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { textOutline } from "../../../utils/mixins";
 
 const StyledThanks = styled.section`
 padding-top: 2.5%;
@@ -11,6 +12,7 @@ align-items: center;
     color: var(--fancyClr);
     font-size: 6rem;
     font-family: Lato, sans-serif;
+    ${textOutline(.125, .25, 'var(--boringClr)')}
   }
 
   .love-container {
@@ -22,6 +24,7 @@ align-items: center;
     }
     ul {
       color: var(--boringClr);
+
       font-size: 3rem;
       font-family: Inter, sans-serif;
 

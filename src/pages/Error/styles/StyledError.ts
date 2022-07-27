@@ -11,7 +11,7 @@ padding: 2.5%;
   h1 {
     color: var(--boringClr);
     mix-blend-mode: difference;
-    filter: drop-shadow(.125rem .125rem .0625rem var(--fancyClr))
+    filter: drop-shadow(.125rem .125rem .0625rem var(--fancyClr));
   }
   .svg {
     width: 60vw;

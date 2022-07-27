@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import StyledNavbar from "./styles/StyledNavbar"
 import { Icon } from '@iconify/react';
 import {ReactComponent as Logo} from '../assets/LogoDark.svg';
@@ -25,10 +25,10 @@ function Navbar({changeTheme}: Props){
 
   return (
     <StyledNavbar onClick={themeSelectorOpen ? closeThemeSelector : undefined} >
-      <div className="logo-container">
+      <Link to="/" className="logo-container">
         <LogoTextDark className="logo-text"/>
         <Logo className="logo"/>
-      </div>
+      </Link>
       <div className="button-container" >
         <NavLink to = '/thanks'>
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>
