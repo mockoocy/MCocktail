@@ -16,9 +16,14 @@ import Thanks from './pages/Thanks/Thanks';
 
 
 function App()  {
-  const [theme, setTheme] = useState(Themes.darkTheme);
+  const themeFromStorage = localStorage.getItem("theme");
+
+  const [theme, setTheme] = useState(themeFromStorage ? JSON.parse(themeFromStorage) : Themes.darkTheme);
+
+
 
 function changeTheme(theme: Theme){
+  localStorage.setItem("theme", JSON.stringify(theme))
   setTheme(theme)
 }
 
