@@ -10,9 +10,6 @@ import {Drink, IngredientsWithMeasures } from "../../types"
 export default function SingleDrink(){
   const MAX_INGREDIENT_NUMBER = 16;
 
-
-
-
   const [drink, setDrink] = useState<Drink>({
   idDrink: '',
   strDrink: '',

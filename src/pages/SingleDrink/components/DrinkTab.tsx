@@ -3,15 +3,19 @@ import StyledDrinkTab from '../styles/StyledDrinkTab';
 import {Drink} from "../../../types";
 import urls from "../../../data/urls.json";
 import { Icon } from '@iconify/react';
-
+import { useGlobalContext } from '../../../context';
 const {urlImageByIngredient} = urls;
 
 type Props = {
   drink: Drink;
 }
 
+
 function DrinkTab({drink}: Props) {
+  const {updateFavoriteList, favoriteList} = useGlobalContext();
+
   const {
+    idDrink,
     strDrink,
     strCategory,
     strIBA,
@@ -36,7 +40,9 @@ function DrinkTab({drink}: Props) {
     <StyledDrinkTab>
       <div className="img-container">
           <img src={strDrinkThumb} alt={strDrink} className="drink-image" />
-          <Icon icon="carbon:star-filled" id="star"/> 
+          <Icon icon="carbon:star-filled" id="star" 
+          onClick={() => updateFavoriteList(idDrink)}
+          className={favoriteList.includes(idDrink) ? "active" : ""}/> 
       </div>
         
         <div className="info-container">

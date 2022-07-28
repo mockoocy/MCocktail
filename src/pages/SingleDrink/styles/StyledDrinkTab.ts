@@ -36,12 +36,16 @@ const StyledDrinkTab = styled.section`
       margin: 0 10%;
       top: 2.5%;
       right: 0;
-      transition: all 150ms linear;
+      transition: all 450ms linear;
 
       &:hover {
         transform: scale(1.15);
-        color: var(--fancyClr)
+        color: var(--fancyClr);
+
+      }
         
+      &.active {
+        color: var(--fancyClr);
       }
     }
   }
