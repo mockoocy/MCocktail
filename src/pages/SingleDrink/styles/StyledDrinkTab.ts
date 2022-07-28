@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { textOutline, dropShadowOutline } from "../../../utils/mixins";
 
-
 const StyledDrinkTab = styled.section`
   background-color: var(--bgVariationClr);
   color: var(--boringClr);  
@@ -24,14 +23,13 @@ const StyledDrinkTab = styled.section`
       width: 100%;
       height: 100%;
       border-radius: 4rem;
-      ${dropShadowOutline(.0625, .0625, 'var(--boringClr)')};
+      filter: ${dropShadowOutline(.0625, .0625, 'var(--boringClr)')};
     }
     #star {
       height: 4rem;
       width: 4rem;
-      ${dropShadowOutline(.0625, .0625, '#000')};
-      color: #fff; 
-      mix-blend-mode: multiply;
+      filter: ${dropShadowOutline(.0625, .0625, '#000')};
+      color: #ddd; 
       position: absolute;
       margin: 0 10%;
       top: 2.5%;
@@ -119,7 +117,7 @@ const StyledDrinkTab = styled.section`
     .ingredients-glass {
       display: flex;
       justify-content: space-between;
-      padding-right: 10%;
+      gap: 1rem;
       align-items: top;
       
     }

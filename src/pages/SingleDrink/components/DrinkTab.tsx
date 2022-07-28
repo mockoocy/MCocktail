@@ -13,7 +13,6 @@ type Props = {
 
 function DrinkTab({drink}: Props) {
   const {updateFavoriteList, favoriteList} = useGlobalContext();
-
   const {
     idDrink,
     strDrink,
@@ -26,6 +25,7 @@ function DrinkTab({drink}: Props) {
     strIngredient1,
     ingredientsWithMeasures} = drink
 
+    const isFavorite = favoriteList.includes(idDrink) ? true : false;
     const ingredients = Object.keys(ingredientsWithMeasures);
     const ingredientElements = ingredients.map((ingredient, id) => (
       <li className="ingredient"
@@ -42,12 +42,12 @@ function DrinkTab({drink}: Props) {
           <img src={strDrinkThumb} alt={strDrink} className="drink-image" />
           <Icon icon="carbon:star-filled" id="star" 
           onClick={() => updateFavoriteList(idDrink)}
-          className={favoriteList.includes(idDrink) ? "active" : ""}/> 
+          className={isFavorite ? "active" : ""}/> 
       </div>
         
         <div className="info-container">
           <div className="main-info">
-            <h1 className="drink-name">{strDrink}</h1>
+            <h1 className="drink-name">{strDrink} {`${isFavorite ? '✨' : ''}`}</h1>
               <h3 className="category">{strCategory}</h3>
             <div className="less-important-info">
               <div className="main-ingredient-container">

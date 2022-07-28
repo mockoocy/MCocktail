@@ -17,8 +17,6 @@ export function AppProvider({children}: Props) {
   function updateFavoriteList(idDrink: string){
     setFavoriteList(prevList => prevList.includes(idDrink) ? prevList.filter(id => id !== idDrink) : [...prevList, idDrink]
     );
-    console.log(favoriteList);
-    
     localStorage.setItem("favoriteList", JSON.stringify(favoriteList))
     
   }
