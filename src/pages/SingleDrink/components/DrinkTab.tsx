@@ -25,7 +25,7 @@ function DrinkTab({drink}: Props) {
     strIngredient1,
     ingredientsWithMeasures} = drink
 
-    const isFavorite = favoriteList.includes(idDrink) ? true : false;
+    const isFavorite = favoriteList.some((drink:Drink) => drink.idDrink ) ? true : false;
     const ingredients = Object.keys(ingredientsWithMeasures);
     const ingredientElements = ingredients.map((ingredient, id) => (
       <li className="ingredient"
@@ -41,7 +41,7 @@ function DrinkTab({drink}: Props) {
       <div className="img-container">
           <img src={strDrinkThumb} alt={strDrink} className="drink-image" />
           <Icon icon="carbon:star-filled" id="star" 
-          onClick={() => updateFavoriteList(idDrink)}
+          onClick={() => updateFavoriteList(drink)}
           className={isFavorite ? "active" : ""}/> 
       </div>
         

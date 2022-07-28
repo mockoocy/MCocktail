@@ -13,6 +13,7 @@ import Home from "./pages/Home/Home"
 import SingleDrink from "./pages/SingleDrink/SingleDrink"
 import Error from './pages/Error/Error';
 import Thanks from './pages/Thanks/Thanks';
+import Favourites from './pages/Favourites/Favourites';
 
 
 function App()  {
@@ -23,8 +24,8 @@ function App()  {
 
 
 function changeTheme(theme: Theme){
-  localStorage.setItem("theme", JSON.stringify(theme))
-  setTheme(theme)
+  localStorage.setItem("theme", JSON.stringify(theme));
+  setTheme(theme);
 }
 
   return (
@@ -36,6 +37,7 @@ function changeTheme(theme: Theme){
           <Route path ='/' element={<Home/>}/>
           <Route path ='drink/:drinkId' element={<SingleDrink/>}/>
           <Route path="/thanks/" element={<Thanks/>}/>
+          <Route path ="/favs/" element={<Favourites/>}/>
           <Route path ='*' element={<Error/>}/>
         </Routes>
 

@@ -1,22 +1,26 @@
 import React, {useContext, useState} from "react";
+import { Drink, FavoriteDrink } from "./types";
 
 type Props = {
   children: JSX.Element;
 }
 
 
-export const AppContext = React.createContext<any>({});
+export const AppContext = React.createContext<any>({favoriteList: []});
 
 export function AppProvider({children}: Props) {
   
   const localFavoriteList = localStorage.getItem('favoriteList')
 
-  const [favoriteList, setFavoriteList] = useState<string[]>(localFavoriteList 
+  const [favoriteList, setFavoriteList] = useState<FavoriteDrink[]>(localFavoriteList 
     ? JSON.parse(localFavoriteList) : []);
 
-  function updateFavoriteList(idDrink: string){
-    setFavoriteList(prevList => prevList.includes(idDrink) ? prevList.filter(id => id !== idDrink) : [...prevList, idDrink]
-    );
+  function updateFavoriteList({idDrink, strDrinkThumb} : FavoriteDrink){
+    const currentDrink = {idDrink, strDrinkThumb};
+    setFavoriteList(prevList => prevList.some(drink => drink.idDrink === idDrink) ?
+    prevList.filter(drink => drink.idDrink !== idDrink) 
+    : [...prevList, currentDrink])
+      ;
     localStorage.setItem("favoriteList", JSON.stringify(favoriteList))
     
   }

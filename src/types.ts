@@ -56,5 +56,9 @@ export type Drink = {
   ingredientsWithMeasures: IngredientsWithMeasures;
   // For a shortcut I have assigned some other attributes to the drink state. 
   // I won't throw it away anyway, because of the suggestion I will get tahnks to this type 
+}
 
+export type FavoriteDrink = {
+  idDrink: string;
+  strDrinkThumb: string
 }

@@ -34,7 +34,7 @@ function Navbar({changeTheme}: Props){
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>
         </NavLink>
 
-        <NavLink to = '/'>
+        <NavLink to = '/favs/'>
           <Icon icon="akar-icons:book" className="btn icon-book"/>
         </NavLink>
         <NavLink to = '/'>
