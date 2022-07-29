@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import StyledNavbar from "./styles/StyledNavbar";
+import SearchBar from "./SearchBar";
 import { Link, NavLink } from "react-router-dom";
-import StyledNavbar from "./styles/StyledNavbar"
 import { Icon } from '@iconify/react';
 import {ReactComponent as Logo} from '../assets/LogoDark.svg';
 import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
@@ -29,6 +30,7 @@ function Navbar({changeTheme}: Props){
         <LogoTextDark className="logo-text"/>
         <Logo className="logo"/>
       </Link>
+      <SearchBar />
       <div className="button-container" >
         <NavLink to = '/thanks'>
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>

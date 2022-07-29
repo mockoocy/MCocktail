@@ -15,13 +15,9 @@ const StyledNavbar = styled.nav`
   filter: saturate(var(--navSaturation));
   border-bottom: 0.25rem solid var(--boringClr);
 
-  * {
-    max-height: 15%;
-  }
 
   button {
     cursor: pointer;
-
     background: transparent;
     border: 0;
   }
@@ -85,6 +81,7 @@ const StyledNavbar = styled.nav`
     width: 10ch;
     right: 5%;
     bottom: 0;
+    max-height: 15%;
     &>li {
       width: 10ch;
       background-color: var(--boringClr);
