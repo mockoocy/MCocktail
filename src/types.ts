@@ -60,5 +60,6 @@ export type Drink = {
 
 export type FavoriteDrink = {
   idDrink: string;
-  strDrinkThumb: string
+  strDrinkThumb: string;
+  strDrink: string;
 }

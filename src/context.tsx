@@ -15,15 +15,16 @@ export function AppProvider({children}: Props) {
   const [favoriteList, setFavoriteList] = useState<FavoriteDrink[]>(localFavoriteList 
     ? JSON.parse(localFavoriteList) : []);
 
-  function updateFavoriteList({idDrink, strDrinkThumb} : FavoriteDrink){
-    const currentDrink = {idDrink, strDrinkThumb};
-    setFavoriteList(prevList => prevList.some(drink => drink.idDrink === idDrink) ?
-    prevList.filter(drink => drink.idDrink !== idDrink) 
-    : [...prevList, currentDrink])
-      ;
+  function updateFavoriteList({idDrink, strDrinkThumb, strDrink} : FavoriteDrink){
+    const currentDrink = {idDrink, strDrinkThumb, strDrink};
+    setFavoriteList(prevList => {
+      return prevList.some(drink => drink.idDrink === idDrink) 
+      ? prevList.filter(drink => drink.idDrink !== idDrink) 
+      : [...prevList, currentDrink]
+      })
     localStorage.setItem("favoriteList", JSON.stringify(favoriteList))
-    
-  }
+    }
+    //TODO; useDebounce hook in order to prevent favoriteList from being async to local storage
 
   return (
     <AppContext.Provider value={{

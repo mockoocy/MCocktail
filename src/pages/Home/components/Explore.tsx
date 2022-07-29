@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from "react";
 import Loader from "../../../components/Loader";
 import StyledExplore from "./styles/StyledExplore";
+import Cocktail from "../../../components/Cocktail";
 import randomSample from "../../../utils/randomSample"
 import {Option} from "../../../types";
 import { TApiResponse } from "../../../types";
@@ -103,10 +104,12 @@ function Explore() {
   
   const cocktailElements = cocktails.map((cocktail,id) =>{
     return (
-      <Link to={`/drink/${cocktail.idDrink}`} className="img-container" key={id}  data-drinkid={cocktail.idDrink}>
-        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-        <span className="caption">{cocktail.strDrink}</span>
-      </Link>
+      <Cocktail 
+        key={id}
+        strDrinkThumb={cocktail.strDrinkThumb}
+        strDrink={cocktail.strDrink}
+        idDrink={cocktail.idDrink}
+      />
     )
 
   })
