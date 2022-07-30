@@ -56,7 +56,7 @@ const greenTheme: Theme = {
     optionClr: '#f5faf5',
     fancyClr: '#DDFFC7',
     boringClr: 'rgb(15, 15, 15)',
-    selectionClr: 'rgb(131, 241, 208)',
+    selectionClr: '#E9C7FF',
     bgNestedClr: '#fff',
     bgVariationClr: '#f8fff8',
     captionClr : "#0f0f0fa0"
@@ -74,7 +74,7 @@ const lightTheme: Theme = {
     optionClr: '#f0f2f5',
     fancyClr: '#005ce6',
     boringClr: 'rgb(15, 15, 15)',
-    selectionClr: 'rgb(131, 241, 208)',
+    selectionClr: '#E68A00',
     bgVariationClr: '#f8f8f8',
     bgNestedClr: '#fff',
     captionClr: "#f0f2f598",
@@ -89,11 +89,11 @@ const lightTheme: Theme = {
 
 const peachTheme: Theme = {
   colors: {
-    bgClr: 'linear-gradient(45deg,#ff5858,#ffc8c8)',
+    bgClr: 'linear-gradient(45deg,#ffc8c8,#ff5858,#ffc8c8)',
     optionClr: '#c2cad0'  ,
     fancyClr: '#D12335',
     boringClr: 'rgb(15, 15, 15)',
-    selectionClr: 'rgb(131, 241, 208)',
+    selectionClr: '#23D1C0  ',
     bgVariationClr: '#E87A72',
     bgNestedClr: '#E88E72',
     captionClr: "#f0f2f598",

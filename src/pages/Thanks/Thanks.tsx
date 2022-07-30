@@ -15,6 +15,7 @@ function Thanks() {
           <li>React team for providing amazing tools to make this website possible</li>
           <li>Typescript team for saving me from painful debugging</li>
           <li>Styled Components contributors for a nice css in js solution</li>
+          <li>People who answer questions on Stack Overflow!</li>
         </ul>
       </div>
     </StyledThanks>

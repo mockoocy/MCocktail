@@ -7,7 +7,6 @@ import {Option} from "../../../types";
 import { TApiResponse } from "../../../types";
 import {useApiGet} from "../../../hooks/useApiGet"
 import urls from "../../../data/urls.json";
-import { Link } from "react-router-dom";
 
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
@@ -80,7 +79,6 @@ function Explore() {
       setCocktailsLoading(true)
       try {
         const response = await fetch(urlSelected);
-        console.log(urlSelected)
         const data = await response.json();
         const drinksSample = await randomSample(data.drinks, COCKTAIL_AMOUNT);
         setCocktails(drinksSample);
