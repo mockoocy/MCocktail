@@ -7,6 +7,7 @@ import {ReactComponent as Logo} from '../assets/LogoDark.svg';
 import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
 import Themes from "../data/themes"
 import {Theme} from "../types"
+import useOuterClick from "../hooks/useOuterClick"
 
 type Props = {
   changeTheme: (theme: Theme) => void
@@ -14,7 +15,7 @@ type Props = {
 
 function Navbar({changeTheme}: Props){
   const [themeSelectorOpen, setThemeSelectorOpen] = useState(false);
-
+  const themeSelectorRef = useOuterClick(closeThemeSelector)
   function openThemeSelector(){
     setThemeSelectorOpen(true)
   }
@@ -25,7 +26,7 @@ function Navbar({changeTheme}: Props){
 
 
   return (
-    <StyledNavbar onClick={themeSelectorOpen ? closeThemeSelector : undefined} >
+    <StyledNavbar >
       <Link to="/" className="logo-container">
         <LogoTextDark className="logo-text"/>
         <Logo className="logo"/>
@@ -42,7 +43,7 @@ function Navbar({changeTheme}: Props){
         <NavLink to = '/'>
           <Icon icon="ic:baseline-computer" className="btn icon-computer"/>
         </NavLink>
-        <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector}  />
+        <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector} ref={themeSelectorRef} />
         </div>
           {themeSelectorOpen 
           &&

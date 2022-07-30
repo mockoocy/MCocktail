@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import StyledSearchBar from './styles/StyledSearchBar';
 import {Icon} from '@iconify/react';
 import { DebounceInput } from 'react-debounce-input';
