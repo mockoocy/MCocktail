@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { dropShadowOutline } from "../../utils/mixins";
 const StyledSearchBar = styled.div`
-
+// TODO: MOBILE VERSION!!
 position: relative;
 display: flex;
 align-items: center;
@@ -73,6 +73,12 @@ ul {
   flex-direction: column;
   
   align-items: center;
+
+  h1 {
+    color: var(--boringClr);
+    text-align: center;
+    width: 100%;
+  }
   li {
     width: 95%;
     height: 4rem;

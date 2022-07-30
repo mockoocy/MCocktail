@@ -1,14 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StyledSearchBar from './styles/StyledSearchBar';
 import {Icon} from '@iconify/react';
 import { DebounceInput } from 'react-debounce-input';
 import urls from "../data/urls.json"
 import { Link } from 'react-router-dom';
+import useOuterClick from '../hooks/useOuterClick';
 
 function SearchBar() {
 
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [foundDrinks, setFoundDrinks] = useState<any[]>([]);
+  const [showResults, setShowResults] = useState(false);  
+  const resultsRef = useOuterClick(() => setShowResults(false))
+
+
   function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>){
     const inputValue = e.target.value;
     setSearchTerm(inputValue);
@@ -18,7 +23,8 @@ function SearchBar() {
     fetch(`${urls.urlName}${searchTerm}`)
       .then(res => res.json())
       .then(data=>{
-        (searchTerm && data.drinks) ? setFoundDrinks(data.drinks) : setFoundDrinks([])
+        (searchTerm && data.drinks) ? setFoundDrinks(data.drinks) : setFoundDrinks([0]);
+        setShowResults(true)
       })
   }
   useEffect(()=>{
@@ -37,7 +43,7 @@ function SearchBar() {
   
   ))
   return (
-    <StyledSearchBar>
+    <StyledSearchBar onClick={()=> setShowResults(true)} ref={resultsRef}>
       <Icon icon="fe:search" id="search-icon"/>
       <DebounceInput 
         type="text" 
@@ -49,11 +55,16 @@ function SearchBar() {
         onChange={e => handleSearchChange(e)}
         value={searchTerm}
         />
-        <div id="result-container">
+          {showResults  &&
+        <div id="result-container" >
           <ul>
-          {searchResultElements}
+            {foundDrinks.length > 0 
+            ? searchResultElements
+            : <h1>IT'S EMPTY!</h1>
+          }
           </ul>
         </div>
+          }
     </StyledSearchBar>
   )
 }
