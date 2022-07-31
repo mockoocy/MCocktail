@@ -24,10 +24,9 @@ export const useApiGet = (url: string): TApiResponse => {
   };
 
   useEffect(() => {
-    // react exhaustive deps fix; otherwise - empty deps and linter comment 
-    if (loading || data) return; 
     getAPIData();
-  }, [getAPIData, data, loading]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return { status, statusText, data, error, loading };
 };

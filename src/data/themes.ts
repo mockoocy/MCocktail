@@ -123,6 +123,25 @@ const vividTheme: Theme = {
   }
 }
 
+const happyTheme: Theme = {
+  colors: {
+    bgClr: 'linear-gradient( 90deg, rgba(255,187,187,1) -8.8%, rgba(255,220,177,1) 12.4%, rgba(255,249,177,1) 35.6%, rgba(220,255,177,1) 59.6%, rgba(177,218,255,1) 84%, rgba(222,177,255,1) 107.9% )',
+    optionClr: '#0A0C10',
+    fancyClr: '#FF5A5C',
+    boringClr: '#E1FF59',
+    selectionClr: '#5CFFFC  ',
+    bgVariationClr: '#272729',
+    bgNestedClr: '#36363A ',
+    captionClr: "#0f0f0fa0",
+
+  },
+  utils: {
+    navSaturation: '300%',
+    hueRotateDeg: '140deg'
+  }
+}
+
+//background-image: 
 const Themes = {
   darkTheme,
   lightTheme,
@@ -130,7 +149,8 @@ const Themes = {
   fuschiaTheme,
   monoTheme,
   peachTheme,
-  vividTheme
+  vividTheme,
+  happyTheme
 
 }
 

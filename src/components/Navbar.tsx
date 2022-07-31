@@ -36,9 +36,11 @@ function Navbar({changeTheme}: Props){
         <NavLink to = '/thanks'>
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>
         </NavLink>
-
+        <NavLink to = '/'>
+          <Icon icon="ic:baseline-computer" className="btn generate"/>
+        </NavLink>
         <NavLink to = '/favs/'>
-          <Icon icon="akar-icons:book" className="btn icon-book"/>
+          <Icon icon="gis:globe-favorite" className="btn icon-favorite"/>
         </NavLink>
         <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector} ref={themeSelectorRef} />
         </div>
@@ -52,8 +54,7 @@ function Navbar({changeTheme}: Props){
               <li className="theme-option" onClick={()=> changeTheme(Themes.monoTheme)}>Mono</li>
               <li className="theme-option" onClick={()=> changeTheme(Themes.peachTheme)}>Peach</li>
               <li className="theme-option" onClick={()=> changeTheme(Themes.vividTheme)}>Vivid</li>
-
-
+              <li className="theme-option" onClick={()=> changeTheme(Themes.happyTheme)}>Happy</li>
 
 
             </ul>

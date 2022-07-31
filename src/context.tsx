@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
-import { Drink, FavoriteDrink } from "./types";
+import { FavoriteDrink } from "./types";
 
 type Props = {
   children: JSX.Element;
