@@ -10,7 +10,7 @@
     "@types/node": "^16.11.43",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "create-react-app": "^1.2.1",
+    "create-react-app": "^5.0.1",
     "react": "^18.2.0",
     "react-debounce-input": "^3.3.0",
     "react-dom": "^18.2.0",

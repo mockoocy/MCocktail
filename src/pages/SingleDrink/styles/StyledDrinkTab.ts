@@ -126,6 +126,7 @@ const StyledDrinkTab = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
 
     .ingredients-glass {
       display: flex;
