@@ -19,20 +19,27 @@ function SearchBar() {
     setSearchTerm(inputValue);
   }
 
+  function handleSearchClick(){
+    setShowResults(true);
+    
+  }
+
   function getMatchingDrinks(){
     fetch(`${urls.urlName}${searchTerm}`)
       .then(res => res.json())
       .then(data=>{
-        (searchTerm && data.drinks) ? setFoundDrinks(data.drinks) : setFoundDrinks([0]);
-        setShowResults(true)
+        if (searchTerm && data.drinks){
+          setFoundDrinks(data.drinks);
+          
+        } 
       })
   }
   useEffect(()=>{
     getMatchingDrinks();
 
   },[searchTerm])
-
-  const searchResultElements = foundDrinks.splice(0,10).map((drink,id) => (
+  console.log(foundDrinks)
+  const searchResultElements = foundDrinks.slice(0,10).map((drink,id) => (
     <li key={id}>
       <Link to={`/drink/${drink.idDrink}`} className="link" >
         <img src={drink.strDrinkThumb} alt="" />
@@ -42,8 +49,9 @@ function SearchBar() {
     </li>
   
   ))
+
   return (
-    <StyledSearchBar onClick={()=> setShowResults(true)} ref={resultsRef}>
+    <StyledSearchBar onClick={handleSearchClick} ref={resultsRef}>
       <Icon icon="fe:search" id="search-icon"/>
       <DebounceInput 
         type="text" 
@@ -55,8 +63,7 @@ function SearchBar() {
         onChange={e => handleSearchChange(e)}
         value={searchTerm}
         />
-          {showResults  &&
-        <div id="result-container" >
+          {showResults && <div id="result-container" >
           <ul>
             {foundDrinks.length > 0 
             ? searchResultElements
