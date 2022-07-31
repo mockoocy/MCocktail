@@ -141,7 +141,26 @@ const happyTheme: Theme = {
   }
 }
 
-//background-image: 
+
+const sunsetTheme: Theme = {
+  colors: {
+    bgClr: 'linear-gradient(45deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%)',
+    optionClr: '#0A0C10',
+    fancyClr: '#0c1db8',
+    boringClr: '#AB0DB8',
+    selectionClr: '#49A3FD  ',
+    bgVariationClr: '#F897BF',
+    bgNestedClr: '#F9ACCC ',
+    captionClr: "#f0f2f598",
+
+  },
+  utils: {
+    navSaturation: '110%',
+    hueRotateDeg: '110deg'
+  }
+}
+
+
 const Themes = {
   darkTheme,
   lightTheme,
@@ -150,7 +169,8 @@ const Themes = {
   monoTheme,
   peachTheme,
   vividTheme,
-  happyTheme
+  happyTheme,
+  sunsetTheme
 
 }
 

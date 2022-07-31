@@ -55,6 +55,8 @@ function Navbar({changeTheme}: Props){
               <li className="theme-option" onClick={()=> changeTheme(Themes.peachTheme)}>Peach</li>
               <li className="theme-option" onClick={()=> changeTheme(Themes.vividTheme)}>Vivid</li>
               <li className="theme-option" onClick={()=> changeTheme(Themes.happyTheme)}>Happy</li>
+              <li className="theme-option" onClick={()=> changeTheme(Themes.sunsetTheme)}>Sunset</li>
+
 
 
             </ul>
