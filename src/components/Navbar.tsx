@@ -40,9 +40,6 @@ function Navbar({changeTheme}: Props){
         <NavLink to = '/favs/'>
           <Icon icon="akar-icons:book" className="btn icon-book"/>
         </NavLink>
-        <NavLink to = '/'>
-          <Icon icon="ic:baseline-computer" className="btn icon-computer"/>
-        </NavLink>
         <Icon icon="arcticons:theme-store" className="btn theme" onClick={openThemeSelector} ref={themeSelectorRef} />
         </div>
           {themeSelectorOpen 

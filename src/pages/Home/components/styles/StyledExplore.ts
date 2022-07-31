@@ -79,6 +79,7 @@ const StyledExplore = styled.section`
   filter: ${dropShadowOutline(.0625, .0625, 'var(--bgNestedClr)')};
   }
   .carousel {
+    padding: 0 1rem;
     display: grid;
     width: 100%;
     grid-auto-flow: column;
