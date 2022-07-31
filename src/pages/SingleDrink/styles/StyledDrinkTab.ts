@@ -68,12 +68,19 @@ const StyledDrinkTab = styled.section`
         ${textOutline(.125, .125, 'var(--captionClr)')};
         font-weight: 600;
 
+        @media (max-width:820px){
+          font-size: 2rem;
+        }
+
       }
       .category {
         font-size: 2rem;
         color: var(--fancyClr);
         mix-blend-mode: luminosity;
-        ${textOutline(.125, .125, 'var(--captionClr)')}
+        ${textOutline(.125, .125, 'var(--captionClr)')};
+        @media (max-width: 820px){
+          font-size: 1rem;
+        }
       }
       .less-important-info {
         width: 100%;
@@ -83,13 +90,19 @@ const StyledDrinkTab = styled.section`
         gap: 2ch;
         * {
           font-size: 2rem;
+          @media (max-width: 820px){
+            font-size: 1rem;
+          }
         }
         
         .main-ingredient, .iba{
           color: var(--fancyClr);
           mix-blend-mode: luminosity;
           font-size: 2rem;
-          ${textOutline(.125, .125, 'var(--captionClr)')}
+          ${textOutline(.125, .125, 'var(--captionClr)')};
+          @media (max-width: 820px){
+            font-size: 1rem;
+          }
 
       }
 

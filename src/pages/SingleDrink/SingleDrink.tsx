@@ -24,9 +24,10 @@ export default function SingleDrink(){
   });
 
   const {drinkId} = useParams();
-  const {urlDetailsById} = urls;
 
-  const fetchData : TApiResponse = useApiGet(`${urlDetailsById}${drinkId}`);
+  const {urlDetailsById} = urls;
+  const fetchUrl = `${urlDetailsById}${drinkId}`
+  const fetchData : TApiResponse = useApiGet(fetchUrl);
   let drinkInfo: any = fetchData.data?.drinks[0];
 
   useEffect(()=>{
@@ -45,7 +46,6 @@ export default function SingleDrink(){
   }
 
     if (drinkInfo){
-      console.log(drinkInfo)
       const {idDrink,
         strDrink,
         strCategory,

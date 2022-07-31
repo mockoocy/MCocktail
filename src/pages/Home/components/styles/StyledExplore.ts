@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { textOutline } from "../../../../utils/mixins";
+import { textOutline, dropShadowOutline } from "../../../../utils/mixins";
 
 const StyledExplore = styled.section`
   padding: 0 1rem;
@@ -10,6 +10,9 @@ const StyledExplore = styled.section`
   margin: 5% 10% 0  10%;
   background-color: var(--bgVariationClr);
   border-radius: 2rem;
+  overflow-x: hidden;
+  filter: ${dropShadowOutline(.0625, .0625, 'var(--bgNestedClr)')};
+
 
 
   .loading-container {
@@ -66,13 +69,14 @@ const StyledExplore = styled.section`
       drop-shadow(.125rem .125rem 0.25rem var(--boringClr));
     
   }
-  .carousel-container {
-    padding: 0 10vw;
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+.carousel-container {
+  width: 100%;
+  padding-bottom: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: ${dropShadowOutline(.0625, .0625, 'var(--bgNestedClr)')};
   }
   .carousel {
     display: grid;

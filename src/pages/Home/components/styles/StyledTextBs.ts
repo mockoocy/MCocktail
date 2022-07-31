@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { dropShadowOutline } from "../../../../utils/mixins";
 
 const StyledTextBs = styled.div`
 
@@ -27,6 +27,8 @@ h1 {
   }
 
   .text-block {
+  filter: ${dropShadowOutline(.0625, .125, 'var(--bgNestedClr)')};
+
     background-color: var(--bgVariationClr);
     border-radius: 2rem;
     padding: 1rem;

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Drink, FavoriteDrink } from "./types";
 
 type Props = {
@@ -15,16 +15,18 @@ export function AppProvider({children}: Props) {
   const [favoriteList, setFavoriteList] = useState<FavoriteDrink[]>(localFavoriteList 
     ? JSON.parse(localFavoriteList) : []);
 
-  function updateFavoriteList({idDrink, strDrinkThumb, strDrink} : FavoriteDrink){
+  async function updateFavoriteList({idDrink, strDrinkThumb, strDrink} : FavoriteDrink){
     const currentDrink = {idDrink, strDrinkThumb, strDrink};
     setFavoriteList(prevList => {
       return prevList.some(drink => drink.idDrink === idDrink) 
       ? prevList.filter(drink => drink.idDrink !== idDrink) 
       : [...prevList, currentDrink]
-      })
-    localStorage.setItem("favoriteList", JSON.stringify(favoriteList))
-    }
-    //TODO; useDebounce hook in order to prevent favoriteList from being async to local storage
+    })
+  }
+
+  useEffect(()=> {
+    localStorage.setItem("favoriteList", JSON.stringify(favoriteList));
+  }, [favoriteList])
 
   return (
     <AppContext.Provider value={{

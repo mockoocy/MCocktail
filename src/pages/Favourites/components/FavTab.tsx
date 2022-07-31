@@ -7,7 +7,7 @@ import { FavoriteDrink } from '../../../types';
 function FavTab() {
   const {favoriteList} = useGlobalContext();
 
-  const favElements = favoriteList.map((fav:FavoriteDrink,id: React.Key | null | undefined) => (
+  const favElements = favoriteList.map((fav:FavoriteDrink,id: React.Key) => (
     <Cocktail
       key={id}
       idDrink={fav.idDrink}

@@ -24,6 +24,7 @@ function DrinkTab({drink}: Props) {
     strDrinkThumb,
     strIngredient1,
     ingredientsWithMeasures} = drink
+
     const isFavorite = favoriteList.some((drink:Drink) => drink.idDrink === idDrink) ? true : false;
     const ingredients = Object.keys(ingredientsWithMeasures);
     const ingredientElements = ingredients.map((ingredient, id) => (
