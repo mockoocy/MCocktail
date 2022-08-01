@@ -36,7 +36,7 @@ function Navbar({changeTheme}: Props){
         <NavLink to = '/thanks'>
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>
         </NavLink>
-        <NavLink to = '/'>
+        <NavLink to = '/generate/'>
           <Icon icon="ic:baseline-computer" className="btn generate"/>
         </NavLink>
         <NavLink to = '/favs/'>

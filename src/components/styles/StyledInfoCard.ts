@@ -52,7 +52,7 @@ const StyledInfoCard = styled.div`
       hue-rotate(var(--hueRotateDeg));
 
   }
-  .robot {
+  .robot, .factory {
     width: 75%;
     height: 75%;
   }

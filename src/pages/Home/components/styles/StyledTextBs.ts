@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { dropShadowOutline } from "../../../../utils/mixins";
 
 const StyledTextBs = styled.div`
 margin: 2.5% 10%;

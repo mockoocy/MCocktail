@@ -52,7 +52,7 @@ function DrinkTab({drink}: Props) {
             <div className="less-important-info">
               <div className="main-ingredient-container">
                 <h4 className="main-ingredient">{strIngredient1}</h4>
-                <img src={`${urlImageByIngredient}${strIngredient1}.png`}  alt=""  className="main-ingredient-image" />
+                <img src={`${urlImageByIngredient}${strIngredient1}-small.png`}  alt=""  className="main-ingredient-image" />
               </div>
                 <h5 className="iba">{strIBA}</h5>
             </div>
