@@ -40,7 +40,6 @@ function Explore() {
   const [cocktailsLoading, setCocktailsLoading] = useState(true);
   const [cocktails, setCocktails] = useState<any[]>([]);
   const [options, setOptions] = useState<Option[]>(DEFAULT_OPTIONS);
-
   // Can't put it in useEffect, so we call it there. [options, cocktails] is the only
   // deps array that forces re-render, so there is no excess data being fetched, no worries
   const ingredients : TApiResponse = useApiGet(urls.urlListIngredients);
@@ -59,7 +58,6 @@ function Explore() {
   };
 
   async function shuffleOptions(ingredients: TApiResponse["data"]["drinks"], amount: number){
-    console.log(ingredients)
     const ingredientOptions = await randomSample(ingredients, amount);
     const newOptions: Option[] = ingredientOptions.map((ingredient, id) => {
       return {
@@ -81,6 +79,7 @@ function Explore() {
         const response = await fetch(urlSelected);
         const data = await response.json();
         const drinksSample = await randomSample(data.drinks, COCKTAIL_AMOUNT);
+        console.log(data)
         setCocktails(drinksSample);
       } catch (error) {
         console.log(error);

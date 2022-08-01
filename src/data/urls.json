@@ -1,9 +1,9 @@
 {
-  "urlDefault": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=",
-  "urlAlcoholic": "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=",
-  "urlIngredient": "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=",
-  "urlName": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=",
-  "urlListIngredients": "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list",
-  "urlDetailsById" : "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=",
+  "urlDefault": "http://localhost:8000/urlDefault",
+  "urlAlcoholic": "http://localhost:8000/urlAlcoholic",
+  "urlIngredient": "http://localhost:8000/urlIngredient",
+  "urlName": "http://localhost:8000/urlName/",
+  "urlListIngredients": "http://localhost:8000/urlListIngredients",
+  "urlDetailsById" : "http://localhost:8000/urlDetailsById/",
   "urlImageByIngredient" : "https://www.thecocktaildb.com/images/ingredients/" 
 }
