@@ -47,11 +47,13 @@ app.get('/urlIngredient/:ingredient', (req,res) => {
     console.log(error)
   })
 })
+
+// Some of the ingredients in the PAID version of the API had no marching drinks. WTF?
 app.get('/urlName/:name', (req,res) => {
   const name = req.params.name;
   const options = {
     method: "GET",
-    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/search.php?s=${name}`
+    url: `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
   }
   axios.request(options).then(response => {
     res.json(response.data)
@@ -62,7 +64,7 @@ app.get('/urlName/:name', (req,res) => {
 app.get('/urlListIngredients', (req,res) => {
   const options = {
     method: "GET",
-    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/list.php?i=list`
+    url: `https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list`
   }
   axios.request(options).then(response => {
     res.json(response.data)
