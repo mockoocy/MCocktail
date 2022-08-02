@@ -67,6 +67,7 @@ const StyledDrinkTab = styled.section`
         font-size: 4rem;
         ${textOutline(.125, .125, 'var(--captionClr)')};
         font-weight: 600;
+        text-align: center;
 
         @media (max-width:820px){
           font-size: 2rem;

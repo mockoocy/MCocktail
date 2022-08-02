@@ -10,6 +10,7 @@ const darkTheme: Theme = {
     bgVariationClr: '#202020',
     bgNestedClr: '#242424',
     captionClr: "#0f0f0fa0",
+    resultsClr: "linear-gradient(45deg,#0f0f0f, #272729,#363640)"
   },
   utils: {
     navSaturation: '75%'
@@ -26,6 +27,7 @@ const fuschiaTheme: Theme = {
     bgVariationClr: '#202020',
     bgNestedClr: '#242424',
     captionClr: "#0f0f0fa0",
+    resultsClr: "linear-gradient(45deg,#0f0f0f, #272729,#363640)"
   },
   utils: {
     navSaturation: '100%',
@@ -42,7 +44,8 @@ const monoTheme: Theme = {
     selectionClr: 'rgb(131, 241, 208)',
     bgNestedClr: '#242424',
     bgVariationClr: '#202020',
-    captionClr : "#0f0f0fa0"
+    captionClr : "#0f0f0fa0",
+    resultsClr: "linear-gradient(45deg,#0f0f0f, #272729,#363640)"
 
   },
   utils: {
@@ -59,7 +62,8 @@ const greenTheme: Theme = {
     selectionClr: '#E9C7FF',
     bgNestedClr: '#fff',
     bgVariationClr: '#f8fff8',
-    captionClr : "#0f0f0fa0"
+    captionClr : "#0f0f0fa0",
+    resultsClr: "#f8fff8"
 
   },
   utils: {
@@ -78,6 +82,7 @@ const lightTheme: Theme = {
     bgVariationClr: '#f8f8f8',
     bgNestedClr: '#fff',
     captionClr: "#f0f2f598",
+    resultsClr: "#f8f8f8"
 
   },
   utils: {
@@ -97,6 +102,7 @@ const peachTheme: Theme = {
     bgVariationClr: 'transparent',
     bgNestedClr: 'transparent',
     captionClr: "#f0f2f598",
+    resultsClr: "#E87A72"
 
   },
   utils: {
@@ -107,7 +113,7 @@ const peachTheme: Theme = {
 
 const vividTheme: Theme = {
   colors: {
-    bgClr: 'linear-gradient(45deg,#ffd91b, #1b4395, #e663e3)',
+    bgClr: 'linear-gradient(45deg,#ddd91a, #0b4380, #a222a3)',
     optionClr: '#0A0C10',
     fancyClr: '#ffe885',
     boringClr: '#EF7B45',
@@ -115,6 +121,7 @@ const vividTheme: Theme = {
     bgVariationClr: '#272729',
     bgNestedClr: '#363640 ',
     captionClr: "#C270A8b0",
+    resultsClr: "linear-gradient(45deg,#0f0f0f, #272729,#363640)"
 
   },
   utils: {
@@ -133,6 +140,7 @@ const happyTheme: Theme = {
     bgVariationClr: 'transparent', //E7F9A9 if i decide to not use transparent 
     bgNestedClr: 'transparent ', // F6FAAA if i decide to not use transparent 
     captionClr: "#0f0f0fa0",
+    resultsClr: "#d3fbe5"
 
   },
   utils: {
@@ -152,6 +160,7 @@ const sunsetTheme: Theme = {
     bgVariationClr: 'transparent',
     bgNestedClr: 'transparent ',
     captionClr: "#f0f2f598",
+    resultsClr: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)"
 
   },
   utils: {

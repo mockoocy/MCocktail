@@ -10,7 +10,8 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
   --bgVariationClr: ${({theme})=>theme.colors.bgVariationClr};
   --captionClr: ${({theme})=>theme.colors.captionClr};
   --bgNestedClr: ${({theme})=>theme.colors.bgNestedClr};
-  --OptionClr: ${({theme})=>theme.colors.optionClr};
+  --optionClr: ${({theme})=>theme.colors.optionClr};
+  --resultsClr: ${({theme})=>theme.colors.resultsClr};
   --navSaturation: ${({theme})=>theme.utils.navSaturation};
   --hueRotateDeg: ${({theme})=>theme.utils.hueRotateDeg};
 

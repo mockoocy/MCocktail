@@ -52,7 +52,7 @@ const StyledExplore = styled.section`
       width: auto;
       height: 2.5rem;
       background-color: var(--boringClr);
-      color: var(--OptionClr, --bgClr, --boringClr);
+      color: var(--optionClr, --bgClr, --boringClr);
 
       &:hover {
         cursor: pointer;

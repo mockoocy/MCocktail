@@ -9,6 +9,7 @@ type Colors = {
   optionClr : string;
   selectionClr : string;
   captionClr : string;
+  resultsClr : string;
 }
 
 type Utils = {

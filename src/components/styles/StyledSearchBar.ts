@@ -72,7 +72,7 @@ cursor: pointer;
 }
 
 ul {
-  background-color: var(--bgVariationClr);
+  background: var(--resultsClr);
   max-height: 50vh;
   overflow-y: auto;
   overflow-x: hidden;
