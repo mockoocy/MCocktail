@@ -6,7 +6,6 @@ const StyledInfoCard = styled.div`
   align-items: center;
   align-self: stretch;
   justify-content: space-around;
-  padding: 0 1rem;
   @media (max-width: 820px){
     width: 100%;
   }
@@ -15,7 +14,7 @@ const StyledInfoCard = styled.div`
     filter: ${dropShadowOutline(.0625, .125, 'var(--bgNestedClr)')};
     background-color: var(--bgVariationClr);
     border-radius: 2rem;
-    padding: 1rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

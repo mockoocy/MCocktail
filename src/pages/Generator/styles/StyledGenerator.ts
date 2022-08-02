@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledGenerator = styled.section`
+  padding: 0 10%;
   .info-cards {
     padding: 2.5% 10%;
     display: flex;

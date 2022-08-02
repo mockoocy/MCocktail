@@ -4,7 +4,7 @@ import {ReactComponent as Search} from "../../assets/search.svg";
 import {ReactComponent as Select} from "../../assets/select.svg";
 import {ReactComponent as Factory} from "../../assets/factory.svg";
 import StyledGenerator from './styles/StyledGenerator';
-
+import ContentBar from './components/ContentBar';
 function Generator() {
   return (
     <StyledGenerator>
@@ -28,6 +28,7 @@ function Generator() {
           <Factory className="svg factory"/>
         </InfoCard>
       </div>  
+      <ContentBar/>
     </StyledGenerator>
   )
 }

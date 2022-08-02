@@ -11,8 +11,6 @@ import urls from "../../../data/urls.json";
 const COCKTAIL_AMOUNT = 8;
 const RANDOM_INGREDIENTS_AMOUNT =8;
 
-
-
 const DEFAULT_OPTIONS: Option[] = [
   {
     value: "Alcoholic",
