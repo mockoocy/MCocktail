@@ -85,7 +85,7 @@ const StyledNavbar = styled.nav`
     &>li {
       width: 10ch;
       background-color: var(--boringClr);
-      color: var(--bgVariationClr);
+      color: var(--fancyClr);
       border-radius: 100vmax;
       text-align: center;
       &:hover{

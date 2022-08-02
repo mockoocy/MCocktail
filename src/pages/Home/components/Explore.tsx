@@ -49,7 +49,6 @@ function Explore() {
       return options.map(option => {
         if (option.id === id){
           option.clicked ? setUrlSelected(urls.urlDefault) : setUrlSelected(option.url)
-          console.log(option.url)
           return {...option, clicked: !option.clicked};
         }
         return {...option, clicked: false};
@@ -79,7 +78,6 @@ function Explore() {
         const response = await fetch(urlSelected);
         const data = await response.json();
         const drinksSample = await randomSample(data.drinks, COCKTAIL_AMOUNT);
-        console.log(data)
         setCocktails(drinksSample);
       } catch (error) {
         console.log(error);
@@ -114,8 +112,8 @@ function Explore() {
     <StyledExplore >
       <h1 className="title">Some drinks for you</h1>
       <div className="options-container">
-        {optionElements}
         {!ingredients.loading && <div className="option" onClick={() => shuffleOptions(ingredients.data.drinks, RANDOM_INGREDIENTS_AMOUNT)}>Shuffle and get Ingredients!🔀 </div>}
+        {optionElements}
       </div>
       {
         cocktailsLoading

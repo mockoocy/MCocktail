@@ -4,6 +4,9 @@ const axios = require('axios');
 require('dotenv').config();
 const PORT = 8000;
 
+// 90 -> code for "Z", 65 -> code for "A"
+const randomCharCode = Math.floor(Math.random() * (90-65)) + 65
+
 const app = express();
 
 const cocktailKey = process.env.COCKTAIL_DB_API_KEY
@@ -12,7 +15,7 @@ app.use(cors())
 app.get('/urlDefault', (req,res) => {
   const options = {
     method: "GET",
-    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/search.php?s=p`
+    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/search.php?s=${String.fromCharCode(randomCharCode)}`
   }
   axios.request(options).then(response => {
     res.json(response.data)
@@ -21,10 +24,10 @@ app.get('/urlDefault', (req,res) => {
   })
 })
 
-app.get('/urlAlcoholic', (req,res) => {
+app.get('/urlAlcoholic/:alcoholic', (req,res) => {
   const options = {
     method: "GET",
-    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?a=`
+    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?a=${req.params.alcoholic}`
   }
   axios.request(options).then(response => {
     res.json(response.data)
@@ -33,10 +36,10 @@ app.get('/urlAlcoholic', (req,res) => {
   })
 })
 
-app.get('/urlIngredient', (req,res) => {
+app.get('/urlIngredient/:ingredient', (req,res) => {
   const options = {
     method: "GET",
-    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?i=`
+    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?i=${req.params.ingredient}`
   }
   axios.request(options).then(response => {
     res.json(response.data)
@@ -82,4 +85,4 @@ app.get('/urlDetailsById/:drinkId', (req,res) => {
 
 
 
-app.listen(PORT, ()=>console.log(`running on ${PORT}`))
+app.listen(PORT, ()=>console.log(`server running on ${PORT}`))

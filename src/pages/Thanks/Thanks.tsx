@@ -11,6 +11,7 @@ function Thanks() {
         <ul className="nice-people-list">
           Thanks to:
           <li>You, the person visiting the website!</li>
+          <li>The CocktailDB for almost everything this site can display</li>
           <li>Unsplash & Undraw team for their amazing assets</li>
           <li>React team for providing amazing tools to make this website possible</li>
           <li>Typescript team for saving me from painful debugging</li>

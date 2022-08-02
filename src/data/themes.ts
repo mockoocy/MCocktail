@@ -94,8 +94,8 @@ const peachTheme: Theme = {
     fancyClr: '#D12335',
     boringClr: 'rgb(15, 15, 15)',
     selectionClr: '#23D1C0  ',
-    bgVariationClr: '#E87A72',
-    bgNestedClr: '#E88E72',
+    bgVariationClr: 'transparent',
+    bgNestedClr: 'transparent',
     captionClr: "#f0f2f598",
 
   },
@@ -112,8 +112,8 @@ const vividTheme: Theme = {
     fancyClr: '#ffe885',
     boringClr: '#EF7B45',
     selectionClr: '#ce81a8',
-    bgVariationClr: '#080b10',
-    bgNestedClr: '#272729 ',
+    bgVariationClr: '#272729',
+    bgNestedClr: '#363640 ',
     captionClr: "#C270A8b0",
 
   },
@@ -128,10 +128,10 @@ const happyTheme: Theme = {
     bgClr: 'linear-gradient( 90deg, rgba(255,187,187,1) -8.8%, rgba(255,220,177,1) 12.4%, rgba(255,249,177,1) 35.6%, rgba(220,255,177,1) 59.6%, rgba(177,218,255,1) 84%, rgba(222,177,255,1) 107.9% )',
     optionClr: '#0A0C10',
     fancyClr: '#FF5A5C',
-    boringClr: '#E1FF59',
+    boringClr: '#641C73',
     selectionClr: '#5CFFFC  ',
-    bgVariationClr: '#272729',
-    bgNestedClr: '#36363A ',
+    bgVariationClr: 'transparent', //E7F9A9 if i decide to not use transparent 
+    bgNestedClr: 'transparent ', // F6FAAA if i decide to not use transparent 
     captionClr: "#0f0f0fa0",
 
   },
@@ -146,11 +146,11 @@ const sunsetTheme: Theme = {
   colors: {
     bgClr: 'linear-gradient(45deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%)',
     optionClr: '#0A0C10',
-    fancyClr: '#0c1db8',
-    boringClr: '#AB0DB8',
+    fancyClr: '#ff7981',
+    boringClr: '#641C73',
     selectionClr: '#49A3FD  ',
-    bgVariationClr: '#F897BF',
-    bgNestedClr: '#F9ACCC ',
+    bgVariationClr: 'transparent',
+    bgNestedClr: 'transparent ',
     captionClr: "#f0f2f598",
 
   },

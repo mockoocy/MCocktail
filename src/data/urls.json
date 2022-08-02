@@ -1,7 +1,7 @@
 {
   "urlDefault": "http://localhost:8000/urlDefault",
-  "urlAlcoholic": "http://localhost:8000/urlAlcoholic",
-  "urlIngredient": "http://localhost:8000/urlIngredient",
+  "urlAlcoholic": "http://localhost:8000/urlAlcoholic/",
+  "urlIngredient": "http://localhost:8000/urlIngredient/",
   "urlName": "http://localhost:8000/urlName/",
   "urlListIngredients": "http://localhost:8000/urlListIngredients",
   "urlDetailsById" : "http://localhost:8000/urlDetailsById/",

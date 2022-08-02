@@ -35,7 +35,7 @@ function SearchBar() {
       })
   }
   useEffect(()=>{
-    getMatchingDrinks();
+    if (searchTerm) getMatchingDrinks();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[searchTerm])
   const searchResultElements = foundDrinks.slice(0,10).map((drink,id) => (
