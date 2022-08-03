@@ -57,7 +57,7 @@ function SearchBar() {
       <Icon icon="fe:search" id="search-icon"/>
       <DebounceInput 
         type="text" 
-        minLength={0}
+        minLength={1}
         placeholder="Search!" 
         id="search"
         name="searchTerm"
