@@ -8,7 +8,7 @@ import { TApiResponse } from "../../../types";
 import {useApiGet} from "../../../hooks/useApiGet"
 import urls from "../../../data/urls.json";
 
-const COCKTAIL_AMOUNT = 8;
+const COCKTAIL_AMOUNT = 10;
 const RANDOM_INGREDIENTS_AMOUNT =8;
 
 const DEFAULT_OPTIONS: Option[] = [
@@ -25,10 +25,16 @@ const DEFAULT_OPTIONS: Option[] = [
     id: 1
   },
   {
-    value: "Optional",
+    value: "Optional Alcohol",
     clicked: false,
     url: `${urls.urlAlcoholic}optional_alcohol`,
     id: 2
+  },
+  {
+    value: "Popular",
+    clicked: false,
+    url: `${urls.urlAlcoholic}optional_alcohol`,
+    id: 3
   }
 ]
 
