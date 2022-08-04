@@ -20,6 +20,7 @@ box-shadow:
 @media (max-width: 820px){
   width: 80%;
   margin: 0 10% 2.5% 10%;
+  height: 40vh;
 }
 
   .info-container{
@@ -28,10 +29,16 @@ box-shadow:
     top: 0;
     height: 3rem;
     border-bottom: 2px solid var(--boringClr);
+    @media (max-width:820px){
+          height: 2rem;
+        }
     .info {
       text-align: center;
       font-size: 2rem;  
       color: var(--boringClr);
+      @media (max-width:820px){
+          font-size: 1.5rem;
+        }
     }
   }
   .ingredients-container {
@@ -53,16 +60,23 @@ box-shadow:
       align-items: center;
       font-size: 1.5rem;
       cursor: pointer;
-
+      @media (max-width:820px){
+          min-height: 2rem;
+          font-size: 1rem;
+        }
       
       &:not(:last-child){
 
         border-bottom: 1px solid var(--boringClr);
       }
 
-      .cross, .check {
+      .cross {
         height: 2.5rem;
         width: 2.5rem;
+        @media (max-width:820px){
+          width: 1.5rem;
+          height: 1.5rem;
+        }
       }
       &:hover {
         transform: scale(1.05);
