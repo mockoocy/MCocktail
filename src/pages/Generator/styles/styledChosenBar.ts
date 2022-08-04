@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledContentBar = styled.div`
+const StyledChosenBar = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -9,8 +9,8 @@ background: var(--bgVariationClr);
 border-radius: 2rem;
 width: 30vw;
 height: 80vh;
-overflow: hidden;
 margin: 2.5% 0;
+overflow: hidden;
 box-shadow: 
   .0625rem .0625rem .25rem var(--boringClr),
   -.0625rem .0625rem .25rem var(--boringClr),
@@ -22,26 +22,25 @@ box-shadow:
   margin: 0 10% 2.5% 10%;
 }
 
-
-.info-container{
-  height: 3rem;
-  background-color: var(--bgNestedClr);
-  width: 110%;
-  top: 0;
-  border-bottom: 2px solid var(--boringClr);
-
-
-  .info {
-    text-align: center;
-    font-size: 2rem;  
-    color: var(--boringClr);
+  .info-container{
+    background-color: var(--bgNestedClr);
+    width: 110%;
+    top: 0;
+    height: 3rem;
+    border-bottom: 2px solid var(--boringClr);
+    .info {
+      text-align: center;
+      font-size: 2rem;  
+      color: var(--boringClr);
+    }
   }
-}
-.ingredients-container {
+  .ingredients-container {
   width: 100%;
+  height: calc(100% - 3rem);
   padding: 0 3%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   color: var(--boringClr);
   overflow-y: scroll;
   scrollbar-color: var(--fancyClr) var(--captionClr);
@@ -61,7 +60,7 @@ box-shadow:
         border-bottom: 1px solid var(--boringClr);
       }
 
-      .check {
+      .cross, .check {
         height: 2.5rem;
         width: 2.5rem;
       }
@@ -70,29 +69,10 @@ box-shadow:
     }
   }
 }
-.ingredient-filter {
-  background: var(--bgNestedClr);
-  border-radius: 2rem;
-  color: var(--boringClr);
-  width: 110%;
-  height: 10%;
-  padding-left: 7%;
-  font-size: 1.5rem;
-  border-top: 2px solid var(--boringClr);
-
-
+.info-empty{
+  align-self: center;
 }
 
-#filter, #filter:focus {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  padding: 0 .5rem;
-  margin: 0;
-  background: transparent;
-  color: var(--boringClr)
-}
+`
 
-` 
-
-export default StyledContentBar;
+export default StyledChosenBar;

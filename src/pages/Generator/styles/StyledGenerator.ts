@@ -14,7 +14,16 @@ const StyledGenerator = styled.section`
       align-items: center;
       justify-content: center;
     }
-
+  }
+  .generator-setup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @media (max-width:820px){
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 `
 

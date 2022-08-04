@@ -7,6 +7,7 @@ type Props = {
   children: React.ReactNode
 }
 function InfoCard({bigText, smallText, children} : Props) {
+  console.log(children)
   return (
 
     <StyledInfoCard>

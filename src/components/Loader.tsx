@@ -10,7 +10,7 @@ export default function Loader({text}: Props){
     <StyledLoader>
       <div className="loader">
 
-      <span>Loading...</span>
+      <span>{text}</span>
       </div>
     </StyledLoader>
   )
