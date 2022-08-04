@@ -12,10 +12,10 @@ height: 80vh;
 overflow: hidden;
 margin: 2.5% 0;
 box-shadow: 
-  .0625rem .0625rem .25rem var(--boringClr),
-  -.0625rem .0625rem .25rem var(--boringClr),
-  .0625rem -.0625rem .25rem var(--boringClr),
-  -.0625rem -.0625rem .25rem var(--boringClr);
+  .0625rem .0625rem .25rem var(--optionClr),
+  -.0625rem .0625rem .25rem var(--optionClr),
+  .0625rem -.0625rem .25rem var(--optionClr),
+  -.0625rem -.0625rem .25rem var(--optionClr);
   
 @media (max-width: 820px){
   width: 80%;

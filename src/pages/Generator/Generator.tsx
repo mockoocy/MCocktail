@@ -3,6 +3,7 @@ import InfoCard from '../../components/InfoCard';
 import {ReactComponent as Search} from "../../assets/search.svg";
 import {ReactComponent as Select} from "../../assets/select.svg";
 import {ReactComponent as Factory} from "../../assets/factory.svg";
+import {ReactComponent as Omega} from "../../assets/omega.svg"
 import StyledGenerator from './styles/StyledGenerator';
 import ContentBar from './components/ContentBar';
 import urls from "../../data/urls.json";
@@ -15,6 +16,8 @@ function Generator() {
   const [allIngredients, setAllIngredients] = useState<any[]>([]);
   const [ingredientsLoading, setIngredientsLoading] = useState(false);
   const [chosenIngredients, setChosenIngredients] = useState<any[]>([]);
+
+  //TODO: THEMES FOR BUTTON COLOR 
 
   function chooseIngredient(ingredient: string){
     const currIngredient = allIngredients.find(ingr => ingr.strIngredient1 === ingredient);
@@ -55,20 +58,20 @@ function Generator() {
     <StyledGenerator>
       <div className="info-cards">
         <InfoCard 
-        bigText="Search for ingredients that you have"
+        bigText="Search for ingredients that you want"
         smallText="You can search for them using the search bar below"
         >
           <Search className="svg search"/>
         </InfoCard>
         <InfoCard
-        bigText='Select Ingredients that you wish to have'
+        bigText='Select ingredients that you want to see in your drink'
         smallText='We will find out what you can do with these'
         >
           <Select className="svg select"/>
         </InfoCard>
         <InfoCard
-        bigText='Select Ingredients that you wish to have'
-        smallText='We will find out what you can do with these'
+        bigText='Enjoy a drink that we will recommend you!'
+        smallText='Have fun mixing and making it!'
         >
           <Factory className="svg factory"/>
         </InfoCard>
@@ -84,9 +87,17 @@ function Generator() {
           <ChosenBar
             chosenIngredients={chosenIngredients}
             ejectIngredient={ejectIngredient}
-          />
+            />
+          <div className="btn-container">
+            <h1>We're finally here!   </h1>
+            <div className="svg-container">
+              <Omega className="svg omega" />
+            </div>
+            <button className="generate-btn">LET'S GO!</button>
+          </div>  
         </div>
       }
+
     </StyledGenerator>
   )
 }

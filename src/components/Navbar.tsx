@@ -3,8 +3,7 @@ import StyledNavbar from "./styles/StyledNavbar";
 import SearchBar from "./SearchBar";
 import { Link, NavLink } from "react-router-dom";
 import { Icon } from '@iconify/react';
-import {ReactComponent as Logo} from '../assets/LogoDark.svg';
-import {ReactComponent as LogoTextDark} from '../assets/MCocktailDark.svg';
+import {ReactComponent as Logo} from '../assets/logo.svg';
 import Themes from "../data/themes"
 import {Theme} from "../types"
 import useOuterClick from "../hooks/useOuterClick"
@@ -28,8 +27,7 @@ function Navbar({changeTheme}: Props){
   return (
     <StyledNavbar >
       <Link to="/" className="logo-container">
-        <LogoTextDark className="logo-text"/>
-        <Logo className="logo"/>
+      <Logo className="logo"/>
       </Link>
       <SearchBar />
       <div className="button-container" >

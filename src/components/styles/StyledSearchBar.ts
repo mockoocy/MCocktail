@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { dropShadowOutline } from "../../utils/mixins";
 const StyledSearchBar = styled.div`
-// TODO: MOBILE VERSION!!
 position: relative;
 display: flex;
 align-items: center;
@@ -44,7 +43,7 @@ cursor: pointer;
   font-size: 1.5rem;
   font-family: Lato, sans-serif;
   @media (max-width: 820px) {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 #search-icon {
@@ -66,7 +65,7 @@ cursor: pointer;
   border-radius: 2rem;
   filter: ${dropShadowOutline(.0625, .0625, 'var(--boringClr)')}; 
   @media (max-width: 820px){
-    width: 90vw;
+    width: 60vw;
   }
 
 }
@@ -101,8 +100,7 @@ ul {
     font-size: 1.5rem;
     font-style: italic;
     @media (max-width:820px){
-      width: 90vw;
-      height: 2rem;
+      height: 2.5rem;
       font-size: 1rem;
       padding: 0 0.25rem;
     }

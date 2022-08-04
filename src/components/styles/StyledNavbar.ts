@@ -31,17 +31,8 @@ const StyledNavbar = styled.nav`
     
   }
 
-  .logo, .logo-text {
-    filter: hue-rotate(var(--hueRotateDeg));
-  }
-
   .logo {
-    width: 2rem;
-    height: 2rem;
-  }
-  .logo-text{
-    width: 8rem;
-    height: auto;
+    filter: hue-rotate(var(--hueRotateDeg));
   }
 
   .button-container{

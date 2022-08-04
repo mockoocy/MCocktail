@@ -14,6 +14,7 @@ type Colors = {
 
 type Utils = {
   navSaturation: string;
+  gradientButtonClrs: string;
   hueRotateDeg?: string;
 }
 

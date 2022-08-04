@@ -14,6 +14,8 @@ const GlobalStyles = createGlobalStyle<{theme: Theme}>`
   --resultsClr: ${({theme})=>theme.colors.resultsClr};
   --navSaturation: ${({theme})=>theme.utils.navSaturation};
   --hueRotateDeg: ${({theme})=>theme.utils.hueRotateDeg};
+  --gradientButtonClrs: ${({theme})=>theme.utils.gradientButtonClrs};
+
 
 
 
