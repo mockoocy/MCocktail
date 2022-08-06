@@ -28,7 +28,7 @@ box-shadow:
     width: 110%;
     top: 0;
     height: 3rem;
-    border-bottom: 2px solid var(--boringClr);
+    border-bottom: 2px solid var(--optionClr);
     @media (max-width:820px){
           height: 2rem;
         }
@@ -67,7 +67,7 @@ box-shadow:
       
       &:not(:last-child){
 
-        border-bottom: 1px solid var(--boringClr);
+        border-bottom: 1px solid var(--optionClr);
       }
 
       .cross {

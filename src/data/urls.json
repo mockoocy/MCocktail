@@ -5,6 +5,7 @@
   "urlName": "http://localhost:8000/urlName/",
   "urlListIngredients": "http://localhost:8000/urlListIngredients",
   "urlListIngredientsV2": "http://localhost:8000/urlListIngredientsV2",
+  "multiIngredient": "http://localhost:8000/multiIngredient",
   "urlDetailsById" : "http://localhost:8000/urlDetailsById/",
   "urlImageByIngredient" : "https://www.thecocktaildb.com/images/ingredients/" ,
   "urlPopular" : "http://localhost:8000/urlPopular/"

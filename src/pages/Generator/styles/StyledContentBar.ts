@@ -30,7 +30,7 @@ box-shadow:
   background-color: var(--bgNestedClr);
   width: 110%;
   top: 0;
-  border-bottom: 2px solid var(--boringClr);
+  border-bottom: 2px solid var(--optionClr);
   @media (max-width:820px){
     height: 2rem;
   }
@@ -71,7 +71,7 @@ box-shadow:
       
       &:not(:last-child){
 
-        border-bottom: 1px solid var(--boringClr);
+        border-bottom: 1px solid var(--optionClr);
       }
 
       .check {
@@ -96,7 +96,7 @@ box-shadow:
   height: 10%;
   padding-left: 7%;
   font-size: 1.5rem;
-  border-top: 2px solid var(--boringClr);
+  border-top: 2px solid var(--optionClr);
 
 
 }

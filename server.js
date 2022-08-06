@@ -94,6 +94,18 @@ app.get('/urlListIngredientsV2', (req,res) => {
   })
 })
 
+app.get('/multiIngredient', (req,res) => {
+  const options = {
+    method: "GET",
+    url: ` www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?i=`
+  }
+  axios.request(options).then(response => {
+    res.json(response.data)
+  }).catch(error => {
+    console.log(error)
+  })
+})
+
 app.get('/urlDetailsById/:drinkId', (req,res) => {
   const drinkId = req.params.drinkId;
   const options = {
