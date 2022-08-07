@@ -15,6 +15,7 @@ import Error from './pages/Error/Error';
 import Thanks from './pages/Thanks/Thanks';
 import Favourites from './pages/Favourites/Favourites';
 import Generator from './pages/Generator/Generator';
+import SingleIngredient from './pages/SingleIngredient/SingleIngredient';
 
 
 function App()  {
@@ -39,7 +40,9 @@ function changeTheme(theme: Theme){
           <Route path ='drink/:drinkId' element={<SingleDrink/>}/>
           <Route path="/thanks/" element={<Thanks/>}/>
           <Route path ="/favs/" element={<Favourites/>}/>
-          <Route path="/generate/" element={<Generator/>}/>
+          <Route path ='ingredient/:ingredientName' element={<SingleIngredient/>}/>
+          <Route path="/generate/" element={<Generator/>}>
+          </Route>
           <Route path ='*' element={<Error/>}/>
         </Routes>
 

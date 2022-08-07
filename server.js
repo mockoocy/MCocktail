@@ -118,6 +118,19 @@ app.get('/urlDetailsById/:drinkId', (req,res) => {
   }).catch(error => {
     console.log(error)
   })
+});
+
+app.get('/urlIngredientByName/:ingredientName', (req,res) => {
+  const ingredientName = req.params.ingredientName;
+  const options = {
+    method: "GET",
+    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/search.php?i=${ingredientName}`
+  }
+  axios.request(options).then(response => {
+    res.json(response.data)
+  }).catch(error => {
+    console.log(error)
+  })
 })
 
 

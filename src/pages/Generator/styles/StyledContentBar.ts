@@ -61,23 +61,19 @@ box-shadow:
       justify-content: space-between;
       align-items: center;
       font-size: 1.5rem;
-      cursor: pointer;
       @media (max-width:820px){
         font-size: 1rem;
         min-height: 2rem;
       }
 
-      
-
-      
       &:not(:last-child){
-
         border-bottom: 1px solid var(--optionClr);
       }
 
       .check {
         height: 2.5rem;
         width: 2.5rem;
+        cursor: pointer;
       @media (max-width:820px){
         width: 1.5rem;
         height: 1.5rem;
@@ -86,6 +82,10 @@ box-shadow:
       }
       &:hover {
         transform: scale(1.05);
+    }
+    a:link, a:visited {
+      color: var(--boringClr);
+      text-decoration: none;
     }
   }
 }

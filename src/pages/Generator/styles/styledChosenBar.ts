@@ -58,7 +58,6 @@ box-shadow:
       justify-content: space-between;
       align-items: center;
       font-size: 1.5rem;
-      cursor: pointer;
       @media (max-width:820px){
           min-height: 2rem;
           font-size: 1rem;
@@ -68,10 +67,11 @@ box-shadow:
 
         border-bottom: 1px solid var(--optionClr);
       }
-
       .cross {
         height: 2.5rem;
         width: 2.5rem;
+        cursor: pointer;
+
         @media (max-width:820px){
           width: 1.5rem;
           height: 1.5rem;

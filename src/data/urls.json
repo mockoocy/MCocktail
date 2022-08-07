@@ -2,6 +2,7 @@
   "urlDefault": "http://localhost:8000/urlDefault",
   "urlAlcoholic": "http://localhost:8000/urlAlcoholic/",
   "urlIngredient": "http://localhost:8000/urlIngredient/",
+  "urlIngredientByName": "http://localhost:8000/urlIngredientByName/",
   "urlName": "http://localhost:8000/urlName/",
   "urlListIngredients": "http://localhost:8000/urlListIngredients",
   "urlListIngredientsV2": "http://localhost:8000/urlListIngredientsV2",

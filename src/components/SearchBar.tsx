@@ -40,10 +40,10 @@ function SearchBar() {
   },[searchTerm])
   const searchResultElements = foundDrinks.slice(0,10).map((drink,id) => (
     <li key={id} onClick={() => window.location.reload()}>
+      {/* Done in order to refresh which drink is being displayed in 
+      single drink page, because the change of urlParams doesnt't force a fetch request
+      with new url while using useApiGet hook.   */}
       <Link to={`/drink/${drink.idDrink}`} className="link" >
-        {/* Done in order to refresh which drink is being displayed in 
-        single drink page, because the change of urlParams doesnt't force a fetch request
-        with new url while using useApiGet hook.   */}
         <img src={drink.strDrinkThumb} alt="" />
         <span>{drink.strDrink}</span>
         <span>{drink.strAlcoholic}</span>

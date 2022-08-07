@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { DebounceInput } from 'react-debounce-input';
 import StyledContentBar from '../styles/StyledContentBar';
+import { Link } from 'react-router-dom';
 
 type Props = {
   allIngredients: any[];
@@ -33,10 +34,12 @@ function ContentBar({allIngredients, chooseIngredient}: Props) {
     
   },[filterTerm, allIngredients]);
 
-
+  // strIngredient1 is just a name of the ingredient 
   const IngredientElements = displayedIngredients.map((ingredient,id) =>(
     <div className="ingredient" key={id}>
-      <h3 className="name">{ingredient.strIngredient1}</h3>
+      <Link to={`../ingredient/${ingredient.strIngredient1}`} className='ingredient-link'>
+        <h3 className="name">{ingredient.strIngredient1}</h3>
+      </Link>
       <Icon className="check" icon="icon-park-outline:correct" onClick={()=>chooseIngredient(ingredient.strIngredient1)}/>
     </div>
   ))

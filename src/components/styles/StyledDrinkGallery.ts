@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { dropShadowOutline, textOutline } from "../../utils/mixins";
+import {dropShadowOutline } from "../../utils/mixins";
 
 const StyledFavTab = styled.section`
 display: flex;
