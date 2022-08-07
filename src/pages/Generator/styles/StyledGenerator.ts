@@ -20,6 +20,7 @@ const StyledGenerator = styled.section`
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    margin-top: 2rem;
     
     @media (max-width:820px){
       flex-direction: column;
@@ -71,13 +72,17 @@ const StyledGenerator = styled.section`
       transition: 0.75s ease-in-out;
       background-size: 200% auto;
       color: var(--boringClr);            
-      box-shadow: 0 0 .75rem var(--boringClr);
+      box-shadow: 
+        0 .25rem var(--boringClr);
       border-radius: 1rem;
+      cursor: pointer;
   
       &:hover {
             background-position: right center; /* change the direction of the change here */
             color: var(--boringClr);
             text-decoration: none;
+            transform: translateY(.5rem);
+            box-shadow: none;
           }
     }
   }

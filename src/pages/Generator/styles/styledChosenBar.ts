@@ -47,7 +47,6 @@ box-shadow:
   padding: 0 3%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   color: var(--boringClr);
   overflow-y: scroll;
   scrollbar-color: var(--fancyClr) var(--captionClr);

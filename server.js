@@ -94,10 +94,11 @@ app.get('/urlListIngredientsV2', (req,res) => {
   })
 })
 
-app.get('/multiIngredient', (req,res) => {
+app.get('/multiIngredient/:ingredients', (req,res) => {
+  const ingredients = req.params.ingredients
   const options = {
     method: "GET",
-    url: ` www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?i=`
+    url: `https://www.thecocktaildb.com/api/json/v2/${cocktailKey}/filter.php?i=${ingredients}`
   }
   axios.request(options).then(response => {
     res.json(response.data)

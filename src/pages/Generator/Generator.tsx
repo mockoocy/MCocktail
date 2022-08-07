@@ -9,15 +9,14 @@ import ContentBar from './components/ContentBar';
 import urls from "../../data/urls.json";
 import Loader from '../../components/Loader';
 import ChosenBar from './components/ChosenBar';
-import { Icon } from '@iconify/react';
 
 
 function Generator() {
   const [allIngredients, setAllIngredients] = useState<any[]>([]);
   const [ingredientsLoading, setIngredientsLoading] = useState(false);
   const [chosenIngredients, setChosenIngredients] = useState<any[]>([]);
+  const [generatedDrinks, setGeneratedDrinks] = useState<any[]>([]);
 
-  //TODO: THEMES FOR BUTTON COLOR 
 
   function chooseIngredient(ingredient: string){
     const currIngredient = allIngredients.find(ingr => ingr.strIngredient1 === ingredient);
@@ -31,6 +30,18 @@ function Generator() {
     setAllIngredients(prevAllIngredients => [currIngredient, ...prevAllIngredients])
   }
 
+  async function fetchMachingDrinks(){
+    const ingredients = chosenIngredients.map(ingr=>ingr.strIngredient1)
+    const params = ingredients.join();    
+    const fetchUrl = `${urls.urlmultiIngredient}${params}`
+    console.log(fetchUrl);
+    
+    const response = await fetch(fetchUrl);
+    const data = await response.json();
+    setGeneratedDrinks(data.drinks);
+    console.log(data.drinks);
+    
+  }
   useEffect(()=>{
     async function fetchIngredients(){
       setIngredientsLoading(true);
@@ -47,12 +58,6 @@ function Generator() {
   fetchIngredients();
   },[]);
 
-  const IngredientElements = chosenIngredients.map((ingredient,id) =>(
-    <div className="ingredient" key={id}>
-      <h3 className="name">{ingredient.strIngredient1}</h3>
-      <Icon className="cross" icon="akar-icons:cross" onClick={()=>ejectIngredient(ingredient.strIngredient1)}/>
-    </div>
-  ))
   
   return (
     <StyledGenerator>
@@ -93,7 +98,8 @@ function Generator() {
             <div className="svg-container">
               <Omega className="svg omega" />
             </div>
-            <button className="generate-btn">LET'S GO!</button>
+            <button className="generate-btn" onClick={()=> fetchMachingDrinks()
+            }>LET'S GO!</button>
           </div>  
         </div>
       }
@@ -102,4 +108,4 @@ function Generator() {
   )
 }
 
-export default Generator
+export default Generator;
