@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
 import urls from "../../data/urls.json";
 import { Ingredient } from '../../types';
 import IngredientTab from './Components/IngredientTab';
+
+const StyledSingleIngredient = styled.section`
+  padding: 2.5% 10%;
+`
 
 function SingleIngredient() {
   const [ingredientData, setIngredientData] = useState<Ingredient>({
@@ -23,9 +28,10 @@ function SingleIngredient() {
     }
   fetchIngredientInfo();
   },[ingredientName])
-  console.log(ingredientData)
   return (
-    <IngredientTab ingredient={ingredientData}/>
+    <StyledSingleIngredient>
+      <IngredientTab ingredient={ingredientData}/>
+    </StyledSingleIngredient>
   )
 }
 

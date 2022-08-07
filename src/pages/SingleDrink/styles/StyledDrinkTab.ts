@@ -39,7 +39,6 @@ const StyledDrinkTab = styled.section`
       &:hover {
         transform: scale(1.15);
         color: var(--fancyClr);
-
       }
         
       &.active {

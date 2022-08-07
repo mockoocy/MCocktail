@@ -42,6 +42,10 @@ const StyledNavbar = styled.nav`
     align-items: center;
     gap: 1rem;
     position: relative;
+
+    @media (max-width:820px){
+      gap: .25rem;
+    }
   }
   .btn {
     color: var(--fancyClr);
