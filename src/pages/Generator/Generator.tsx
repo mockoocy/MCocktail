@@ -9,6 +9,8 @@ import ContentBar from './components/ContentBar';
 import urls from "../../data/urls.json";
 import Loader from '../../components/Loader';
 import ChosenBar from './components/ChosenBar';
+import Cocktail from '../../components/Cocktail';
+import DrinkGallery from '../../components/DrinkGallery';
 
 
 function Generator() {
@@ -29,6 +31,7 @@ function Generator() {
     setChosenIngredients(prevChosenIngredients => prevChosenIngredients.filter(ingr=> ingr!==currIngredient));
     setAllIngredients(prevAllIngredients => [currIngredient, ...prevAllIngredients])
   }
+
 
   async function fetchMachingDrinks(){
     const ingredients = chosenIngredients.map(ingr=>ingr.strIngredient1)
@@ -58,6 +61,14 @@ function Generator() {
   fetchIngredients();
   },[]);
 
+  const generatedDrinksElements = generatedDrinks.map((drink, id) => (
+    <Cocktail
+      key={`gen-${id}`}
+      idDrink={drink.idDrink}
+      strDrinkThumb={drink.strDrinkThumb}
+      strDrink={drink.strDrink}
+    />
+  ))
   
   return (
     <StyledGenerator>
@@ -103,7 +114,10 @@ function Generator() {
           </div>  
         </div>
       }
+      <DrinkGallery>
 
+      {generatedDrinksElements}
+      </DrinkGallery>
     </StyledGenerator>
   )
 }

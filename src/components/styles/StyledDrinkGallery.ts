@@ -1,25 +1,13 @@
 import styled from "styled-components";
-import { dropShadowOutline, textOutline } from "../../../utils/mixins";
+import { dropShadowOutline, textOutline } from "../../utils/mixins";
 
 const StyledFavTab = styled.section`
-padding: 0 10%;
 display: flex;
 flex-direction: column;
 align-items: center;
 
   @media (max-width: 820px) {
     padding: 12.5vh 2.5% 0 2.5%;
-  }
-  h1{
-    font-size: 5rem;
-    color: var(--fancyClr);
-    ${textOutline(.125, .25, "var(--boringClr)")};
-    text-align: center;
-
-    @media (max-width: 820px){
-      font-size: 2.5rem;
-      ${textOutline(.0625, .125, "var(--boringClr)")};
-    }
   }
   .favorites-container {
     background-color: var(--bgNestedClr);
