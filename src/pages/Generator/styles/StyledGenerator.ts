@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { textOutline } from "../../../utils/mixins";
 
 const StyledGenerator = styled.section`
   padding: 0 10%;
@@ -86,6 +87,20 @@ const StyledGenerator = styled.section`
           }
     }
   }
+
+  #generated-drinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5%;
+    
+    h1 {
+      font-size: 3rem; 
+      color: var(--fancyClr);
+      ${textOutline(.125, .125, 'var(--boringClr)')};
+    }
+  }
+
 `
 
 export default StyledGenerator;

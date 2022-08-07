@@ -15,9 +15,9 @@ function TextBs() {
       <div className="info-cards">
 
       <InfoCard
-        bigText="Drink something cheaply"
-        smallText="Just tell us what’s in your bar,we will 
-        handle the rest for you.">
+        bigText="Don't know what to drink?"
+        smallText="Just tell us what’s in your bar,
+        we will handle the rest for you ">
         <Drink className="svg drink"/>
       </InfoCard>      <InfoCard
         bigText="Use our generator"

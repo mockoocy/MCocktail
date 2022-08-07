@@ -1,6 +1,8 @@
 import {createGlobalStyle} from "styled-components"
 import { Theme } from "../../types"
 
+// TODO PRETTIER THEME PICKER
+
 const GlobalStyles = createGlobalStyle<{theme: Theme}>`
 :root {
   --fancyClr: ${({theme})=>theme.colors.fancyClr};

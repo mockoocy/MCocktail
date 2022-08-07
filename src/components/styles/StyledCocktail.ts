@@ -30,6 +30,12 @@ const StyledCocktail = styled.div`
     text-align: center;
     position: absolute;
     bottom: 15%;
+
+    @media (max-width: 820px) {
+      font-size: 1rem;
+      width: 90%;
+      margin: 0 5%;
+    }
   }
   
 `

@@ -5,7 +5,7 @@ const darkTheme: Theme = {
     bgClr: 'rgb(15, 15, 15)',
     optionClr: 'rgb(15, 15, 15)',
     fancyClr: '#7FFFD4',
-    boringClr: 'rgb(235, 255, 251)',
+    boringClr: '#D1FFF0',
     selectionClr: 'rgb(95, 95, 95)',
     bgVariationClr: '#202020',
     bgNestedClr: '#242424',
@@ -110,7 +110,7 @@ const peachTheme: Theme = {
     selectionClr: '#23D1C0  ',
     bgVariationClr: 'transparent',
     bgNestedClr: 'transparent',
-    captionClr: "#f0f2f598",
+    captionClr: "#f0f2f5b0",
     resultsClr: "#E87A72"
 
   },

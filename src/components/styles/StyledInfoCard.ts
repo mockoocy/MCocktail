@@ -14,7 +14,7 @@ const StyledInfoCard = styled.div`
     filter: ${dropShadowOutline(.0625, .125, 'var(--bgNestedClr)')};
     background-color: var(--bgVariationClr);
     border-radius: 2rem;
-    padding-left: 1rem;
+    padding: 0 .5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

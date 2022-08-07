@@ -34,9 +34,7 @@ h1 {
   }
   @media (max-width: 820px){
     * {
-    margin: 0 5%;
     text-align: center;
-
     }
     .motto-container{ 
       h1 {

@@ -14,9 +14,11 @@ import DrinkGallery from '../../components/DrinkGallery';
 
 
 function Generator() {
+  const ingredientsFromStorage = localStorage.getItem('chosenIngredients')
+
   const [allIngredients, setAllIngredients] = useState<any[]>([]);
   const [ingredientsLoading, setIngredientsLoading] = useState(false);
-  const [chosenIngredients, setChosenIngredients] = useState<any[]>([]);
+  const [chosenIngredients, setChosenIngredients] = useState<any[]>(ingredientsFromStorage ? JSON.parse(ingredientsFromStorage) : []);
   const [generatedDrinks, setGeneratedDrinks] = useState<any[]>([]);
 
 
@@ -37,12 +39,11 @@ function Generator() {
     const ingredients = chosenIngredients.map(ingr=>ingr.strIngredient1)
     const params = ingredients.join();    
     const fetchUrl = `${urls.urlmultiIngredient}${params}`
-    console.log(fetchUrl);
-    
-    const response = await fetch(fetchUrl);
-    const data = await response.json();
-    setGeneratedDrinks(data.drinks);
-    console.log(data.drinks);
+      const response = await fetch(fetchUrl);
+      const data = await response.json();
+      data.drinks !== "None Found" ? setGeneratedDrinks(data.drinks) : setGeneratedDrinks([]);
+      // The cocktailDB API return "None Found" string in it's json response
+      // when there is no match...
     
   }
   useEffect(()=>{
@@ -61,6 +62,9 @@ function Generator() {
   fetchIngredients();
   },[]);
 
+  useEffect(()=>{
+    localStorage.setItem('chosenIngredients', JSON.stringify(chosenIngredients))
+  },[chosenIngredients])
   const generatedDrinksElements = generatedDrinks.map((drink, id) => (
     <Cocktail
       key={`gen-${id}`}
@@ -114,10 +118,12 @@ function Generator() {
           </div>  
         </div>
       }
-      <DrinkGallery>
-
-      {generatedDrinksElements}
-      </DrinkGallery>
+      <div id="generated-drinks">
+        <h1>That's what we found for you</h1>
+        <DrinkGallery>
+        {generatedDrinksElements}
+        </DrinkGallery>
+      </div>
     </StyledGenerator>
   )
 }
