@@ -29,6 +29,9 @@ const StyledNavbar = styled.nav`
     align-items: center;
     gap: 0.5rem;
     
+    @media (max-width:820px){
+      width: 25%;
+    }
   }
 
   .logo {
@@ -67,47 +70,15 @@ const StyledNavbar = styled.nav`
 
   }
 
-  .dropdown-list {
-    position: absolute;
-    gap: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    width: 10ch;
-    right: 5%;
-    bottom: 0;
-    max-height: 15%;
-    &>li {
-      width: 10ch;
-      background-color: var(--boringClr);
-      color: var(--optionClr);
-      border-radius: 100vmax;
-      text-align: center;
-      &:hover{
-        transform: scale(1.05)
-      }
-      &::marker {
-        content: "";     
-      }
-  
-    }
-  }
-
   .theme {
   stroke-width: 0.25rem;
 
 }
 
-
-
-
   @media (max-width: 820px) {
     position: fixed;
     .btn {
       width: 2rem;
-    }
-    .browse {
-      content: 'dupa';
     }
     .dropdown-list {
       right: 10%;

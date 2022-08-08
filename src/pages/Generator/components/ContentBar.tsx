@@ -11,8 +11,6 @@ type Props = {
 
 function ContentBar({allIngredients, chooseIngredient}: Props) {
 
-  // TODO: Single Ingredient Page
-  // TODO: implement ingredient type
   const [displayedIngredients, setDisplayedIngredients] = useState<any[]>([]);
   const [filterTerm, setFilterTerm] = useState('');
 
