@@ -13,12 +13,11 @@ const StyledCocktail = styled.div`
     height: 100%;
     border-radius: 2rem;
 
+    &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    }
   }
-  img:hover {
-      cursor: pointer;
-
-      transform: scale(1.05);
-      }
   .caption {
     background-color: var(--captionClr); 
     color: var(--fancyClr);
