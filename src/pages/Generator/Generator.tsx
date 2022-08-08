@@ -14,9 +14,11 @@ import DrinkGallery from '../../components/DrinkGallery';
 
 
 function Generator() {
-  const ingredientsFromStorage = localStorage.getItem('chosenIngredients')
+  const ingredientsFromStorage = localStorage.getItem('chosenIngredients');
+  const allIngredientsFromStorage = localStorage.getItem('allIngredients');
 
-  const [allIngredients, setAllIngredients] = useState<any[]>([]);
+
+  const [allIngredients, setAllIngredients] = useState<any[]>(allIngredientsFromStorage ? JSON.parse(allIngredientsFromStorage) : []);
   const [ingredientsLoading, setIngredientsLoading] = useState(false);
   const [chosenIngredients, setChosenIngredients] = useState<any[]>(ingredientsFromStorage ? JSON.parse(ingredientsFromStorage) : []);
   const [generatedDrinks, setGeneratedDrinks] = useState<any[]>([]);
@@ -29,6 +31,7 @@ function Generator() {
   }
 
   function ejectIngredient(ingredient: string){
+    // add throttle
     const currIngredient = chosenIngredients.find(ingr=>ingr.strIngredient1 === ingredient);
     setChosenIngredients(prevChosenIngredients => prevChosenIngredients.filter(ingr=> ingr!==currIngredient));
     setAllIngredients(prevAllIngredients => [currIngredient, ...prevAllIngredients])
@@ -49,6 +52,7 @@ function Generator() {
   useEffect(()=>{
     async function fetchIngredients(){
       setIngredientsLoading(true);
+      //the api is lying, the data.drinks contains ingredients :(
       try {
         const response = await fetch(urls.urlListIngredientsV2)
         const data = await response.json();
@@ -59,12 +63,17 @@ function Generator() {
       setIngredientsLoading(false)
     }
   }
-  fetchIngredients();
+  if (allIngredients.length ===0) fetchIngredients();
   },[]);
 
   useEffect(()=>{
     localStorage.setItem('chosenIngredients', JSON.stringify(chosenIngredients))
-  },[chosenIngredients])
+  },[chosenIngredients]);
+
+  useEffect(()=>{
+    localStorage.setItem('allIngredients', JSON.stringify(allIngredients))
+  },[allIngredients]);
+
   const generatedDrinksElements = generatedDrinks.map((drink, id) => (
     <Cocktail
       key={`gen-${id}`}
