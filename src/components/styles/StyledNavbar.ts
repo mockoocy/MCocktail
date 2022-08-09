@@ -9,13 +9,19 @@ const StyledNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url("../../smokebook.png");
-  background-size: 150vmax;
-  background-repeat: no-repeat;
-  filter: saturate(var(--navSaturation));
   border-bottom: 0.25rem solid var(--boringClr);
 
+  .background-image-container {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../smokebook.png");
+    background-size: 150vmax;
+    background-repeat: no-repeat;
+    filter: saturate(var(--navSaturation));
 
+  }
   button {
     cursor: pointer;
     background: transparent;
@@ -35,7 +41,7 @@ const StyledNavbar = styled.nav`
   }
 
   .logo {
-    filter: hue-rotate(var(--hueRotateDeg));
+    filter:  hue-rotate(var(--hueRotateDeg));
   }
 
   .button-container{

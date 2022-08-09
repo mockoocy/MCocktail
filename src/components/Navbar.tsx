@@ -15,6 +15,7 @@ function Navbar({changeTheme}: Props){
 
   return (
     <StyledNavbar >
+      <div className="background-image-container"></div>
       <Link to="/" className="logo-container">
       <Logo className="logo"/>
       </Link>
