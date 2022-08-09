@@ -11,7 +11,7 @@ const StyledThemeSelector = styled.div`
     align-items: center;
     min-width: 25ch;
     background: var(--resultsClr);
-    border: 3px solid var(--boringClr);
+    border: 2px solid var(--boringClr);
     border-radius: 1rem;
     padding: 0 .5rem;
 
@@ -49,16 +49,20 @@ const StyledThemeSelector = styled.div`
       ::marker {
         content: '';
       }
-      .theme-marker {
-        width: 2rem;
-        height: 2rem;
+
+      .icon-container{
         border-radius: 2rem;
 
-        @media (max-width:820px){
-          width: 1.5rem;
-          height: 1.5rem;
+        .theme-marker {
+          width: 2rem;
+          height: 2rem;
+  
+          @media (max-width:820px){
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+  
         }
-
       }
     }
   }

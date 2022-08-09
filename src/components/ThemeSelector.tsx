@@ -4,6 +4,7 @@ import Themes from '../data/themes';
 import { Theme } from '../types';
 import useOuterClick from '../hooks/useOuterClick';
 import StyledThemeSelector from './styles/StyledThemeSelector';
+import styled from 'styled-components';
 
 
 type Props = {
@@ -28,10 +29,13 @@ function ThemeSelector({changeTheme}: Props) {
     key={`themeOption-${id}`}
     className="theme-option"
     onClick={()=> changeTheme(theme)}>
+      <div className="icon-container" style={{background:theme.colors.bgClr}}>
+
       <Icon className="theme-marker"
       icon="line-md:marker"
       color={theme.colors.fancyClr}
       />
+      </div>
       {theme.name}
     </li>
   ))
