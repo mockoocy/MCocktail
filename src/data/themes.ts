@@ -161,7 +161,7 @@ const happyTheme: Theme = {
     bgVariationClr: 'transparent', //E7F9A9 if i decide to not use transparent 
     bgNestedClr: 'transparent ', // F6FAAA if i decide to not use transparent 
     captionClr: "#0f0f0fa0",
-    resultsClr: "#d3fbe5"
+    resultsClr: "#DDFFC7"
 
   },
   utils: {
