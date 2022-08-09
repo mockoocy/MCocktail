@@ -15,7 +15,7 @@ type Colors = {
 type Utils = {
   navSaturation: string;
   gradientButtonClrs: string;
-  hueRotateDeg?: string;
+  hueRotateDeg: string;
 }
 
 export type Theme = {

@@ -15,6 +15,7 @@ const darkTheme: Theme = {
   },
   utils: {
     navSaturation: '75%',
+    hueRotateDeg: '0',
     gradientButtonClrs: 'linear-gradient(to right, #0f0f0f 0%, #7fffd4 51%, #0f0f0f 100%)'
   }
 }
@@ -56,8 +57,8 @@ const monoTheme: Theme = {
   },
   utils: {
     navSaturation: '0%',
+    hueRotateDeg: '0',
     gradientButtonClrs: '#f8fff8'
-
   }
 }
 

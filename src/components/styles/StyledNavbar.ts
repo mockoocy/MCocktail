@@ -41,7 +41,7 @@ const StyledNavbar = styled.nav`
   }
 
   .logo {
-    filter:  hue-rotate(var(--hueRotateDeg));
+    filter: saturate(var(--navSaturation)) hue-rotate(var(--hueRotateDeg));
   }
 
   .button-container{
