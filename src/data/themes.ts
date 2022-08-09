@@ -1,6 +1,7 @@
 import { Theme } from "../types"
 
 const darkTheme: Theme = {
+  name: "Lime Dark",
   colors: {
     bgClr: 'rgb(15, 15, 15)',
     optionClr: 'rgb(15, 15, 15)',
@@ -19,6 +20,7 @@ const darkTheme: Theme = {
 }
 
 const fuschiaTheme: Theme = {
+  name: "Fuschia Dark",
   colors: {
     bgClr: '#0E0B16',
     optionClr: '#0E0B16',
@@ -39,6 +41,7 @@ const fuschiaTheme: Theme = {
 }
 
 const monoTheme: Theme = {
+  name: "Mono Dark",
   colors: {
     bgClr: '#0f0f0f',
     optionClr: '#0f0f0f',
@@ -59,6 +62,7 @@ const monoTheme: Theme = {
 }
 
 const greenTheme: Theme = {
+  name: "Green Light",
   colors: {
     bgClr: '#f5faf5',
     optionClr: '#f5faf5',
@@ -80,6 +84,7 @@ const greenTheme: Theme = {
 }
 
 const lightTheme: Theme = {
+  name: "Blue Light",
   colors: {
     bgClr: '#f0f2f5',
     optionClr: '#f0f2f5',
@@ -102,6 +107,7 @@ const lightTheme: Theme = {
 }
 
 const peachTheme: Theme = {
+  name: "Peach",
   colors: {
     bgClr: 'linear-gradient(45deg,#ffc8c8,#ff5858,#ffc8c8)',
     optionClr: '#c2cad0'  ,
@@ -123,6 +129,7 @@ const peachTheme: Theme = {
 }
 
 const vividTheme: Theme = {
+  name: "Vivid",
   colors: {
     bgClr: 'linear-gradient(45deg,#00DBDE, #FC00FF)',
     optionClr: '#0A0C10',
@@ -144,6 +151,7 @@ const vividTheme: Theme = {
 }
 
 const happyTheme: Theme = {
+  name: "Happy 🏳️‍🌈",
   colors: {
     bgClr: 'linear-gradient( 90deg, rgba(255,187,187,1) -8.8%, rgba(255,220,177,1) 12.4%, rgba(255,249,177,1) 35.6%, rgba(220,255,177,1) 59.6%, rgba(177,218,255,1) 84%, rgba(222,177,255,1) 107.9% )',
     optionClr: '#0A0C10',
@@ -166,6 +174,7 @@ const happyTheme: Theme = {
 
 
 const sunsetTheme: Theme = {
+  name: "Sunset",
   colors: {
     bgClr: 'linear-gradient(45deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%)',
     optionClr: '#FF9D78',

@@ -19,6 +19,7 @@ type Utils = {
 }
 
 export type Theme = {
+  name: string;
   colors : Colors;
   utils: Utils;
 }

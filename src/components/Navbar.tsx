@@ -20,6 +20,7 @@ function Navbar({changeTheme}: Props){
       </Link>
       <SearchBar />
       <div className="button-container" >
+        <ThemeSelector changeTheme={changeTheme}/>
         <NavLink to = '/thanks'>
           <Icon icon="akar-icons:heart" className="btn icon-hear"/>
         </NavLink>
@@ -29,7 +30,6 @@ function Navbar({changeTheme}: Props){
         <NavLink to = '/favs/'>
           <Icon icon="gis:globe-favorite" className="btn icon-favorite"/>
         </NavLink>
-        <ThemeSelector changeTheme={changeTheme}/>
         </div>
     </StyledNavbar>
   )
