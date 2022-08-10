@@ -67,7 +67,7 @@ const greenTheme: Theme = {
   colors: {
     bgClr: '#f5faf5',
     optionClr: '#f5faf5',
-    fancyClr: '#DDFFC7',
+    fancyClr: '#A3FF66',
     boringClr: 'rgb(15, 15, 15)',
     selectionClr: '#E9C7FF',
     bgNestedClr: '#fff',
@@ -179,12 +179,12 @@ const sunsetTheme: Theme = {
   colors: {
     bgClr: 'linear-gradient(45deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%)',
     optionClr: '#FF9D78',
-    fancyClr: '#ff7981',
-    boringClr: '#FFFA78',
+    fancyClr: '#66DEE7',
+    boringClr: '#FFF566',
     selectionClr: '#49A3FD  ',
     bgVariationClr: 'transparent',
     bgNestedClr: 'transparent ',
-    captionClr: "#f0f2f598",
+    captionClr: "#001A1490",
     resultsClr: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)"
 
   },
@@ -199,10 +199,10 @@ const sunsetTheme: Theme = {
 
 const Themes = {
   darkTheme,
-  lightTheme,
-  greenTheme,
   fuschiaTheme,
   monoTheme,
+  lightTheme,
+  greenTheme,
   peachTheme,
   vividTheme,
   happyTheme,

@@ -27,9 +27,9 @@ align-items: center;
 
       font-size: 3rem;
       font-family: Inter, sans-serif;
-
       li {
         font-size: 1.5rem;
+        font-family: Lato, Inter, sans-serif;
       }
     }
     li::marker{

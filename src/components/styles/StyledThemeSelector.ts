@@ -51,7 +51,7 @@ const StyledThemeSelector = styled.div`
       }
 
       .icon-container{
-        border-radius: 2rem;
+        border-radius: 100vmax;
 
         .theme-marker {
           width: 2rem;

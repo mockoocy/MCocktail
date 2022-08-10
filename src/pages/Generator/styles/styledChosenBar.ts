@@ -35,6 +35,7 @@ box-shadow:
     .info {
       text-align: center;
       font-size: 2rem;  
+      font-family: Inter, Lato, sans-serif;
       color: var(--boringClr);
       @media (max-width:820px){
           font-size: 1.5rem;
@@ -53,6 +54,7 @@ box-shadow:
 
     .ingredient {
       min-height: 3.5rem;
+      font-family: Inter, Lato, sans-serif;
       width: 100%;
       display: flex;
       justify-content: space-between;

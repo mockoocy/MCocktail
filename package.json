@@ -27,7 +27,7 @@
   },
   "scripts": {
     "frontend": "react-scripts start",
-    "backend": "node server.js",
+    "backend": "nodemon server.js",
     "start": "concurrently \"react-scripts start\" \"nodemon server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",

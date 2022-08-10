@@ -15,7 +15,7 @@ h1 {
   font-family: "Rubik Moonrocks", Lato, sans-serif;
   filter:
     drop-shadow(.25rem .25rem 0 var(--boringClr))
-    drop-shadow(.25rem .25rem .25rem var(--boringClr));
+    drop-shadow(.125rem .125rem .25rem var(--boringClr));
   }
 
   .info-cards {

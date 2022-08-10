@@ -30,7 +30,7 @@ const StyledInfoCard = styled.div`
     font-size: 3rem;
     filter: 
     drop-shadow(.125rem .125rem 0 var(--boringClr));
-    font-family: Lato;
+    font-family: Inter, Lato, sans-serif;
     color: var(--fancyClr);
     font-weight: 400;
     text-align: center;

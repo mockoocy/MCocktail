@@ -7,12 +7,20 @@ align-items: center;
 justify-content: center;
 gap: 0.5rem;
 height: 4rem;
-width: 40%;
+width: 20%;
 transition: all 250ms ease-in-out;
 cursor: pointer;
 
+&.open {
+  width: 40%;
+
+  @media (max-width:820px){
+    width: 100%;
+  }
+}
+
 @media (max-width: 820px){
-  width: 60%;
+  width: 25%;
   height: 2rem;
   font-size: 0.625rem;
 }
@@ -99,6 +107,7 @@ ul {
     padding: 0 1rem;
     font-size: 1.5rem;
     font-style: italic;
+    font-family: Lato, Inter, sans-serif;
     @media (max-width:820px){
       height: 2.5rem;
       font-size: 1rem;

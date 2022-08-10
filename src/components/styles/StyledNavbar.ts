@@ -42,6 +42,10 @@ const StyledNavbar = styled.nav`
 
   .logo {
     filter: saturate(var(--navSaturation)) hue-rotate(var(--hueRotateDeg));
+
+    &:hover{
+      transform: scale(1.02);
+    }
   }
 
   .button-container{

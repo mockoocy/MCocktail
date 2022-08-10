@@ -33,7 +33,7 @@ const StyledExplore = styled.section`
     font-size: 3.25rem;
     letter-spacing: 0.25rem;
     color: var(--fancyClr);
-    ${textOutline(.125, .125, 'var(--boringClr)')}
+    ${textOutline(.0625, .0625, 'var(--boringClr)')}
   }
   .options-container {
     display: flex;
@@ -45,9 +45,8 @@ const StyledExplore = styled.section`
       align-items: center;
       padding: 0 0.5rem;
       font-weight: 500;
-      font-family: Lato, sans-serif;
+      font-family: Inter, sans-serif;
       border: 1px solid var(--fancyClr);
-
       border-radius: 100vmax;
       width: auto;
       height: 2.5rem;
@@ -117,6 +116,7 @@ const StyledExplore = styled.section`
       color: var(--fancyClr);
       height: auto;
       font-size: 1.5rem;
+      font-family: Inter, sans-serif;
       border-radius: 2rem;
       width: 80%;
       margin: 0 10%;

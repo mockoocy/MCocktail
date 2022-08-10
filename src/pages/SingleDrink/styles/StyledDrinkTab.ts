@@ -54,6 +54,10 @@ const StyledDrinkTab = styled.section`
     align-items: center;
     gap: 2rem;
 
+    *{
+      font-family: Lato, Inter, sans-serif;   
+    }
+
     .main-info {
       display: flex;
       flex-direction: column;
@@ -116,11 +120,8 @@ const StyledDrinkTab = styled.section`
       img {
           height: 2rem;
         }
-
       }
-
     }
-
   }
   .preparation-info {
     display: flex;
@@ -133,7 +134,7 @@ const StyledDrinkTab = styled.section`
       justify-content: space-between;
       gap: 1rem;
       align-items: top;
-      
+      font-family: Inter, sans-serif;
     }
 
 
@@ -143,6 +144,7 @@ const StyledDrinkTab = styled.section`
       font-size: 2.25rem;
       ${textOutline(.125, .125, 'var(--captionClr)')};
       font-weight: 600;
+      
 
 
     }
@@ -157,10 +159,13 @@ const StyledDrinkTab = styled.section`
       padding: 0;
       font-size: 1.25rem;
       color: var(--boringClr);
+
       
       >li {
         display: flex;
         justify-content: space-between;
+        font-family: Inter, sans-serif;
+
         gap: 1rem;
 
         .ingredient-measure {
@@ -182,6 +187,7 @@ const StyledDrinkTab = styled.section`
       .instruction{
         font-size: 1.25rem;
         text-align: center;
+        font-family: Inter, sans-serif;
       }
     }
   }

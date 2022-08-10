@@ -53,7 +53,7 @@ function SearchBar() {
   ))
 
   return (
-    <StyledSearchBar onClick={handleSearchClick} ref={resultsRef}>
+    <StyledSearchBar onClick={handleSearchClick} ref={resultsRef} className={`${showResults? "open" : ''}`}>
       <Icon icon="fe:search" id="search-icon"/>
       <DebounceInput 
         type="text" 

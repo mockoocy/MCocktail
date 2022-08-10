@@ -45,6 +45,8 @@ const StyledGenerator = styled.section`
       font-size: 3rem;
       color: var(--boringClr);
       text-align: center;
+      font-family: Lato, Inter,  sans-serif;
+
       @media (max-width:820px){
         font-size: 1.5rem;
       }
