@@ -15,7 +15,8 @@ type Props = {
 function IngredientTab({ingredient}: Props) {
   const {favoriteIngredients, updateFavoriteIngredients} = useGlobalContext();
   const isFavorite = favoriteIngredients.some((ingr: Ingredient) => ingredient.idIngredient === ingr.idIngredient);
-  const displayABV = ingredient.strABV ? ingredient.strABV : "0"
+  const displayABV = ingredient.strABV ? ingredient.strABV : "0";
+  const displayDescription = ingredient.strDescription ? ingredient.strDescription : "Sadly, there is no description provided for this ingredient"
   return (
     <StyledIngredientTab>
       <div id="image-container">
@@ -31,7 +32,7 @@ function IngredientTab({ingredient}: Props) {
           <h3 id="abv">ABV: {displayABV}%</h3>
         </div>
         <div id="description-container">
-          <p id="description">{ingredient.strDescription}</p>
+          <p id="description">{displayDescription}</p>
         </div>
       </div>
     </StyledIngredientTab>
