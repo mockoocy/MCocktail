@@ -11,6 +11,7 @@ import Loader from '../../components/Loader';
 import ChosenBar from './components/ChosenBar';
 import Cocktail from '../../components/Cocktail';
 import DrinkGallery from '../../components/DrinkGallery';
+import { useQuery } from '@tanstack/react-query';
 
 
 function Generator() {
@@ -19,7 +20,6 @@ function Generator() {
 
 
   const [allIngredients, setAllIngredients] = useState<any[]>(allIngredientsFromStorage ? JSON.parse(allIngredientsFromStorage) : []);
-  const [ingredientsLoading, setIngredientsLoading] = useState(false);
   const [chosenIngredients, setChosenIngredients] = useState<any[]>(ingredientsFromStorage ? JSON.parse(ingredientsFromStorage) : []);
   const [generatedDrinks, setGeneratedDrinks] = useState<any[]>([]);
 
@@ -38,7 +38,7 @@ function Generator() {
   }
 
 
-  async function fetchMachingDrinks(){
+  async function fetchMatchingDrinks(){
     const ingredients = chosenIngredients.map(ingr=>ingr.strIngredient1)
     const params = ingredients.join();    
     const fetchUrl = `${urls.urlmultiIngredient}${params}`
@@ -49,30 +49,24 @@ function Generator() {
       // when there is no match...
     
   }
-  useEffect(()=>{
-    async function fetchIngredients(){
-      setIngredientsLoading(true);
-      //the api is lying, the data.drinks contains ingredients :(
-      try {
-        const response = await fetch(urls.urlListIngredientsV2)
-        const data = await response.json();
-        setAllIngredients(data.drinks)
-    } catch(error){
-      console.log(error);
-    } finally {
-      setIngredientsLoading(false)
-    }
+
+  const {isLoading} = useQuery(['allIngredients'], fetchIngredients );
+
+  async function fetchIngredients(){
+    if (allIngredients.length !== 0) return;
+    const response = await fetch(urls.urlListIngredientsV2);
+    const data = await response.json();
+    setAllIngredients(data.drinks)
   }
-  if (allIngredients.length ===0) fetchIngredients();
-  },[]);
+
 
   useEffect(()=>{
     localStorage.setItem('chosenIngredients', JSON.stringify(chosenIngredients))
   },[chosenIngredients]);
 
-  useEffect(()=>{
-    localStorage.setItem('allIngredients', JSON.stringify(allIngredients))
-  },[allIngredients]);
+    useEffect(()=>{
+      localStorage.setItem('allIngredients', JSON.stringify(allIngredients))
+    },[allIngredients]);
 
   const generatedDrinksElements = generatedDrinks.map((drink, id) => (
     <Cocktail
@@ -105,7 +99,7 @@ function Generator() {
           <Factory className="svg factory"/>
         </InfoCard>
       </div>  
-      {ingredientsLoading
+      {isLoading
         ? <Loader text="loading ingredients" />
         :
         <div className="generator-setup">
@@ -122,7 +116,7 @@ function Generator() {
             <div className="svg-container">
               <Omega className="svg omega" />
             </div>
-            <button className="generate-btn" onClick={()=> fetchMachingDrinks()
+            <button className="generate-btn" onClick={()=> fetchMatchingDrinks()
             }>LET'S GO!</button>
           </div>  
         </div>
