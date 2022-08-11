@@ -4,9 +4,8 @@ import StyledExplore from "./styles/StyledExplore";
 import Cocktail from "../../../components/Cocktail";
 import randomSample from "../../../utils/randomSample"
 import {Option} from "../../../types";
-import { TApiResponse } from "../../../types";
-import {useApiGet} from "../../../hooks/useApiGet"
 import urls from "../../../data/urls.json";
+import {  useQuery } from "@tanstack/react-query";
 
 const COCKTAIL_AMOUNT = 10;
 const RANDOM_INGREDIENTS_AMOUNT =8;
@@ -25,9 +24,9 @@ const DEFAULT_OPTIONS: Option[] = [
     id: 1
   },
   {
-    value: "Optional Alcohol",
+    value: "Random",
     clicked: false,
-    url: `${urls.urlAlcoholic}optional_alcohol`,
+    url: urls.urlDefault,
     id: 2
   },
   {
@@ -46,7 +45,28 @@ function Explore() {
   const [options, setOptions] = useState<Option[]>(DEFAULT_OPTIONS);
   // Can't put it in useEffect, so we call it there. [options, cocktails] is the only
   // deps array that forces re-render, so there is no excess data being fetched, no worries
-  const ingredients : TApiResponse = useApiGet(urls.urlListIngredients);
+
+  const ingredientsQuery = useQuery(['ingredients'],fetchIngredients);
+  const isIngredientsLoading = ingredientsQuery.isLoading;
+  const ingredients = ingredientsQuery.data?.drinks;
+
+  async function fetchIngredients(){
+    const response = await fetch(urls.urlListIngredients);
+    const data = response.json();
+    return data
+  }
+
+  // const drinksQuery = useQuery(['drinks', urlSelected], fetchDrinks);
+  // const areDrinksLoading = drinksQuery.isLoading;
+
+  // async function fetchDrinks(){
+  //   const response = await fetch(urlSelected);
+  //   const data = await response.json();
+  //   const drinksSample = await randomSample(data.drinks, COCKTAIL_AMOUNT);
+  //   setCocktails(drinksSample);
+  //   return data;
+  // }
+  // Will leave it for now, because traditional useEffect is more performant
 
   function handleOptionClick(id: number){
     setOptions(options => {
@@ -60,7 +80,7 @@ function Explore() {
     })
   };
 
-  async function shuffleOptions(ingredients: TApiResponse["data"]["drinks"], amount: number){
+  async function shuffleOptions(ingredients: any[], amount: number){
     const ingredientOptions = await randomSample(ingredients, amount);
     const newOptions: Option[] = ingredientOptions.map((ingredient, id) => {
       return {
@@ -116,7 +136,7 @@ function Explore() {
     <StyledExplore >
       <h1 className="title">Some drinks for you</h1>
       <div className="options-container">
-        {!ingredients.loading && <div className="option" onClick={() => shuffleOptions(ingredients.data.drinks, RANDOM_INGREDIENTS_AMOUNT)}>Shuffle and get Ingredients!🔀 </div>}
+        {!isIngredientsLoading && <div className="option" onClick={() => shuffleOptions(ingredients, RANDOM_INGREDIENTS_AMOUNT)}>Shuffle and get Ingredients!🔀 </div>}
         {optionElements}
       </div>
       {

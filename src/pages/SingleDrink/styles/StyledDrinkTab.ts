@@ -172,6 +172,10 @@ const StyledDrinkTab = styled.section`
           font-weight: 400;
           font-style: italic;
         }
+        a, a:visited, a:link {
+          color: inherit;
+          text-decoration: none;
+        }
       }
 
       *::marker {

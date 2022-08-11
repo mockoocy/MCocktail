@@ -4,6 +4,7 @@ import {Drink} from "../../../types";
 import urls from "../../../data/urls.json";
 import { Icon } from '@iconify/react';
 import { useGlobalContext } from '../../../context';
+import { Link } from 'react-router-dom';
 const {urlImageByIngredient} = urls;
 
 type Props = {
@@ -30,7 +31,7 @@ function DrinkTab({drink}: Props) {
     const ingredientElements = ingredients.map((ingredient, id) => (
       <li className="ingredient"
       key={id}>
-        <span className="ingredient-name">{ingredient}</span>
+        <Link to={`../ingredient/${ingredient}`}><span className="ingredient-name">{ingredient}</span></Link>
         <span className="ingredient-measure">{ingredientsWithMeasures[ingredient]}</span>
       </li>
       )
