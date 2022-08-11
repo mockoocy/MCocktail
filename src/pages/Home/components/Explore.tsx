@@ -114,7 +114,7 @@ function Explore() {
 
 
   const optionElements = options.map(option =>{
-    return <div key={option.id}
+    return <div key={`option${option.id}`}
       id={option.id.toString()}
       className={`option ${option.clicked? 'clicked': ''}`}
       onClick={()=> handleOptionClick(option.id)}
@@ -124,7 +124,7 @@ function Explore() {
   const cocktailElements = cocktails.map((cocktail,id) =>{
     return (
       <Cocktail 
-        key={id}
+        key={`cocktailPreview-${id}`}
         strDrinkThumb={cocktail.strDrinkThumb}
         strDrink={cocktail.strDrink}
         idDrink={cocktail.idDrink}
