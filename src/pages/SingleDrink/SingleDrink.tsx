@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import DrinkTab from "./components/DrinkTab";
 import { useParams } from "react-router-dom";
-import { useApiGet } from "../../hooks/useApiGet";
-import { TApiResponse } from "../../types";
 import urls from "../../data/urls.json"
 import Loader from "../../components/Loader";
 import {Drink, IngredientsWithMeasures } from "../../types"
+import { useQuery } from "@tanstack/react-query";
 
 export default function SingleDrink(){
   const MAX_INGREDIENT_NUMBER = 16;
@@ -27,17 +26,23 @@ export default function SingleDrink(){
 
   const {urlDetailsById} = urls;
   const fetchUrl = `${urlDetailsById}${drinkId}`
-  const fetchData : TApiResponse = useApiGet(fetchUrl);
-  let drinkInfo: any = fetchData.data?.drinks[0];
+
+  const {data, isLoading} = useQuery(["drinkInfo"],fetchDrinkInfo);
+  const drinkData = data?.drinks[0];
+
+  async function fetchDrinkInfo(){
+    const response = await fetch(fetchUrl);
+    return response.json();
+  }
 
   useEffect(()=>{
   let ingredientsWithMeasures : IngredientsWithMeasures = {}
-  if (fetchData.data?.drinks[0]){
-  const drinkData : any = fetchData.data.drinks[0];
+  if (drinkData){
+  const drinkInfo : any = drinkData;
 
     for (let i=1;i<MAX_INGREDIENT_NUMBER; i++){
-      const ingredient = drinkData[`strIngredient${i}`];
-      const measure = drinkData[`strMeasure${i}`] 
+      const ingredient = drinkInfo[`strIngredient${i}`];
+      const measure = drinkInfo[`strMeasure${i}`] 
       ? drinkData[`strMeasure${i}`]
       : "As much as you wish" ;
       if (ingredient) ingredientsWithMeasures[ingredient] = measure;
@@ -45,7 +50,7 @@ export default function SingleDrink(){
     }
   }
 
-    if (drinkInfo){
+    if (drinkData){
       const {idDrink,
         strDrink,
         strCategory,
@@ -54,7 +59,7 @@ export default function SingleDrink(){
         strGlass,
         strInstructions,
         strDrinkThumb,
-        strIngredient1} = drinkInfo 
+        strIngredient1} = drinkData 
       setDrink({idDrink,
         strDrink,
         strCategory,
@@ -67,10 +72,10 @@ export default function SingleDrink(){
         ingredientsWithMeasures});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[drinkInfo])
+  },[drinkData])
   return (
     <>
-      {fetchData.loading
+      {isLoading
         ? <Loader text="Loading..."/>
         : <DrinkTab drink={drink}/>
       }

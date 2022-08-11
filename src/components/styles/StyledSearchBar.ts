@@ -7,7 +7,7 @@ align-items: center;
 justify-content: center;
 gap: 0.5rem;
 height: 4rem;
-width: 20%;
+width: 15%;
 transition: all 250ms ease-in-out;
 cursor: pointer;
 
