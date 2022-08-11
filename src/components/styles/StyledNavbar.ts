@@ -16,10 +16,13 @@ const StyledNavbar = styled.nav`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: url("../../smokebook.png");
-    background-size: 150vmax;
-    background-repeat: no-repeat;
     filter: saturate(var(--navSaturation));
+
+    img {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
 
   }
   button {

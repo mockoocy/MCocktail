@@ -6,16 +6,18 @@ import { Link, NavLink } from "react-router-dom";
 import { Icon } from '@iconify/react';
 import {ReactComponent as Logo} from '../assets/logo.svg';
 import {Theme} from "../types"
+import smokebook from "../assets/smokebook.png"
 
 type Props = {
   changeTheme: (theme: Theme) => void
 }
 
 function Navbar({changeTheme}: Props){
-
   return (
     <StyledNavbar>
-      <div className="background-image-container"></div>
+      <div className="background-image-container">
+        <img src={smokebook} alt="eeeewqeqwrqwevdsmkmddkskfds" />
+      </div>
       <Link to="/" className="logo-container">
       <Logo className="logo"/>
       </Link>
