@@ -7,7 +7,7 @@ const StyledExplore = styled.section`
   flex-direction: column;
   gap: 1rem;
   width: 80%;
-  margin: 0 10% 0  10%;
+  margin: 2.5% 10% 0  10%;
   background-color: var(--bgVariationClr);
   border-radius: 2rem;
   overflow-x: hidden;

@@ -67,7 +67,13 @@ const StyledNavbar = styled.nav`
 
     @media (max-width:820px){
       gap: .25rem;
+    } 
+    .active-btn {
+      >*{
+        color: var(--boringClr);
+      }
     }
+
   }
   .btn {
     color: var(--fancyClr);

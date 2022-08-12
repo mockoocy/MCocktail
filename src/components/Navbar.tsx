@@ -24,13 +24,16 @@ function Navbar({changeTheme}: Props){
       <SearchBar />
       <div className="button-container" >
         <ThemeSelector changeTheme={changeTheme}/>
-        <NavLink to = '/thanks'>
-          <Icon icon="akar-icons:heart" className="btn icon-hear"/>
+        <NavLink to="/" className={({isActive})=> isActive ? "active-btn" : ''}>
+          <Icon icon="ant-design:home-outlined" className="btn icon-home" />
         </NavLink>
-        <NavLink to = '/generate/'>
-          <Icon icon="ic:baseline-computer" className="btn generate"/>
+        <NavLink to='/thanks' className={({isActive})=> isActive ? "active-btn" : ''}>
+          <Icon icon="akar-icons:heart" className="btn icon-heart"/>
         </NavLink>
-        <NavLink to = '/favs/'>
+        <NavLink to='/generate/' className={({isActive})=> isActive ? "active-btn" : ''}>
+          <Icon icon="ic:baseline-computer" className="btn icon-generate"/>
+        </NavLink>
+        <NavLink to='/favs/' className={({isActive})=> isActive ? "active-btn" : ''}>
           <Icon icon="gis:globe-favorite" className="btn icon-favorite"/>
         </NavLink>
         </div>

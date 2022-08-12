@@ -102,8 +102,9 @@ const StyledGenerator = styled.section`
     
     h1 {
       font-size: 3rem; 
+      font-family: Lato, Inter, sans-serif;
       color: var(--fancyClr);
-      ${textOutline(.125, .125, 'var(--boringClr)')};
+      ${textOutline(.0625, .0625, 'var(--boringClr)')};
     }
   }
 

@@ -73,7 +73,7 @@ const greenTheme: Theme = {
     bgNestedClr: '#fff',
     bgVariationClr: '#f8fff8',
     captionClr : "#0f0f0fa0",
-    resultsClr: "#f8fff8"
+    resultsClr: "linear-gradient(45deg, #A3FF66, #DDFFC7, #f8fff8)"
 
   },
   utils: {
@@ -95,7 +95,8 @@ const lightTheme: Theme = {
     bgVariationClr: '#f8f8f8',
     bgNestedClr: '#fff',
     captionClr: "#f0f2f598",
-    resultsClr: "#f8f8f8"
+    resultsClr: "linear-gradient(45deg,#005ce6, #f0f2f5)"
+
 
   },
   utils: {
@@ -118,7 +119,7 @@ const peachTheme: Theme = {
     bgVariationClr: 'transparent',
     bgNestedClr: 'transparent',
     captionClr: "#f0f2f5b0",
-    resultsClr: "#E87A72"
+    resultsClr: "linear-gradient(45deg,#D12335, #ffc8c8, #f0f2f5)"
 
   },
   utils: {
@@ -152,7 +153,7 @@ const vividTheme: Theme = {
 }
 
 const happyTheme: Theme = {
-  name: "Happy 🏳️‍🌈",
+  name: "Happy",
   colors: {
     bgClr: 'linear-gradient( 90deg, rgba(255,187,187,1) -8.8%, rgba(255,220,177,1) 12.4%, rgba(255,249,177,1) 35.6%, rgba(220,255,177,1) 59.6%, rgba(177,218,255,1) 84%, rgba(222,177,255,1) 107.9% )',
     optionClr: '#0A0C10',
@@ -162,7 +163,8 @@ const happyTheme: Theme = {
     bgVariationClr: 'transparent', //E7F9A9 if i decide to not use transparent 
     bgNestedClr: 'transparent ', // F6FAAA if i decide to not use transparent 
     captionClr: "#0f0f0fa0",
-    resultsClr: "#DDFFC7"
+    resultsClr: "linear-gradient(45deg,#DDFFC7, #f0f2f5)"
+
 
   },
   utils: {
@@ -192,21 +194,65 @@ const sunsetTheme: Theme = {
     navSaturation: '110%',
     hueRotateDeg: '110deg',
     gradientButtonClrs:  'linear-gradient(to right, #fcc5e4 0%, #fda34b 16.6%, #ff7882 33.3%, #c8699e 50%, #7046aa 66.6%, #0c1db8 83.3%, #020f75 100%)',
-
   }
 }
 
+const minionTheme: Theme = {
+  name: "Minion",
+  colors: {
+    bgClr: '#fcde67',
+    optionClr: '#fcde67',
+    fancyClr: '#5bccf6',
+    boringClr: '#030e12',
+    selectionClr: '#81FC68  ',
+    bgVariationClr: 'transparent',
+    bgNestedClr: 'transparent ',
+    captionClr: "#001A1490",
+    resultsClr: "linear-gradient(45deg, #5bccf6 0%, #fcde67 46%, #49A3FD 100%)"
+
+  },
+  utils: {
+    navSaturation: '110%',
+    hueRotateDeg: '110deg',
+    gradientButtonClrs:  'linear-gradient(to right, #5bccf6 0%, #FCC567 51%, #49A3FD 100%)',
+  }
+}
+
+const redishTheme: Theme = {
+  name: "French Light",
+  colors: {
+    bgClr: '#fff0f2',
+    optionClr: '#fff0f2',
+    fancyClr: '#E0485D',
+    boringClr: '#5346C8',
+    selectionClr: '#4caa2b  ',
+    bgVariationClr: '#FFF2F4', //E7F9A9 if i decide to not use transparent 
+    bgNestedClr: '#FFF4F6 ', // F6FAAA if i decide to not use transparent 
+    captionClr: "#0f0f0fa0",
+    resultsClr: "linear-gradient(45deg,#E0485D, #FFF2F4, #5346C8)"
+
+
+  },
+  utils: {
+    navSaturation: '300%',
+    hueRotateDeg: '140deg',
+    gradientButtonClrs: 'linear-gradient( to right, #E0485D, #FFF2F4 51%, #5346C8 100%)'
+
+  }
+}
 
 const Themes = {
   darkTheme,
   fuschiaTheme,
   monoTheme,
   lightTheme,
+  redishTheme,
   greenTheme,
+  minionTheme,
   peachTheme,
   vividTheme,
   happyTheme,
-  sunsetTheme
+  sunsetTheme,
 
 }
 

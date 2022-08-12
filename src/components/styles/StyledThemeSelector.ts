@@ -32,7 +32,6 @@ const StyledThemeSelector = styled.div`
       align-items: center;
       justify-content: space-between;
       padding: 0 .25rem;
-      ${textOutline(.0625, 0.125, "var(--optionClr)")};
 
       @media (max-width:820px){
         height: 2rem;

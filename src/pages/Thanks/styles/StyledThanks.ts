@@ -12,7 +12,7 @@ align-items: center;
     color: var(--fancyClr);
     font-size: 6rem;
     font-family: Lato, sans-serif;
-    ${textOutline(.125, .25, 'var(--boringClr)')}
+    ${textOutline(.0625, .125, 'var(--boringClr)')}
   }
 
   .love-container {
