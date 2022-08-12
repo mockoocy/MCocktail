@@ -6,9 +6,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
-  @media (max-width: 820px) {
-    padding: 12.5vh 2.5% 0 2.5%;
-  }
   .favorites-container {
     background-color: var(--bgNestedClr);
     filter: ${dropShadowOutline(.125, .125, 'var(--bgVariationClr)')};

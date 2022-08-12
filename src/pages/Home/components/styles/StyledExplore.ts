@@ -7,7 +7,7 @@ const StyledExplore = styled.section`
   flex-direction: column;
   gap: 1rem;
   width: 80%;
-  margin: 5% 10% 0  10%;
+  margin: 0 10% 0  10%;
   background-color: var(--bgVariationClr);
   border-radius: 2rem;
   overflow-x: hidden;
@@ -130,7 +130,7 @@ const StyledExplore = styled.section`
 
 
   @media (max-width: 820px){
-    margin-top: 12.5vh;
+    margin-top: 10vh;
     .options-container {
       display: grid;
       grid-template-columns: repeat(3, .20fr);
@@ -141,14 +141,14 @@ const StyledExplore = styled.section`
         text-align: center;
         justify-content: center;
         align-content: center;
-        width: auto;
-        height: 2rem;
+        width: 15ch;
         font-size: 0.75rem;
+
       }
     }
     .carousel {
       margin: 0;
-      grid-auto-columns: 40vw;
+      grid-auto-columns: 51vw;
 
 
     }

@@ -11,6 +11,11 @@ const StyledNavbar = styled.nav`
   align-items: center;
   border-bottom: 0.25rem solid var(--boringClr);
 
+  @media (max-width:820px){
+    height: 8vh;
+  }
+
+
   .background-image-container {
     position: absolute;
     z-index: -1;
@@ -22,6 +27,7 @@ const StyledNavbar = styled.nav`
       position: relative;
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
 
   }

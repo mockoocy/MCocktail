@@ -10,11 +10,16 @@ import { textOutline } from '../../utils/mixins';
 const StyledFavourites = styled.section`
   padding: 2.5% 10%;
 
+  @media (max-width:820px){
+    margin-top: 10vh;
+  }
+
   h1{
   font-size: 5rem;
   color: var(--fancyClr);
   ${textOutline(.125, .25, "var(--boringClr)")};
   text-align: center;
+  margin-bottom: 2rem;
 
     @media (max-width: 820px){
       font-size: 2.5rem;

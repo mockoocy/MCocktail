@@ -15,7 +15,8 @@ const StyledSingleIngredient = styled.section`
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
-    color: var(--boringClr)
+    color: var(--boringClr);
+    margin: 5% 0;
   }
 `
 const SAMPLE_DRINKS_AMOUNT = 8;

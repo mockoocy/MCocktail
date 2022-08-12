@@ -41,7 +41,7 @@ align-items: center;
   @media (max-width: 820px){
     padding: 0 10%;
 
-    padding-top: 12.5vh;
+    padding-top: 10vh;
     h1 {
       font-size: 3rem;
     }

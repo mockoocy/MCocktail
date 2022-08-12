@@ -3,6 +3,10 @@ import { textOutline } from "../../../utils/mixins";
 
 const StyledGenerator = styled.section`
   padding: 0 10%;
+
+  @media (max-width:820px){
+    margin-top: 10vh;
+  }
   .info-cards {
     padding: 2.5% 10%;
     display: flex;
