@@ -99,7 +99,7 @@ function Explore() {
     async function fetchCocktails(){
       setCocktailsLoading(true)
       try {
-        const response = await fetch("./.netlify/functions/randomDrinks");
+        const response = await fetch(urls.urlDefault);
         const data = await response.json();
         const drinksSample = await randomSample(data.drinks, COCKTAIL_AMOUNT);
         setCocktails(drinksSample);
