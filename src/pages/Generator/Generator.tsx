@@ -54,7 +54,7 @@ function Generator() {
 
   async function fetchIngredients(){
     if (allIngredients.length !== 0) return;
-    const response = await fetch(urls.urlListIngredientsV2);
+    const response = await fetch(urls.urlListIngredients);
     const data = await response.json();
     setAllIngredients(data.drinks)
   }
