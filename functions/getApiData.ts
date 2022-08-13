@@ -46,7 +46,6 @@ const handler: Handler = async (event, context) => {
   
   const url = `${baseUrl}${urlSnippet}${arg ? arg : ''}`
 
-  console.log(url)
 
   const bodyContent = await axios.get(url).then(res=>res.data)
 
