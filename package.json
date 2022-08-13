@@ -36,7 +36,8 @@
     "start": "concurrently \"react-scripts start\" \"nodemon server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "netlify dev"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^3.2.2",
+    "@netlify/functions": "^1.1.0",
     "@types/styled-components": "^5.1.25",
     "concurrently": "^7.3.0",
     "netlify-cli": "^10.17.4"

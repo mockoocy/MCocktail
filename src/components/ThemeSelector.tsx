@@ -4,7 +4,6 @@ import Themes from '../data/themes';
 import { Theme } from '../types';
 import useOuterClick from '../hooks/useOuterClick';
 import StyledThemeSelector from './styles/StyledThemeSelector';
-import styled from 'styled-components';
 
 
 type Props = {

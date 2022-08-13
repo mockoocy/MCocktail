@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { textOutline } from "../../utils/mixins";
 
 
 const StyledThemeSelector = styled.div`
