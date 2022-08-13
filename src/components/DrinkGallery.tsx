@@ -2,7 +2,7 @@ import React from 'react';
 import StyledDrinkGallery from './styles/StyledDrinkGallery';
 
 type Props = {
-  children: React.ReactNode | React.ReactNode[]
+  children: React.ReactNode[]
 }
 
 function DrinkGallery({children}: Props) {
@@ -11,7 +11,11 @@ function DrinkGallery({children}: Props) {
   return (
     <StyledDrinkGallery>
       <div className="favorites-container">
-        {children}
+        {children.length > 0
+          ? children
+          : <div className="empty-text-container">
+            <h1>It's empty!</h1>
+          </div> }
       </div>
     </StyledDrinkGallery>
   )

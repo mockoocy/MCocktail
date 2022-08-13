@@ -31,6 +31,7 @@ const StyledThemeSelector = styled.div`
       align-items: center;
       justify-content: space-between;
       padding: 0 .25rem;
+      transition: all 250ms ease-in-out;
 
       @media (max-width:820px){
         height: 2rem;
@@ -42,6 +43,7 @@ const StyledThemeSelector = styled.div`
 
       :hover{
         transform: scale(1.1);
+        filter: brightness(1.2) ;
       }
 
       ::marker {
@@ -54,7 +56,7 @@ const StyledThemeSelector = styled.div`
         .theme-marker {
           width: 2rem;
           height: 2rem;
-  
+
           @media (max-width:820px){
             width: 1.5rem;
             height: 1.5rem;

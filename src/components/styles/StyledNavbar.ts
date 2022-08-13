@@ -31,11 +31,6 @@ const StyledNavbar = styled.nav`
     }
 
   }
-  button {
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-  }
 
   .logo-container {
     margin-left: 2.5%;
@@ -87,10 +82,12 @@ const StyledNavbar = styled.nav`
       -.125rem -.125rem 0.125rem var(--boringClr);
       filter: 
     drop-shadow(.25rem .25rem var(--captionClr));
+    transition: all 250ms ease-in-out;
 
     :hover {
-      transform: scale(1.05);
+      transform: scale(1.15);
       cursor: pointer;
+      filter: brightness(1.25);
     }
 
   }

@@ -7,13 +7,17 @@ const StyledExplore = styled.section`
   flex-direction: column;
   gap: 1rem;
   width: 80%;
-  margin: 2.5% 10% 0  10%;
+  margin: 2.5% 10%;
   background-color: var(--bgVariationClr);
   border-radius: 2rem;
   overflow-x: hidden;
   filter: ${dropShadowOutline(.0625, .0625, 'var(--bgNestedClr)')};
 
-
+  @media (max-width:820px){
+    margin: 2.5% 5%;
+    width: 90%;
+    overflow-x: auto;
+  }
 
   .loading-container {
     display: flex;

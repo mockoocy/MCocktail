@@ -20,6 +20,19 @@ align-items: center;
     @media (max-width:820px){
       grid-template-columns: repeat(2,1fr);
       padding: 0 0.5rem;
+
+    }
+    .empty-text-container{
+      width: 80vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 3rem;
+        font-family: Lato, Inter, sans-serif;
+        color: var(--boringClr);
+        text-align: center;
+      }
     }
 
   }

@@ -54,8 +54,9 @@ function SingleIngredient() {
     return [];
   }
 
-  const drinksSampleElements = drinksSample.map(drink => (
+  const drinksSampleElements = drinksSample.map((drink, id) => (
     <Cocktail 
+      key={`drinkSample-${id}`}
       idDrink={drink.idDrink}
       strDrinkThumb={drink.strDrinkThumb}
       strDrink={drink.strDrink}    

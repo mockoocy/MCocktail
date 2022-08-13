@@ -17,7 +17,7 @@ const StyledFavourites = styled.section`
   h1{
   font-size: 5rem;
   color: var(--fancyClr);
-  ${textOutline(.125, .25, "var(--boringClr)")};
+  ${textOutline(.0625, .0625, "var(--boringClr)")};
   text-align: center;
   margin-bottom: 2rem;
 
