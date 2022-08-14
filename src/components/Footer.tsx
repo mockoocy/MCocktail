@@ -4,9 +4,9 @@ import StyledFooter from "./styles/StyledFooter"
 export default function Footer(){
   return(
     <StyledFooter>
-      <h4>Thanks to CocktailDB for their api</h4>
-      <h4>Thanks to Unsplash & Undraw for amazing imaginery</h4>
+      <h4>Hope you enjoy being here!</h4>
       <h2>Made by Mockini @2022</h2>
+      <h4>M stands for Make, Mix and Mocktail</h4>
     </StyledFooter>
   )
 }

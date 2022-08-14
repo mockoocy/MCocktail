@@ -10,6 +10,11 @@ height: 4rem;
 width: 15%;
 transition: all 250ms ease-in-out;
 cursor: pointer;
+margin: 0 .5rem;
+
+@media (max-width:820px){
+  gap: 0.25rem;
+}
 
 &.open {
   width: 40%;
@@ -47,15 +52,18 @@ cursor: pointer;
 }
 
 #search, #search-icon {
-  color: #f0f2f5;
+  color: var(--fancyClr);
   font-size: 1.5rem;
   font-family: Lato, sans-serif;
   @media (max-width: 820px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 #search-icon {
   margin-left: 1rem;
+  @media (max-width:820px){
+    margin-left: 0.5rem;
+  }
 }
 
 #search, #search:focus{

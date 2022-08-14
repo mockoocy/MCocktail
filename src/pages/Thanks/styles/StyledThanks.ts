@@ -24,17 +24,22 @@ align-items: center;
     }
     ul {
       color: var(--boringClr);
-
       font-size: 3rem;
       font-family: Inter, sans-serif;
+      margin-bottom: 1rem;
       li {
         font-size: 1.5rem;
         font-family: Lato, Inter, sans-serif;
       }
     }
-    li::marker{
+    li:nth-child(3n)::marker{
+      content: '❤️';
+    }
+    li:nth-child(3n+1)::marker{
       content: '💚';
-      
+    }
+    li:nth-child(3n+2)::marker{
+      content: '💙';
     }
   }
     
