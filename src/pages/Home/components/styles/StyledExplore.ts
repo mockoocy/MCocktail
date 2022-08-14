@@ -53,6 +53,7 @@ const StyledExplore = styled.section`
       width: auto;
       max-width: 28vw;
       height: auto;
+      min-height: 2.5rem;
       background-color: var(--boringClr);
       color: var(--optionClr, --bgClr, --boringClr);
 
@@ -144,7 +145,6 @@ const StyledExplore = styled.section`
         text-align: center;
         justify-content: center;
         align-content: center;
-        width: 15ch;
         font-size: 0.75rem;
 
       }
