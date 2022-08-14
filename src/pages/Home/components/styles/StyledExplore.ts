@@ -14,8 +14,6 @@ const StyledExplore = styled.section`
   filter: ${dropShadowOutline(.0625, .0625, 'var(--bgNestedClr)')};
 
   @media (max-width:820px){
-    margin: 2.5% 5%;
-    width: 90%;
     overflow-x: auto;
   }
 
@@ -53,7 +51,8 @@ const StyledExplore = styled.section`
       border: 1px solid var(--fancyClr);
       border-radius: 100vmax;
       width: auto;
-      height: 2.5rem;
+      max-width: 28vw;
+      height: auto;
       background-color: var(--boringClr);
       color: var(--optionClr, --bgClr, --boringClr);
 
