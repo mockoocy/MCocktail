@@ -17,6 +17,10 @@ align-items: center;
     gap: 1rem;
     padding: 0 1rem;
 
+    >* {
+      min-width: 20vw;
+    }
+
     @media (max-width:820px){
       grid-template-columns: repeat(2,1fr);
       padding: 0 0.5rem;

@@ -213,7 +213,7 @@ const minionTheme: Theme = {
   },
   utils: {
     navSaturation: '110%',
-    hueRotateDeg: '110deg',
+    hueRotateDeg: '255deg',
     gradientButtonClrs:  'linear-gradient(to right, #5bccf6 0%, #FCC567 51%, #49A3FD 100%)',
   }
 }
@@ -235,7 +235,7 @@ const redishTheme: Theme = {
   },
   utils: {
     navSaturation: '300%',
-    hueRotateDeg: '140deg',
+    hueRotateDeg: '195deg',
     gradientButtonClrs: 'linear-gradient( to right, #E0485D, #FFF2F4 51%, #5346C8 100%)'
 
   }

@@ -61,7 +61,7 @@ const StyledExplore = styled.section`
         cursor: pointer;
         transform: scale(1.1);
         filter: 
-        drop-shadow(.125rem .125rem 0.25rem var(--fancyClr));
+        drop-shadow(.0625rem .0625rem 0.125rem var(--fancyClr));
       }
     }
   .clicked {
