@@ -13,6 +13,7 @@ function Thanks() {
           <li>You, the person visiting the website!</li>
           <li>The CocktailDB for almost everything this site can display</li>
           <li>Unsplash & Undraw team for their amazing assets</li>
+          <li><a href="https://unsplash.com/@bonvivant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bon Vivant</a> for the navbar photo</li>
           <li>React team for providing amazing tools to make this website possible</li>
           <li>Typescript team for saving me from painful debugging</li>
           <li>Styled Components contributors for a nice css in js solution</li>

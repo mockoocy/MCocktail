@@ -30,8 +30,10 @@ function SearchBar() {
       .then(data=>{
         if (searchTerm && data.drinks){
           setFoundDrinks(data.drinks);
-          
-        } 
+        } else {
+          setFoundDrinks([])
+        }
+
       })
   }
   useEffect(()=>{
@@ -51,7 +53,7 @@ function SearchBar() {
     </li>
   
   ))
-
+      console.log(foundDrinks)
   return (
     <StyledSearchBar onClick={handleSearchClick} ref={resultsRef} className={`${showResults? "open" : ''}`}>
       <Icon icon="fe:search" id="search-icon"/>
@@ -61,7 +63,7 @@ function SearchBar() {
         placeholder="Search!" 
         id="search"
         name="searchTerm"
-        debounceTimeout={500}
+        debounceTimeout={200}
         onChange={e => handleSearchChange(e)}
         value={searchTerm}
         />

@@ -30,6 +30,10 @@ align-items: center;
       li {
         font-size: 1.5rem;
         font-family: Lato, Inter, sans-serif;
+
+        a, a:visited, a:link {
+          color: var(--boringClr)
+        }
       }
     }
     li:nth-child(3n)::marker{
