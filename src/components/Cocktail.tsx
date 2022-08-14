@@ -9,7 +9,7 @@ function Cocktail({idDrink, strDrinkThumb, strDrink}: Props) {
   return (
     <StyledCocktail>
       <Link to={`/drink/${idDrink}`} >
-        <img src={strDrinkThumb} alt={strDrink} loading="lazy" />
+        <img src={`${strDrinkThumb}`} alt={strDrink} loading="lazy" />
         <span className="caption">{strDrink}</span>
       </Link>
 
