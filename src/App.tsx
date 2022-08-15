@@ -24,7 +24,13 @@ function App()  {
 
   const [theme, setTheme] = useState(themeFromStorage ? JSON.parse(themeFromStorage) : Themes.darkTheme);
 
-  const queryClient = new QueryClient();
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
 
 function changeTheme(theme: Theme){
   localStorage.setItem("theme", JSON.stringify(theme));

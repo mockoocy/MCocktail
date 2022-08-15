@@ -43,8 +43,6 @@ function Explore() {
   const [cocktailsLoading, setCocktailsLoading] = useState(true);
   const [cocktails, setCocktails] = useState<any[]>([]);
   const [options, setOptions] = useState<Option[]>(DEFAULT_OPTIONS);
-  // Can't put it in useEffect, so we call it there. [options, cocktails] is the only
-  // deps array that forces re-render, so there is no excess data being fetched, no worries
 
   const ingredientsQuery = useQuery(['ingredients'],fetchIngredients);
   const isIngredientsLoading = ingredientsQuery.isLoading;
