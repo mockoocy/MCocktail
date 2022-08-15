@@ -4,6 +4,7 @@ import Themes from '../data/themes';
 import { Theme } from '../types';
 import useOuterClick from '../hooks/useOuterClick';
 import StyledThemeSelector from './styles/StyledThemeSelector';
+import {ReactComponent as Marker} from "../assets/marker.svg"
 
 
 type Props = {
@@ -29,11 +30,9 @@ function ThemeSelector({changeTheme}: Props) {
     className="theme-option"
     onClick={()=> changeTheme(theme)}>
       <div className="icon-container" style={{background:theme.colors.bgClr}}>
-
-      <Icon className="theme-marker"
-      icon="line-md:marker"
-      color={theme.colors.fancyClr}
-      />
+      <Marker 
+      className ='theme-marker'
+      color={theme.colors.fancyClr}/>
       </div>
       {theme.name}
     </li>

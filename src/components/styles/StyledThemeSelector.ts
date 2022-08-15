@@ -56,12 +56,6 @@ const StyledThemeSelector = styled.div`
         .theme-marker {
           width: 2rem;
           height: 2rem;
-
-          @media (max-width:820px){
-            width: 1.5rem;
-            height: 1.5rem;
-          }
-  
         }
       }
     }
