@@ -65,7 +65,8 @@ const StyledNavbar = styled.nav`
     } 
     .active-btn {
       >*{
-        color: var(--boringClr);
+        filter: brightness(1.25) drop-shadow(.25rem .25rem var(--captionClr));
+
       }
     }
 
@@ -82,12 +83,12 @@ const StyledNavbar = styled.nav`
       -.125rem -.125rem 0.125rem var(--boringClr);
       filter: 
     drop-shadow(.25rem .25rem var(--captionClr));
-    transition: all 250ms ease-in-out;
+    transition: all 250 ease-in-out;
 
     :hover {
       transform: scale(1.15);
       cursor: pointer;
-      filter: brightness(1.25);
+      filter: brightness(1.5) ;
     }
 
   }

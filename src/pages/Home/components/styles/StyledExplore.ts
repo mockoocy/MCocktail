@@ -40,7 +40,7 @@ const StyledExplore = styled.section`
   .options-container {
     display: flex;
     flex-flow: row wrap;
-    gap: 0.75rem;
+    gap: 0.5rem;
   
     .option {
       display: flex;

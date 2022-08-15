@@ -14,7 +14,7 @@ const StyledDrinkTab = styled.section`
 
 
   .img-container {
-      min-width: 35%;
+      min-width: 40%;
       width: 60%;
       position: relative;
 
