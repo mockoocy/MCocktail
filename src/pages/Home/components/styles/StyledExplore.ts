@@ -52,8 +52,7 @@ const StyledExplore = styled.section`
       border-radius: 100vmax;
       width: auto;
       max-width: 28vw;
-      height: auto;
-      min-height: 2.5rem;
+      min-height: 2rem;
       background-color: var(--boringClr);
       color: var(--optionClr, --bgClr, --boringClr);
 
@@ -136,11 +135,7 @@ const StyledExplore = styled.section`
   @media (max-width: 820px){
     margin-top: 10vh;
     .options-container {
-      display: grid;
-      grid-template-columns: repeat(3, .20fr);
-      justify-content: space-around;
-      grid-auto-rows: minmax(20%, auto);
-
+      gap: 0.25rem;
       .option {
         text-align: center;
         justify-content: center;

@@ -53,7 +53,6 @@ function SearchBar() {
     </li>
   
   ))
-      console.log(foundDrinks)
   return (
     <StyledSearchBar onClick={handleSearchClick} ref={resultsRef} className={`${showResults? "open" : ''}`}>
       <Icon icon="fe:search" id="search-icon"/>

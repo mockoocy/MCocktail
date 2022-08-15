@@ -12,6 +12,18 @@ const RANDOM_INGREDIENTS_AMOUNT =8;
 
 const DEFAULT_OPTIONS: Option[] = [
   {
+    value: "Random",
+    clicked: false,
+    url: urls.urlDefault,
+    id: 1
+  },
+  {
+    value: "Popular",
+    clicked: false,
+    url: `${urls.urlAlcoholic}optional_alcohol`,
+    id: 2
+  },
+  {
     value: "Alcoholic",
     clicked: false,
     url: `${urls.urlAlcoholic}Alcoholic`,
@@ -21,20 +33,8 @@ const DEFAULT_OPTIONS: Option[] = [
     value: "Non-Alcoholic",
     clicked: false,
     url: `${urls.urlAlcoholic}Non_Alcoholic`,
-    id: 1
-  },
-  {
-    value: "Random",
-    clicked: false,
-    url: urls.urlDefault,
-    id: 2
-  },
-  {
-    value: "Popular",
-    clicked: false,
-    url: `${urls.urlAlcoholic}optional_alcohol`,
     id: 3
-  }
+  },
 ]
 
 
@@ -52,7 +52,8 @@ function Explore() {
 
   async function fetchIngredients(){
     const response = await fetch(urls.urlListIngredients);
-    const data = response.json();
+    const data = await response.json();
+    shuffleOptions(data?.drinks, RANDOM_INGREDIENTS_AMOUNT)
     return data
   }
 
@@ -136,7 +137,7 @@ function Explore() {
     <StyledExplore >
       <h1 className="title">Some drinks for you</h1>
       <div className="options-container">
-        {!isIngredientsLoading && <div className="option" onClick={() => shuffleOptions(ingredients, RANDOM_INGREDIENTS_AMOUNT)}>Shuffle and get Ingredients!🔀 </div>}
+        {!isIngredientsLoading && <div className="option" onClick={() => shuffleOptions(ingredients, RANDOM_INGREDIENTS_AMOUNT)}>Shuffle ingredients</div>}
         {optionElements}
       </div>
       {
