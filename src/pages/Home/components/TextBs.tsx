@@ -16,8 +16,7 @@ function TextBs() {
 
       <InfoCard
         bigText="Don't know what to drink?"
-        smallText="Just tell us what’s in your bar,
-        we will handle the rest for you ">
+        smallText="Enjoy the variety of drinks which you can see here ">
         <Drink className="svg drink"/>
       </InfoCard>      <InfoCard
         bigText="Use our generator"
@@ -27,8 +26,7 @@ function TextBs() {
       </InfoCard>      <InfoCard
         bigText="Learn something new"
         smallText="With our instructions, you’ll become
-        equipped with abilities to craft 
-        something new">
+        equipped with abilities to make a cool drink">
         <Barista className="svg barista"/>
       </InfoCard>
           </div>
