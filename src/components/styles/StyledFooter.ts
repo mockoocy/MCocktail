@@ -12,19 +12,19 @@ bottom: 0;
 font-family: Lato, Inter, sans-serif;
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   @media (max-width: 820px){
-    font-size: .75rem
+    font-size: .625rem
   }
 }
 .credits, .credits:visited, .credits:link {
   color: var(--fancyClr);
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   @media (max-width: 820px){
-    font-size: 1rem;
+    font-size: .625rem;
   }
   
   
